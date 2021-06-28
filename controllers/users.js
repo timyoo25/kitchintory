@@ -38,7 +38,7 @@ export const signUp = async (req, res) => {
 
 export const signIn = async (req, res) => {
   try {
-    const { password } = req.body;
+    const { username, password } = req.body;
     const user = await User.findOne({ username: username }).select(
       "username password_digest"
     );
@@ -63,7 +63,8 @@ export const signIn = async (req, res) => {
 export const verify = async (req, res) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
-    const payload = jwt.verify(token, TOKEN_KEY);
+    console.log(token)
+    const payload = jwt.verify(token, 'gildawilltalontim');
     if (payload) {
       res.json(payload);
     }
