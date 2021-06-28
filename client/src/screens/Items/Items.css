@@ -1,0 +1,17 @@
+.items-parent {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.items-container {
+  border: solid 1px black;
+  width: 30%;
+  /* justify-content: space-around; */
+  margin-top: 20px;
+}
+
+.item-img {
+  width: 150px;
+  height: auto;
+}

@@ -1,6 +1,6 @@
 import { getItems } from "../../services/items";
 import { useState, useEffect } from "react";
-// import "./Items.css";
+import "./Items.css";
 
 const Items = () => {
   const [items, setItems] = useState([]);
@@ -18,11 +18,11 @@ const Items = () => {
       {items &&
         items.map((item, index) => {
           return (
-            <div className="items=container" key={index}>
-              <img src={item.imgURL} />
-              <h3>{item.name}</h3>
-              <p>Quantity: {item.quantity}</p>
-              <p>Price: ${item.price}</p>
+            <div className="items-container" key={index}>
+              <img className="item-img" src={item.imgURL} />
+              <h3 className="item-name">{item.name}</h3>
+              <p className="item-quantity">Quantity: {item.quantity}</p>
+              <p className="item-price">Price: ${item.price}</p>
             </div>
           );
         })}
