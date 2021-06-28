@@ -1,5 +1,6 @@
 import { getItems } from "../../services/items";
 import { useState, useEffect } from "react";
+import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
 const Items = () => {
@@ -14,19 +15,21 @@ const Items = () => {
   }, []);
 
   return (
-    <div className="items-parent">
-      {items &&
-        items.map((item, index) => {
-          return (
-            <div className="items-container" key={index}>
-              <img className="item-img" src={item.imgURL} />
-              <h3 className="item-name">{item.name}</h3>
-              <p className="item-quantity">Quantity: {item.quantity}</p>
-              <p className="item-price">Price: ${item.price}</p>
-            </div>
-          );
-        })}
-    </div>
+    <Layout>
+      <div className="items-parent">
+        {items &&
+          items.map((item, index) => {
+            return (
+              <div className="items-container" key={index}>
+                <img className="item-img" src={item.imgURL} />
+                <h3 className="item-name">{item.name}</h3>
+                <p className="item-quantity">Quantity: {item.quantity}</p>
+                <p className="item-price">Price: ${item.price}</p>
+              </div>
+            );
+          })}
+      </div>
+    </Layout>
   );
 };
 
