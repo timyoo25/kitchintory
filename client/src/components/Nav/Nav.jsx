@@ -1,32 +1,56 @@
 import "./Nav.css";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 const authenticatedOptions = (
-  <>
-    <NavLink className="link" to="/items">Your Stock</NavLink>
-    <NavLink className="link" to="/items/create">Add Item</NavLink>
-    <NavLink className="link" to="/sign-out">Sign Out</NavLink>
-  </>
-)
+  <div className="nav-auth-parent">
+    <NavLink className="link nav-link-to-items" to="/items">
+      Your Stock
+    </NavLink>
+    <NavLink className="link nav-link-to-items-create" to="/items/create">
+      Add Item
+    </NavLink>
+    <NavLink className="link nav-sign-out-link" to="/sign-out">
+      Sign Out
+    </NavLink>
+  </div>
+);
 const unauthenticatedOptions = (
-  <>
-    <NavLink className="link" to="/sign-up">Sign Up</NavLink>
-    <NavLink className="link" to="/sign-in">Sign In</NavLink>
-  </>
-)
-const alwaysOptions = (
-  <>
-  </>
-)
+  <div className="nav-unauth-parent">
+    <div className="nav-sign-up-container">
+      <NavLink className="link nav-sign-up-link" to="/sign-up">
+        <img
+          className="nav-sign-up-logo"
+          src="https://i.imgur.com/0reVlNp.png"
+        />
+        <br />
+        Sign Up
+      </NavLink>
+    </div>
+    <div className="nav-sign-in-container">
+      <NavLink className="link nav-sign-in-link" to="/sign-in">
+        {/* <img
+          className="nav-sign-in-logo"
+          src="https://i.imgur.com/pvsys8F.png"
+        /> */}
+        <br />
+        Sign In
+      </NavLink>
+    </div>
+  </div>
+);
+const alwaysOptions = <></>;
 
 export default function Nav({ user }) {
   return (
     <div className="nav-parent">
-      <div className="links">
-        {console.log(user)}
-        {user && <div className="link welcome">Welcome, {user.username}</div>}
+      <div className="nav-icon">
+        <img clasName="kitchintory" src="https://i.imgur.com/ClX3n7u.png" />
+      </div>
+      <div className="nav-search">search</div>
+      <div className="nav-links">
+        {user && <div className="welcome">Welcome, {user.username}</div>}
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </div>
     </div>
-  )
+  );
 }
