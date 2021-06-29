@@ -1,4 +1,6 @@
-import { Route } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
+import ItemDetail from "./screens/ItemDetail/ItemDetail";
+import ItemEdit from "./screens/ItemEdit/ItemEdit"
 import Items from "./screens/Items/Items"
 import SignIn from "./screens/SignIn/SignIn"
 import SignUp from "./screens/SignUp/SignUp"
@@ -18,18 +20,33 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/">
-        <Items />
-      </Route>
-      <Route path="/sign-up">
-        <SignUp setUser={setUser} />
-      </Route>
-      <Route path="/sign-in">
-        <SignIn setUser={setUser} />
-      </Route>
-      <Route path="/sign-out">
-        <SignOut setUser={setUser} />
-      </Route>
+      <Switch>
+    
+        <Route exact path="/">
+          <Items />
+        </Route>
+
+        <Route path="/sign-up">
+          <SignUp setUser={setUser} />
+        </Route>
+
+        <Route path="/sign-in">
+          <SignIn setUser={setUser} />
+        </Route>
+
+        <Route path="/sign-out">
+          <SignOut setUser={setUser} />
+        </Route>
+
+        <Route exact path="/items/:id">
+          <ItemDetail />
+        </Route>
+
+        <Route exact path="/items/:id/edit">
+          <ItemEdit />
+        </Route>
+
+      </Switch>
     </div>
   );
 }
