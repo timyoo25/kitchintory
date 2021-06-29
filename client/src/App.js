@@ -1,9 +1,11 @@
 import { Route, Switch } from "react-router-dom"
+import { useState, useEffect } from "react"
 import ItemDetail from "./screens/ItemDetail/ItemDetail";
 import ItemEdit from "./screens/ItemEdit/ItemEdit"
 import Items from "./screens/Items/Items"
 import SignIn from "./screens/SignIn/SignIn"
 import SignUp from "./screens/SignUp/SignUp"
+import SignOut from "./screens/SignOut/SignOut"
 import './App.css';
 import { verifyUser } from "./services/users"
 
@@ -22,7 +24,7 @@ function App() {
     <div className="App">
       <Switch>
     
-        <Route exact path="/">
+        <Route exact path="/items">
           <Items />
         </Route>
 
