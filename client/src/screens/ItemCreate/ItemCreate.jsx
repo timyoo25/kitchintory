@@ -10,7 +10,7 @@ export default function ItemCreate(props) {
     name: '',
     quantity: '',
     price: '',
-    location: '',
+    category: '',
     imgURL: '',
   })
 
@@ -60,10 +60,10 @@ export default function ItemCreate(props) {
             onChange={handleChange}
           />
           <input
-            className='input-location'
-            placeholder='Location'
-            value={item.location}
-            name='location'
+            className='input-category'
+            placeholder='Category'
+            value={item.category}
+            name='category'
             onChange={handleChange}
           />
           <input
