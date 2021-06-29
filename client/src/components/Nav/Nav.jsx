@@ -1,6 +1,7 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 const authenticatedOptions = (
+<<<<<<< HEAD
   <div className="nav-auth-parent">
     <NavLink className="link nav-link-to-items" to="/items">
       Your Stock
@@ -13,6 +14,14 @@ const authenticatedOptions = (
     </NavLink>
   </div>
 );
+=======
+  <>
+    <NavLink className="link" to="/items">Your Stock</NavLink>
+    <NavLink className="link" to="/create">Add Item</NavLink>
+    <NavLink className="link" to="/sign-out">Sign Out</NavLink>
+  </>
+)
+>>>>>>> 768b8d7090b2d401cc87cbe7441a4ecd4cfa2ba7
 const unauthenticatedOptions = (
   <div className="nav-unauth-parent">
     <div className="nav-sign-up-container">
