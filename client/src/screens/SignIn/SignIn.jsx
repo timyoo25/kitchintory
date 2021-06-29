@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { signIn } from "../../services/users"
-import { useHistory } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
+import Layout from '../../components/Layout/Layout'
+import "./SignIn.css"
 
 const SignIn = (props) => {
   const history = useHistory()
@@ -51,30 +53,47 @@ const SignIn = (props) => {
   }
   const { username, password } = form;
   return (
-    <div className='form-container'>
-      <h3>Sign In</h3>
-      <form onSubmit={onSignIn}>
-        <label>Username</label>
-        <input
-          required
-          type='text'
-          name='username'
-          value={username}
-          placeholder='Enter Username'
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name='password'
-          value={password}
-          type='password'
-          placeholder='Password'
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <Layout>
+      <div className='form-container'>
+        <div className="title">
+          <h3>Sign In Here</h3>
+        </div>
+        <br />
+        <form onSubmit={onSignIn}>
+          <div className='username-container'>
+          <label>Username</label>
+          <br />
+          <input
+            required
+            type='text'
+            name='username'
+            value={username}
+            // placeholder='Enter Username'
+            onChange={handleChange}
+          />
+          </div>
+          <br />
+          <div className='password-container'>
+          <label>Password</label>
+          <br />
+          <input
+            required
+            name='password'
+            value={password}
+            type='password'
+            // placeholder='Password'
+            onChange={handleChange}
+          />
+          </div>
+          <br />
+          {renderError()}
+        </form>
+        <br />
+        <div className='link'>
+          <p>Don't have an Account? <Link to="/sign-up">Sign Up Here</Link></p>
+        </div>
+      </div>
+    </Layout>
   );
 }
 
