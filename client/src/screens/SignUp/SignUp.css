@@ -19,6 +19,12 @@
 }
 .form-container p {
   padding-bottom: 30px;
+  font-size: large;
+}
+.form-container a:link,
+a:visited {
+  text-decoration: underline;
+  color: blue;
 }
 #sign-up-form {
   background: rgba(44, 82, 102, 0.29);
@@ -28,7 +34,6 @@
   flex-flow: row wrap;
   margin: auto;
   width: 60%;
-  height: 40%;
   padding: 30px;
   justify-content: center;
   margin-bottom: 30px;
