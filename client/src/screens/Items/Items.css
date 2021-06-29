@@ -7,9 +7,13 @@
 
 .items-container {
   border: solid 1px black;
-  width: 30%;
+  width: 50%;
   /* justify-content: space-around; */
   margin-top: 20px;
+}
+
+.items-link {
+  text-decoration: none;
 }
 
 .item-img {
