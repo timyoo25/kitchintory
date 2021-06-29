@@ -1,0 +1,16 @@
+.home-parent {
+  background-color: white;
+  height: 100vh;
+}
+
+.top {
+  background-color: lightgreen;
+  width: 100%;
+  height: 50%;
+}
+
+.bottom {
+  background-color: rgb(144, 227, 238);
+  width: 100%;
+  height: 50%;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import ItemDetail from "./screens/ItemDetail/ItemDetail";
 import ItemEdit from "./screens/ItemEdit/ItemEdit"
 import Items from "./screens/Items/Items"
+import Home from "./screens/Home/Home"
 import SignIn from "./screens/SignIn/SignIn"
 import SignUp from "./screens/SignUp/SignUp"
 import SignOut from "./screens/SignOut/SignOut"
@@ -23,6 +24,10 @@ function App() {
   return (
     <div className="App">
       <Switch>
+
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
 
         <Route exact path="/items">
           <Items user={user} />
