@@ -10,9 +10,12 @@ import SignUp from "./screens/SignUp/SignUp"
 import SignOut from "./screens/SignOut/SignOut"
 import './App.css';
 import { verifyUser } from "./services/users"
+// import { useHistory } from 'react-router-dom'
+
 
 function App() {
-  const [user, setUser] = useState(null);
+
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -46,7 +49,9 @@ function App() {
         </Route>
 
         <Route exact path="/items/:id">
-          <ItemDetail user={user} />
+          <ItemDetail
+            user={user}
+          />
         </Route>
 
         <Route exact path="/create">
