@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
-const Items = () => {
+const Items = (props) => {
   const [items, setItems] = useState([]);
-
+  const { user } = props;
   useEffect(() => {
     const fetchItems = async () => {
       const allItems = await getItems();
@@ -16,7 +16,7 @@ const Items = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="items-parent">
         {items &&
           items.map((item, index) => {

@@ -4,8 +4,9 @@ import { getItem } from "../../services/items.js";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout.jsx";
 
-export default function ItemDetail() {
+export default function ItemDetail(props) {
   const [item, setItem] = useState({});
+  const { user } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function ItemDetail() {
   }, [id]);
 
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="item-detail-parent">
         <div className="item-detail-container">
           <img className="item-detail-img" src={item.imgURL} alt="" />
