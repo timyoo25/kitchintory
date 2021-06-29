@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 
 export default function ItemDetail(props) {
   const [item, setItem] = useState({});
-  const { user, handleSubmit, handleSearch } = props;
+  const { user, handleSubmit, handleChange } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function ItemDetail(props) {
   }, [id]);
 
   return (
-    <Layout user={user} handleSubmit={handleSubmit} handleSearch={handleSearch} >
+    <Layout user={user} handleSubmit={handleSubmit} handleChange={handleChange} >
       <div className="item-detail-parent">
         <div className="item-detail-container">
           <img className="item-detail-img" src={item.imgURL} alt="" />

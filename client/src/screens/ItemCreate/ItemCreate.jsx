@@ -35,9 +35,9 @@ export default function ItemCreate(props) {
   }
 
   return (
-    <Layout user={user}>
+    <Layout user={user} handleSubmit={props.handleSubmit} handleChange={props.handleChange} >
       <div>
-        <form className='create-item-form'onSubmit={handleSubmit}>
+        <form className='create-item-form' onSubmit={handleSubmit}>
           <input
             className='input-name'
             placeholder='Name'

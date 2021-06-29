@@ -10,12 +10,15 @@ import SignUp from "./screens/SignUp/SignUp"
 import SignOut from "./screens/SignOut/SignOut"
 import './App.css';
 import { verifyUser } from "./services/users"
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 function App() {
-
   const [user, setUser] = useState(null)
+  const [items, setItems] = useState([]);
+  const [searchResult, setSearchResult] = useState(null)
+  const history = useHistory();
+  const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -25,15 +28,46 @@ function App() {
     fetchUser();
   }, []);
 
+  const handleChange = (event) => {
+    event.preventDefault()
+    // console.log(event)
+    setSearchInput(
+      // ...searchInput,
+      event.target.value
+    )
+
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const results = items.filter((item) =>
+      item.name.toLowerCase().includes(searchInput.toLowerCase())
+    )
+    setSearchResult(results)
+    history.push('/items')
+  }
+
   return (
     <div className="App">
       <Switch>
+
         <Route exact path="/">
-          <Home />
+          <Home
+            user={user}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange} />
         </Route>
 
         <Route exact path="/items">
-          <Items user={user} />
+          <Items user={user}
+            items={items}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            setSearchResult={setSearchResult}
+            setItems={setItems}
+            searchResult={searchResult}
+          />
         </Route>
 
         <Route path="/sign-up">
@@ -51,15 +85,21 @@ function App() {
         <Route exact path="/items/:id">
           <ItemDetail
             user={user}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
           />
         </Route>
 
         <Route exact path="/create">
-          <ItemCreate user={user} />
+          <ItemCreate
+            user={user}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+          />
         </Route>
 
         <Route exact path="/items/:id/edit">
-          <ItemEdit user={user} />
+          <ItemEdit user={user} handleSubmit={handleSubmit} handleChange={handleChange} />
         </Route>
       </Switch>
     </div>
