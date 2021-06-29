@@ -13,6 +13,7 @@ const authenticatedOptions = (
     </NavLink>
   </div>
 );
+
 const unauthenticatedOptions = (
   <div className="nav-unauth-parent">
     <div className="nav-sign-up-container">
