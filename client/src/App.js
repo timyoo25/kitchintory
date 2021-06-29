@@ -54,7 +54,7 @@ function App() {
         </Route>
 
         <Route exact path="/items/:id/edit">
-          <ItemEdit />
+          <ItemEdit user={user} />
         </Route>
       </Switch>
     </div>
