@@ -5,56 +5,52 @@ import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
 const Items = (props) => {
-  const [items, setItems] = useState([]);
-  const [searchResult, setSearchResult] = useState([])
-  const history = useHistory();
-  const { user } = props;
-  const [searchInput, setSearchInput] = useState("")
+  // const [items, setItems] = useState([]);
+  // const [searchResult, setSearchResult] = useState([])
+  // const history = useHistory();
+  const { user, items, handleSubmit, handleChange, setItems, setSearchResult, searchResult } = props;
+  // const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
     const fetchItems = async () => {
       const allItems = await getItems();
       setItems(allItems);
       setSearchResult(allItems);
+      // if (searchResult) {
+      //   return setSearchResult(searchResult);
+      // } else {
+      //   return setSearchResult(allItems);
+      // }
     };
     fetchItems();
   }, []);
-
-  const handleChange = (event) => {
-    event.preventDefault()
-    // console.log(event)
-    setSearchInput(
-      // ...searchInput,
-      event.target.value
-    )
-  }
   // const results = items.filter((item) =>
-  //   item.name.toLowerCase().includes(event.target.value.toLowerCase())
+  // item.name.toLowerCase().includes(searchInput.toLowerCase())
   // )
   // setSearchResult(results)
-  // history.push('/items')
+  // const handleChange = (event) => {
+  //   event.preventDefault()
+  //   // console.log(event)
+  //   setSearchInput(
+  //     // ...searchInput,
+  //     event.target.value
+  //   )
+  // }
 
-  // const handleSearch = (event) => {
+  // const handleSubmit = (event) => {
+  //   event.preventDefault()
+
   //   const results = items.filter((item) =>
-  //     item.name.toLowerCase().includes(event.target.value.toLowerCase())
+  //     item.name.toLowerCase().includes(searchInput.toLowerCase())
   //   )
   //   setSearchResult(results)
-  //   // setApplySort(true)
+  //   history.push('/items')
   // }
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log(event)
-    const results = items.filter((item) =>
-      item.name.toLowerCase().includes(searchInput.toLowerCase())
-    )
-    setSearchResult(results)
-    history.push('/items')
-  }
 
   return (
     <Layout user={user} handleSubmit={handleSubmit} handleChange={handleChange} >
       <div className="items-parent">
-        {searchResult.map((item, index) => {
+        {searchResult?.map((item, index) => {
           return (
             <Link className="items-link" to={`/items/${item._id}`}>
               <div className="items-container" key={index}>

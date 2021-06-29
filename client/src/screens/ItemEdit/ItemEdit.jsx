@@ -3,6 +3,7 @@ import { useParams, Redirect } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import { getItem, updateItem, deleteItem } from "../../services/items";
 export default function ItemEdit(props) {
+
   const [item, setItem] = useState({
     name: "",
     quantity: "",
@@ -44,7 +45,7 @@ export default function ItemEdit(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} handleSubmit={props.handleSubmit} handleChange={props.handleChange}>
       <div className="edit-container">
         <div className="image-container">
           <img className="edit-item-image" src={item.imgURL} alt={item.name} />

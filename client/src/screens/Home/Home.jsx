@@ -1,9 +1,10 @@
 import Layout from "../../components/Layout/Layout";
 import "./Home.css";
 
-export default function Home() {
+export default function Home(props) {
+  const { user, handleSubmit, handleChange } = props;
   return (
-    <Layout>
+    <Layout user={user} handleSubmit={handleSubmit} handleChange={handleChange} >
       <div className="home-parent">
         <div className="top">
           <img className="home-image" src="https://i.imgur.com/MUdotoA.png" />
