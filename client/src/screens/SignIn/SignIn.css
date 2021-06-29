@@ -1,0 +1,32 @@
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: rgba(164, 197, 216, 0.8);
+  box-shadow: -10px 10px 35px rgba(0, 0, 0, 0.2);
+  margin: 30px 425px;
+  padding: 10px;
+}
+
+.username-container,
+.password-container {
+  border: black 2px;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+form {
+  background: rgba(44, 82, 102, 0.29);
+  box-shadow: -10px 10px 10px rgba(44, 82, 102, 0.25);
+  margin: 10px 30px;
+  padding: 10px;
+}
+
+p {
+  font-size: small;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
