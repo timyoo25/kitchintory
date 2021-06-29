@@ -23,9 +23,9 @@ function App() {
   return (
     <div className="App">
       <Switch>
-    
+
         <Route exact path="/items">
-          <Items />
+          <Items user={user} />
         </Route>
 
         <Route path="/sign-up">
@@ -41,7 +41,7 @@ function App() {
         </Route>
 
         <Route exact path="/items/:id">
-          <ItemDetail />
+          <ItemDetail user={user} />
         </Route>
 
         <Route exact path="/items/:id/edit">
