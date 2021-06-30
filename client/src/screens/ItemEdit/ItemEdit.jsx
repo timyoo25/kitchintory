@@ -13,7 +13,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  // const [input, setInput] = useState(item)
+  const [input, setInput] = useState(item)
   const { id } = useParams();
 
   useEffect(() => {
@@ -23,6 +23,7 @@ export default function ItemEdit(props) {
     };
     fetchItems();
   }, [id]);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setItem({
@@ -34,7 +35,8 @@ export default function ItemEdit(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const updated = await updateItem(id, item);
-    setUpdated(updated);
+    console.log(updated)
+    setUpdated({ updated });
   };
 
   const handleDelete = async (event) => {
@@ -45,6 +47,7 @@ export default function ItemEdit(props) {
 
   if (isUpdated) {
     return <Redirect to={`/items/${id}`} />;
+
   }
   else if (deleted) {
     return <Redirect to={`/items`} />;

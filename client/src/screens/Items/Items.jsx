@@ -1,51 +1,25 @@
 import { getItems } from "../../services/items";
-import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
 const Items = (props) => {
-  // const [items, setItems] = useState([]);
-  // const [searchResult, setSearchResult] = useState([])
-  // const history = useHistory();
-  const { user, items, handleSubmit, handleChange, setItems, setSearchResult, searchResult, setSearchInput } = props;
-  // const [searchInput, setSearchInput] = useState("")
+
+  const { user, items, handleSubmit, handleChange, setItems, setSearchResult, searchResult, searchInput, setSearchInput } = props;
 
   useEffect(() => {
     const fetchItems = async () => {
       const allItems = await getItems();
       setItems(allItems);
-      // setSearchResult(allItems);
-      if (searchResult) {
-        return setSearchResult(searchResult);
+      if (searchInput) {
+        setSearchResult(searchResult)
       } else {
-        return setSearchResult(allItems);
+        setSearchResult(allItems);
       }
     };
     fetchItems();
   }, []);
-  // const results = items.filter((item) =>
-  // item.name.toLowerCase().includes(searchInput.toLowerCase())
-  // )
-  // setSearchResult(results)
-  // const handleChange = (event) => {
-  //   event.preventDefault()
-  //   // console.log(event)
-  //   setSearchInput(
-  //     // ...searchInput,
-  //     event.target.value
-  //   )
-  // }
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-
-  //   const results = items.filter((item) =>
-  //     item.name.toLowerCase().includes(searchInput.toLowerCase())
-  //   )
-  //   setSearchResult(results)
-  //   history.push('/items')
-  // }
 
   return (
     <Layout user={user} items={items} handleSubmit={handleSubmit} handleChange={handleChange}
