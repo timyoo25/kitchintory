@@ -1,11 +1,10 @@
-import './Search.css'
+import "./Search.css";
 
 const Search = (props) => {
-
   return (
     <form className="search-form" onSubmit={(e) => props.handleSubmit(e)}>
       <input
-        className="search-input"
+        className="search search-input"
         value={props.value}
         onChange={(e) => props.handleChange(e)}
         name="Search"
@@ -13,9 +12,9 @@ const Search = (props) => {
         type="text"
         autoFocus
       />
-      <button>Search</button>
+      <button className="search search-button">Search</button>
     </form>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
