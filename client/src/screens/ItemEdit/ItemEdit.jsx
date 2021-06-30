@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import { getItem, updateItem, deleteItem } from "../../services/items";
-export default function ItemEdit(props) {
+import "./ItemEdit.css";
 
+export default function ItemEdit(props) {
   const [item, setItem] = useState({
     name: "",
     quantity: "",
@@ -13,7 +14,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const [input, setInput] = useState(item)
+  const [input, setInput] = useState(item);
   const { id } = useParams();
 
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function ItemEdit(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const updated = await updateItem(id, item);
-    console.log(updated)
+    console.log(updated);
     setUpdated({ updated });
   };
 
@@ -47,73 +48,111 @@ export default function ItemEdit(props) {
 
   if (isUpdated) {
     return <Redirect to={`/items/${id}`} />;
-
-  }
-  else if (deleted) {
+  } else if (deleted) {
     return <Redirect to={`/items`} />;
   }
 
   return (
-    <Layout user={props.user} items={props.items} handleSubmit={props.handleSubmit} handleChange={props.handleChange}
-      setSearchResult={props.setSearchResult} setSearchInput={props.setSearchInput}
+    <Layout
+      user={props.user}
+      items={props.items}
+      handleSubmit={props.handleSubmit}
+      handleChange={props.handleChange}
+      setSearchResult={props.setSearchResult}
+      setSearchInput={props.setSearchInput}
     >
-      <div className="edit-container">
-        <div className="image-container">
-          <img className="edit-item-image" src={item.imgURL} alt={item.name} />
-
-          <form onSubmit={handleSubmit}>
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={item.imgURL}
-              name="imgURL"
-              required
-              onChange={handleChange}
-            />
-          </form>
+      <div className="item-edit-parent">
+        <div className="item-edit-left-side">
+          {/* <img className="edit-item-image" src={item.imgURL} alt={item.name} /> */}
+          <div className="item-edit-form-title-div">
+            <h2 className="item-edit-form-title">Edit Items</h2>
+            <hr className="item-edit-hr item-edit-form-title-hr" />
+          </div>
+          <div className="item-edit-all-forms">
+            <div className="item-edit-all-forms-container">
+              <form className="item-edit-form" onSubmit={handleSubmit}>
+                <div className="item-edit-all-forms-in-container">
+                  <div className="in-form-div item-edit-img-div">
+                    <h3 className="in-form-label">Image URL:</h3>
+                    <input
+                      className="item-edit-input item-edit-input-img"
+                      placeholder="Image Link"
+                      value={item.imgURL}
+                      name="imgURL"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="in-form-div item-edit-name-div">
+                    <h3 className="in-form-label">Name:</h3>
+                    <input
+                      className="item-edit-input item-edit-input-name"
+                      placeholder="Name"
+                      value={item.name}
+                      name="name"
+                      required
+                      autoFocus
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="in-form-div item-edit--div">
+                    <h3 className="in-form-label">Quantity:</h3>
+                    <input
+                      className="item-edit-input item-edit-input-quantity"
+                      placeholder="Quantity"
+                      value={item.quantity}
+                      name="quantity"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="in-form-div item-edit--div">
+                    <h3 className="in-form-label">Price:</h3>
+                    <input
+                      className="item-edit-input item-edit-input-price-price"
+                      placeholder="Price"
+                      value={item.price}
+                      name="price"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="in-form-div item-edit-location-div">
+                    <h3 className="in-form-label">Location:</h3>
+                    <input
+                      className="item-edit-input item-edit-input--category"
+                      placeholder="Category"
+                      value={item.category}
+                      name="category"
+                      required
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <hr className="item-edit-hr item-edit-form-button-hr" />
+                <div className="item-edit-buttons">
+                  <button
+                    className="item-edit-button item-edit-save"
+                    type="button"
+                    type="submit"
+                  >
+                    Save
+                  </button>
+                  <br />
+                  <hr className="item-edit-hr item-edit-small" />
+                  <button
+                    className="item-edit-button item-edit-delete"
+                    type="button"
+                    onClick={handleDelete}
+                  >
+                    Delete
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <form className="edit-form" onSubmit={handleSubmit}>
-          <input
-            className="input-name"
-            placeholder="Name"
-            value={item.name}
-            name="name"
-            required
-            autoFocus
-            onChange={handleChange}
-          />
-          <input
-            className="input-qty"
-            placeholder="Quantity"
-            value={item.quantity}
-            name="quantity"
-            required
-            onChange={handleChange}
-          />
-          <input
-            className="input-price"
-            placeholder="Price"
-            value={item.price}
-            name="price"
-            required
-            onChange={handleChange}
-          />
-          <input
-            className="input-category"
-            placeholder="Category"
-            value={item.category}
-            name="category"
-            required
-            onChange={handleChange}
-          />
-
-          <button type="submit" className="save-btn">
-            Save
-          </button>
-          <button type="button" className="delete-btn" onClick={handleDelete}>
-            Delete
-          </button>
-        </form>
+        <div className="item-edit-right-side"></div>
       </div>
     </Layout>
   );
