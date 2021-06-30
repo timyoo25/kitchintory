@@ -1,6 +1,8 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
-import Search from '../Search/Search'
+import Search from "../Search/Search";
+import { Link } from "react-router-dom";
+
 const authenticatedOptions = (
   <div className="nav-auth-parent">
     <NavLink className="link nav-link-to-items" to="/items">
@@ -46,7 +48,9 @@ export default function Nav(props) {
   return (
     <div className="nav-parent">
       <div className="nav-icon">
-        <img clasName="kitchintory" src="https://i.imgur.com/ClX3n7u.png" />
+        <Link className="nav-link-to-home" to="/">
+          <img clasName="kitchintory" src="https://i.imgur.com/ClX3n7u.png" />
+        </Link>
       </div>
       <div className="nav-search">
         <Search onSubmit={handleSubmit} handleChange={handleChange} />
