@@ -21,19 +21,73 @@
 }
 
 .home-about-container {
-  background-color: darkcyan;
+  background-color: white;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   height: 100%;
 }
 
 .home-about-text {
-  background-color: cornflowerblue;
-  width: 480px;
+  background-color: #f3fdff;
+  margin: 20px 0px 0px 0px;
+  width: 450px;
+  height: 220px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
 }
 
-.home-about-logos {
-  background-color: rgb(59, 69, 88);
-  width: 480px;
+.home-about-text-title {
+  margin-bottom: 10px;
+}
+
+.home-hr {
+  width: 90%;
+}
+
+.home-ul {
+  text-align: left;
+  width: 85%;
+}
+
+.home-about-organize {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+  background-color: #b5d4e7;
+  width: 450px;
+  height: 220px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
+}
+
+.home-about-icons-title {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.home-hr-icons-top {
+  margin-bottom: 20px;
+}
+.home-hr-icons-bottom {
+  margin-top: 15px;
+  margin-bottom: 17px;
+}
+
+.home-about-icons {
+  /* background: coral; */
+}
+
+.home-about-logos-freezer {
+  width: 80px;
+  height: auto;
+}
+
+.home-about-logos-fridge {
+  width: 80px;
+  height: auto;
+}
+
+.home-about-logos-dry {
+  width: 80px;
+  height: auto;
 }
