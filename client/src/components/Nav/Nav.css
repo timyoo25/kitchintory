@@ -25,7 +25,7 @@ Nav {
   /* background: rgb(153, 152, 150); */
 }
 
-.nav-icon > img {
+.nav-link-to-home > img {
   width: 165px;
   height: auto;
 }
@@ -45,13 +45,13 @@ Nav {
   display: flex;
 }
 
-.nav-sign-up-container {
-  /* background: chartreuse; */
+/* .nav-sign-up-container {
+  background: chartreuse;
 }
 
 .nav-sign-in-container {
-  /* background: chocolate; */
-}
+  background: chocolate;
+} */
 
 .nav-links {
   display: flex;
