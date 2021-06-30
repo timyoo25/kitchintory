@@ -2,16 +2,52 @@ import Layout from "../../components/Layout/Layout";
 import "./Home.css";
 
 export default function Home(props) {
-  const { user, items, handleSubmit, handleChange, setSearchResult, setSearchInput } = props;
+  const {
+    user,
+    items,
+    handleSubmit,
+    handleChange,
+    setSearchResult,
+    setSearchInput,
+  } = props;
   return (
-
-    <Layout user={user} items={items} handleSubmit={handleSubmit} handleChange={handleChange}
-      setSearchResult={setSearchResult} setSearchInput={setSearchInput}>
-
+    <Layout
+      user={user}
+      items={items}
+      handleSubmit={handleSubmit}
+      handleChange={handleChange}
+      setSearchResult={setSearchResult}
+      setSearchInput={setSearchInput}
+    >
       <div className="home-parent">
         <div className="top">
-          <img className="home-image" src="https://i.imgur.com/MUdotoA.png" />
+          <div className="home-about-card">
+            <div className="left">
+              <p className="home-about-card-body">
+                Too much is thrown out in kitchens because they don’t keep a
+                close eye on inventory. We want you to better keep track of your
+                stock to cut down on waste and panic in your kitchen. Throwing
+                away food = throwing away profits.
+                <br />
+                <br />
+                <strong className="home-about-card-body-end">
+                  Never forget what’s in your kitchen..
+                </strong>
+              </p>
+              <img
+                clasName="home-kitchintory"
+                src="https://i.imgur.com/ClX3n7u.png"
+              />
+            </div>
+            <div className="right">
+              <img
+                className="home-about-card-img"
+                src="https://i.imgur.com/PnpBTp7.png"
+              />
+            </div>
+          </div>
         </div>
+        {/* <img className="home-image" src="https://i.imgur.com/DiYwkus.png" /> */}
         <div className="bottom">
           <div className="home-about-container">
             <div className="home-about-text">
@@ -59,3 +95,5 @@ export default function Home(props) {
     </Layout>
   );
 }
+
+//src="https://i.imgur.com/MUdotoA.png"
