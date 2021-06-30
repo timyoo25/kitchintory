@@ -46,7 +46,7 @@ export default function ItemCreate(props) {
           <div className='add-item-title'>
             <h3>Add Item</h3>
           </div>
-            <hr className='add-item-line'/>
+          <hr className='add-item-line' />
           <form className='create-item-form' onSubmit={handleSubmit}>
             <div className='create-item-titles' id='create-name'>
               <h5>Name</h5>
@@ -64,7 +64,7 @@ export default function ItemCreate(props) {
                 value={item.quantity}
                 name='quantity'
                 onChange={handleChange}
-                />
+              />
             </div>
             <div className='create-item-titles'>
               <h5>Price</h5>
@@ -73,16 +73,22 @@ export default function ItemCreate(props) {
                 value={item.price}
                 name='price'
                 onChange={handleChange}
-                />
+              />
             </div>
+            {/* //replace with select */}
             <div className='create-item-titles'>
               <h5>Category</h5>
-              <input
+              <select name="category" id="category" onChange={handleChange}>
+                <option value="freezer">Freezer</option>
+                <option value="refrigerator">Refrigerator</option>
+                <option value="dry storage">Dry Storage</option>
+              </select>
+              {/* <input
                 className='input-category create-input'
                 value={item.category}
                 name='category'
                 onChange={handleChange}
-                />
+              /> */}
             </div>
             <div className='create-item-titles' id='create-imgURL'>
               <h5>Image URL</h5>
@@ -91,13 +97,13 @@ export default function ItemCreate(props) {
                 value={item.imgURL}
                 name='imgURL'
                 onChange={handleChange}
-                />
+              />
             </div>
-          </form>
-          <hr className='create-form-line'/>
+            <hr className='create-form-line' />
             <button type='submit' className='create-submit-button'>
               Submit
             </button>
+          </form>
         </div>
       </div>
     </Layout>
