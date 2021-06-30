@@ -39,10 +39,15 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const results = items.filter((item) =>
-      item.name.toLowerCase().includes(searchInput.toLowerCase())
-    )
-    setSearchResult(results)
+    if (searchInput) {
+      const results = items.filter((item) =>
+        item.name.toLowerCase().includes(searchInput.toLowerCase())
+      )
+      setSearchResult(results)
+    } else {
+      setSearchResult(items)
+    }
+    // setSearchInput("")
     history.push('/items')
   }
 
@@ -69,6 +74,7 @@ function App() {
             setSearchResult={setSearchResult}
             setItems={setItems}
             searchResult={searchResult}
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </Route>
@@ -111,6 +117,7 @@ function App() {
           <ItemEdit
             user={user}
             items={items}
+            setItems={setItems}
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             setSearchResult={setSearchResult}
