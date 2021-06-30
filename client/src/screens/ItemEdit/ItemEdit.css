@@ -1,0 +1,107 @@
+.item-edit-parent {
+  height: 100vh;
+  display: flex;
+  /* background: chartreuse; */
+}
+
+.item-edit-left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 50%;
+  background: #a4c5d8;
+  max-height: 500px;
+}
+
+.item-edit-right-side {
+  background: url(https://i.imgur.com/2OuCFqZ.png);
+  background-size: cover;
+  width: 50%;
+  max-height: 500px;
+  height: 100%;
+  /* background: rgb(133, 125, 122); */
+}
+
+.item-edit-form-title-div {
+  font-size: x-large;
+  width: 100%;
+  height: 15%;
+  /* background: cornsilk; */
+}
+
+.item-edit-hr {
+  border: 0.5px solid rgba(0, 0, 0, 0.699);
+  width: 80%;
+}
+
+.item-edit-all-forms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  height: 80%;
+  /* background: cyan; */
+}
+
+.item-edit-all-forms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  height: 80%;
+  /* background: hsl(207, 46%, 45%); */
+}
+
+.item-edit-all-forms-in-container {
+  margin-top: 90px;
+  background: #01243769;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.322);
+}
+
+.item-edit-input {
+  margin: 10px 10px 10px 10px;
+  border: 0px;
+  width: 200px;
+  height: 30px;
+}
+
+.in-form-div {
+  display: flex;
+  justify-content: space-between;
+  /* background: rgb(158, 160, 126); */
+}
+
+.in-form-label {
+  margin: 15px 10px 0px 10px;
+}
+
+.item-edit-form-button-hr {
+  width: 100%;
+}
+
+.item-edit-buttons {
+  margin-top: 20px;
+}
+
+.item-edit-button {
+  border: 0px;
+  width: 150px;
+  height: 35px;
+}
+
+.item-edit-save {
+  background-color: #ddf2d9;
+}
+
+.item-edit-small {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 35px;
+}
+
+.item-edit-delete {
+  background-color: #f8baba;
+}
