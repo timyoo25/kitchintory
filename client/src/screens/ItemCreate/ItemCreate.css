@@ -19,11 +19,14 @@
   /* margin: 5px; */
 }
 
+<<<<<<< HEAD
 /* .layout-children {
   display: flex;
   flex-wrap: wrap-reverse;
 } */
 
+=======
+>>>>>>> fda6e7cbd4b144819951fc0f369c34cec1a939f4
 .create-item-titles {
   display: flex;
   flex-flow: flex-end;
