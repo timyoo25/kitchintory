@@ -4,11 +4,11 @@
 }
 
 .top {
-  background: url(https://i.imgur.com/By1ulN9.png);
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(https://i.imgur.com/By1ulN9.png);
+  background-size: cover;
   width: 100%;
   height: 29.5%;
 }
