@@ -1,50 +1,62 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+
 import Search from "../Search/Search";
 import { Link } from "react-router-dom";
 
-const authenticatedOptions = (
-  <div className="nav-auth-parent">
-    <NavLink className="link nav-link-to-items" to="/items">
-      Your Stock
-    </NavLink>
-    <NavLink className="link nav-link-to-items-create" to="/items/create">
-      Add Item
-    </NavLink>
-    <NavLink className="link nav-sign-out-link" to="/sign-out">
-      Sign Out
-    </NavLink>
-  </div>
-);
 
-const unauthenticatedOptions = (
-  <div className="nav-unauth-parent">
-    <div className="nav-sign-up-container">
-      <NavLink className="link nav-sign-up-link" to="/sign-up">
-        <img
-          className="nav-sign-up-logo"
-          src="https://i.imgur.com/0reVlNp.png"
-        />
-        <br />
-        Sign Up
+export default function Nav(props) {
+  const { user, items, handleSubmit, handleChange, setSearchResult, setSearchInput } = props;
+
+  const clearSearchNull = () => {
+    setSearchResult(null)
+    setSearchInput("")
+  }
+  const clearSearchAll = () => {
+    setSearchResult(items)
+    setSearchInput("")
+  }
+
+  const authenticatedOptions = (
+    <div className="nav-auth-parent">
+      <NavLink className="link nav-link-to-items" to="/items" onClick={clearSearchAll}>
+        Your Stock
+      </NavLink>
+      <NavLink className="link nav-link-to-items-create" to="/create" onClick={clearSearchNull}>
+        Add Item
+      </NavLink>
+      <NavLink className="link nav-sign-out-link" to="/sign-out">
+        Sign Out
       </NavLink>
     </div>
-    <div className="nav-sign-in-container">
-      <NavLink className="link nav-sign-in-link" to="/sign-in">
-        {/* <img
+  );
+
+  const unauthenticatedOptions = (
+    <div className="nav-unauth-parent">
+      <div className="nav-sign-up-container">
+        <NavLink className="link nav-sign-up-link" to="/sign-up">
+          <img
+            className="nav-sign-up-logo"
+            src="https://i.imgur.com/0reVlNp.png"
+          />
+          <br />
+          Sign Up
+        </NavLink>
+      </div>
+      <div className="nav-sign-in-container">
+        <NavLink className="link nav-sign-in-link" to="/sign-in">
+          {/* <img
           className="nav-sign-in-logo"
           src="https://i.imgur.com/pvsys8F.png"
         /> */}
-        <br />
-        Sign In
-      </NavLink>
+          <br />
+          Sign In
+        </NavLink>
+      </div>
     </div>
-  </div>
-);
-const alwaysOptions = <></>;
+  );
+  const alwaysOptions = <></>;
 
-export default function Nav(props) {
-  const { user, handleSubmit, handleChange } = props;
   return (
     <div className="nav-parent">
       <div className="nav-icon">
@@ -53,7 +65,7 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
-        <Search onSubmit={handleSubmit} handleChange={handleChange} />
+        <Search handleSubmit={handleSubmit} handleChange={handleChange} />
       </div>
       <div className="nav-links">
         {user && <div className="welcome">Welcome, {user.username}</div>}

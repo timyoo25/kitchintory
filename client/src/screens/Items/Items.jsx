@@ -8,19 +8,19 @@ const Items = (props) => {
   // const [items, setItems] = useState([]);
   // const [searchResult, setSearchResult] = useState([])
   // const history = useHistory();
-  const { user, items, handleSubmit, handleChange, setItems, setSearchResult, searchResult } = props;
+  const { user, items, handleSubmit, handleChange, setItems, setSearchResult, searchResult, setSearchInput } = props;
   // const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
     const fetchItems = async () => {
       const allItems = await getItems();
       setItems(allItems);
-      setSearchResult(allItems);
-      // if (searchResult) {
-      //   return setSearchResult(searchResult);
-      // } else {
-      //   return setSearchResult(allItems);
-      // }
+      // setSearchResult(allItems);
+      if (searchResult) {
+        return setSearchResult(searchResult);
+      } else {
+        return setSearchResult(allItems);
+      }
     };
     fetchItems();
   }, []);
@@ -48,7 +48,8 @@ const Items = (props) => {
   // }
 
   return (
-    <Layout user={user} handleSubmit={handleSubmit} handleChange={handleChange} >
+    <Layout user={user} items={items} handleSubmit={handleSubmit} handleChange={handleChange}
+      setSearchResult={setSearchResult} setSearchInput={setSearchInput}>
       <div className="items-parent">
         {searchResult?.map((item, index) => {
           return (
