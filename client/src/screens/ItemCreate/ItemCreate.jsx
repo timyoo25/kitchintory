@@ -93,11 +93,11 @@ export default function ItemCreate(props) {
                 onChange={handleChange}
                 />
             </div>
-          </form>
-          <hr className='create-form-line'/>
             <button type='submit' className='create-submit-button'>
               Submit
             </button>
+          </form>
+          <hr className='create-form-line'/>
         </div>
       </div>
     </Layout>
