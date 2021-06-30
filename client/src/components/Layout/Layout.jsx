@@ -1,6 +1,6 @@
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
-import Search from "../Search/Search"
+
 
 
 const Layout = (props) => {
