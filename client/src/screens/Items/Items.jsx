@@ -7,14 +7,14 @@ import "./Items.css";
 const Items = (props) => {
 
 const { user, 
-       items, 
-       handleSubmit, 
-       handleChange, 
-       setItems, 
-       setSearchResult, 
-       searchResult, 
-       searchInput, 
-       setSearchInput } = props;
+      items, 
+      handleSubmit, 
+      handleChange, 
+      setItems, 
+      setSearchResult, 
+      searchResult, 
+      searchInput, 
+      setSearchInput } = props;
 
 
   useEffect(() => {
