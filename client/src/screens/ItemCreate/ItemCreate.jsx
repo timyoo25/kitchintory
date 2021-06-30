@@ -51,9 +51,11 @@ export default function ItemCreate(props) {
           <div className="add-item-title">
             <h3>Add Item</h3>
           </div>
-          <hr className="add-item-line" />
-          <form className="create-item-form" onSubmit={handleSubmit}>
-            <div className="create-item-titles" id="create-name">
+
+          <hr className='add-item-line' />
+          <form className='create-item-form' onSubmit={handleSubmit}>
+            <div className='create-item-titles' id='create-name'>
+
               <h5>Name</h5>
               <input
                 className="input-name create-input"
@@ -80,14 +82,31 @@ export default function ItemCreate(props) {
                 onChange={handleChange}
               />
             </div>
+
+            {/* //replace with select */}
+            <div className='create-item-titles'>
+              <h5>Category</h5>
+              <select name="category" id="category" onChange={handleChange}>
+                <option value="freezer">Freezer</option>
+                <option value="refrigerator">Refrigerator</option>
+                <option value="dry storage">Dry Storage</option>
+              </select>
+              {/* <input
+                className='input-category create-input'
+
             <div className="create-item-titles">
               <h5>Category</h5>
               <input
                 className="input-category create-input"
+
                 value={item.category}
                 name="category"
                 onChange={handleChange}
-              />
+
+              /> */}
+
+         
+
             </div>
             <div className="create-item-titles" id="create-imgURL">
               <h5>Image URL</h5>
@@ -98,8 +117,10 @@ export default function ItemCreate(props) {
                 onChange={handleChange}
               />
             </div>
-            <hr className="create-form-line" />
-            <button type="submit" className="create-submit-button">
+
+            <hr className='create-form-line' />
+            <button type='submit' className='create-submit-button'>
+
               Submit
             </button>
           </form>
