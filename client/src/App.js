@@ -35,12 +35,10 @@ function App() {
       // ...searchInput,
       event.target.value
     )
-
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-
     const results = items.filter((item) =>
       item.name.toLowerCase().includes(searchInput.toLowerCase())
     )
@@ -55,8 +53,12 @@ function App() {
         <Route exact path="/">
           <Home
             user={user}
+            items={items}
             handleSubmit={handleSubmit}
-            handleChange={handleChange} />
+            handleChange={handleChange}
+            setSearchResult={setSearchResult}
+            setSearchInput={setSearchInput}
+          />
         </Route>
 
         <Route exact path="/items">
@@ -67,6 +69,7 @@ function App() {
             setSearchResult={setSearchResult}
             setItems={setItems}
             searchResult={searchResult}
+            setSearchInput={setSearchInput}
           />
         </Route>
 
@@ -85,21 +88,34 @@ function App() {
         <Route exact path="/items/:id">
           <ItemDetail
             user={user}
+            items={items}
             handleSubmit={handleSubmit}
             handleChange={handleChange}
+            setSearchResult={setSearchResult}
+            setSearchInput={setSearchInput}
           />
         </Route>
 
         <Route exact path="/create">
           <ItemCreate
             user={user}
+            items={items}
             handleSubmit={handleSubmit}
             handleChange={handleChange}
+            setSearchResult={setSearchResult}
+            setSearchInput={setSearchInput}
           />
         </Route>
 
         <Route exact path="/items/:id/edit">
-          <ItemEdit user={user} handleSubmit={handleSubmit} handleChange={handleChange} />
+          <ItemEdit
+            user={user}
+            items={items}
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            setSearchResult={setSearchResult}
+            setSearchInput={setSearchInput}
+          />
         </Route>
       </Switch>
     </div>

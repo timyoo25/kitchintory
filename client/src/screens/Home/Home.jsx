@@ -2,9 +2,10 @@ import Layout from "../../components/Layout/Layout";
 import "./Home.css";
 
 export default function Home(props) {
-  const { user, handleSubmit, handleChange } = props;
+  const { user, items, handleSubmit, handleChange, setSearchResult, setSearchInput } = props;
   return (
-    <Layout user={user} handleSubmit={handleSubmit} handleChange={handleChange} >
+    <Layout user={user} items={items} handleSubmit={handleSubmit} handleChange={handleChange}
+      setSearchResult={setSearchResult} setSearchInput={setSearchInput}>
       <div className="home-parent">
         <div className="top">
           <img className="home-image" src="https://i.imgur.com/MUdotoA.png" />

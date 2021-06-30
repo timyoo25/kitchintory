@@ -13,6 +13,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
+  // const [input, setInput] = useState(item)
   const { id } = useParams();
 
   useEffect(() => {
@@ -35,17 +36,24 @@ export default function ItemEdit(props) {
     const updated = await updateItem(id, item);
     setUpdated(updated);
   };
+
   const handleDelete = async (event) => {
     event.preventDefault();
     const deletedItem = await deleteItem(id);
     setDeleted(deletedItem);
   };
-  if (isUpdated || deleted) {
+
+  if (isUpdated) {
     return <Redirect to={`/items/${id}`} />;
+  }
+  else if (deleted) {
+    return <Redirect to={`/items`} />;
   }
 
   return (
-    <Layout user={props.user} handleSubmit={props.handleSubmit} handleChange={props.handleChange}>
+    <Layout user={props.user} items={props.items} handleSubmit={props.handleSubmit} handleChange={props.handleChange}
+      setSearchResult={props.setSearchResult} setSearchInput={props.setSearchInput}
+    >
       <div className="edit-container">
         <div className="image-container">
           <img className="edit-item-image" src={item.imgURL} alt={item.name} />
