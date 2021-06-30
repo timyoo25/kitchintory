@@ -19,11 +19,6 @@
   /* margin: 5px; */
 }
 
-.layout-children {
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
 .create-item-titles {
   display: flex;
   flex-flow: flex-end;
