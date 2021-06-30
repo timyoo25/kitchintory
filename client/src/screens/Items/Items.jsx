@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
 const Items = (props) => {
+
   const {
     user,
     items,
