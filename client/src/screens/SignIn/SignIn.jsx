@@ -48,7 +48,7 @@ const SignIn = (props) => {
         </button>
       );
     } else {
-      return <button type="submit">Sign In</button>;
+      return <button type="submit" className='sign-in-button'>Sign In</button>;
     }
   };
   const { username, password } = form;
@@ -73,7 +73,6 @@ const SignIn = (props) => {
               onChange={handleChange}
             />
           </div>
-          <br />
           <div className="password-container">
             <label>Password</label>
             <br />
@@ -86,10 +85,9 @@ const SignIn = (props) => {
               onChange={handleChange}
             />
           </div>
-          <br />
+          {/* <br /> */}
           {renderError()}
         </form>
-        <br />
         <div className="link">
           <p className="sign-in-prompt">
             Don't have an Account? <Link to="/sign-up">Sign Up Here</Link>
