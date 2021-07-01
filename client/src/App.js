@@ -62,6 +62,7 @@ function App() {
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             setSearchResult={setSearchResult}
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </Route>
@@ -98,6 +99,7 @@ function App() {
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             setSearchResult={setSearchResult}
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </Route>
@@ -109,6 +111,7 @@ function App() {
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             setSearchResult={setSearchResult}
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </Route>
@@ -121,6 +124,7 @@ function App() {
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             setSearchResult={setSearchResult}
+            searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
         </Route>

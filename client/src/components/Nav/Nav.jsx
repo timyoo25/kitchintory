@@ -11,6 +11,7 @@ export default function Nav(props) {
     handleSubmit,
     handleChange,
     setSearchResult,
+    searchInput,
     setSearchInput,
   } = props;
 
@@ -77,7 +78,7 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
-        <Search handleSubmit={handleSubmit} handleChange={handleChange} />
+        <Search handleSubmit={handleSubmit} handleChange={handleChange} searchInput={searchInput}/>
       </div>
       <div className="nav-links">
         {user && <div className="welcome">Welcome, {user.username}</div>}

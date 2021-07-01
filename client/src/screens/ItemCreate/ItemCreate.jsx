@@ -8,8 +8,8 @@ export default function ItemCreate(props) {
   // const { user } = props
   const [item, setItem] = useState({
     name: "",
-    quantity: "",
-    price: "",
+    quantity: 0,
+    price: 0,
     category: "",
     imgURL: "",
   });
@@ -41,6 +41,7 @@ export default function ItemCreate(props) {
       handleSubmit={props.handleSubmit}
       handleChange={props.handleChange}
       setSearchResult={props.setSearchResult}
+      searchInput={props.searchInput}
       setSearchInput={props.setSearchInput}
     >
       <div className="create-item-master">
@@ -52,6 +53,7 @@ export default function ItemCreate(props) {
             <h2>Add Item</h2>
           </div>
           <hr className='add-item-line' />
+
           <div>
             <form className='create-item-form' onSubmit={handleSubmit}>
               <div className='create-item-container'>
@@ -64,24 +66,28 @@ export default function ItemCreate(props) {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="create-item-titles">
-                  <h5>Quantity</h5>
-                  <input
-                    className="input-quantity create-input"
-                    value={item.quantity}
-                    name="quantity"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="create-item-titles">
-                  <h5>Price</h5>
-                  <input
-                    className="input-price create-input"
-                    value={item.price}
-                    name="price"
-                    onChange={handleChange}
-                  />
-                </div>
+                  <div className="create-item-titles">
+                    <h5>Quantity</h5>
+                    <input
+                      type="number"
+                      className="input-quantity create-input"
+                      value={item.quantity}
+                      name="quantity"
+                      min="0"
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="create-item-titles">
+                    <h5>Price</h5>
+                    <input
+                      type="number"
+                      className="input-price create-input"
+                      value={item.price}
+                      name="price"
+                      min="0"
+                      onChange={handleChange}
+                    />
+                  </div>
                 <div className='create-item-titles'>
                   <h5>Category</h5>
                   <select name="category" className='input-category' onChange={handleChange}>
@@ -100,6 +106,7 @@ export default function ItemCreate(props) {
                   />
                 </div>
               </div>
+
             <hr className='create-form-line' />
             <button type='submit' className='create-submit-button'>
               Submit
