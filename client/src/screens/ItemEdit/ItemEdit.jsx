@@ -152,7 +152,9 @@ export default function ItemEdit(props) {
             </div>
           </div>
         </div>
-        <div className="item-edit-right-side"></div>
+        <div className="item-edit-right-side">
+          <img src="https://i.imgur.com/2OuCFqZ.png" />
+        </div>
       </div>
     </Layout>
   );
