@@ -8,6 +8,7 @@ export default function Home(props) {
     handleSubmit,
     handleChange,
     setSearchResult,
+    searchInput,
     setSearchInput,
   } = props;
   return (
@@ -17,6 +18,7 @@ export default function Home(props) {
       handleSubmit={handleSubmit}
       handleChange={handleChange}
       setSearchResult={setSearchResult}
+      searchInput={searchInput}
       setSearchInput={setSearchInput}
     >
       <div className="home-parent">

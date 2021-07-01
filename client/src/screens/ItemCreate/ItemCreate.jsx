@@ -8,8 +8,8 @@ export default function ItemCreate(props) {
   // const { user } = props
   const [item, setItem] = useState({
     name: "",
-    quantity: "",
-    price: "",
+    quantity: 0,
+    price: 0,
     category: "",
     imgURL: "",
   });
@@ -41,6 +41,7 @@ export default function ItemCreate(props) {
       handleSubmit={props.handleSubmit}
       handleChange={props.handleChange}
       setSearchResult={props.setSearchResult}
+      searchInput={props.searchInput}
       setSearchInput={props.setSearchInput}
     >
       <div className="create-item-master">
@@ -67,18 +68,22 @@ export default function ItemCreate(props) {
             <div className="create-item-titles">
               <h5>Quantity</h5>
               <input
+                type="number"
                 className="input-quantity create-input"
                 value={item.quantity}
                 name="quantity"
+                min="0"
                 onChange={handleChange}
               />
             </div>
             <div className="create-item-titles">
               <h5>Price</h5>
               <input
+                type="number"
                 className="input-price create-input"
                 value={item.price}
                 name="price"
+                min="0"
                 onChange={handleChange}
               />
             </div>
@@ -105,7 +110,7 @@ export default function ItemCreate(props) {
 
               /> */}
 
-         
+
 
             </div>
             <div className="create-item-titles" id="create-imgURL">
