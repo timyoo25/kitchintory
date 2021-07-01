@@ -129,6 +129,10 @@
 /* background: coral; */
 /* } */
 
+.home-about-icons {
+  width: 100%;
+}
+
 .home-about-logos-freezer {
   width: 80px;
   height: auto;
