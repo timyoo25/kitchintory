@@ -1,4 +1,4 @@
-.create-item-form {
+.create-item-container {
   background: rgba(1, 36, 55, 0.29);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 5px;
@@ -79,4 +79,3 @@
   margin: 20px;
   background-color: #ddf2d9;
 }
-

@@ -57,9 +57,10 @@ const SignIn = (props) => {
       <div className="form-container">
         <div className="title">
           <h3>Sign In Here</h3>
+        <hr className='sign-in-line' />
         </div>
         <br />
-        <form className="form" onSubmit={onSignIn}>
+        <form className="form" onSubmit={onSignIn} id='sign-in-form'>
           <div className="username-container">
             <label>Username</label>
             <br />
