@@ -16,6 +16,7 @@ const Items = (props) => {
     searchInput,
     setSearchInput,
   } = props;
+
   const [categoryArr, setCategoryArr] = useState([]);
 
   useEffect(() => {
@@ -40,6 +41,7 @@ const Items = (props) => {
       return <i class="fas fa-wind"></i>;
     }
   }
+
   function handleCategory(e) {
     let name = e.target.innerText;
     let itemsCategory = items.filter(
