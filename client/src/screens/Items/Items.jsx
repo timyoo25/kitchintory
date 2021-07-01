@@ -38,6 +38,7 @@ const Items = (props) => {
       handleSubmit={handleSubmit}
       handleChange={handleChange}
       setSearchResult={setSearchResult}
+      searchInput={searchInput}
       setSearchInput={setSearchInput}
     >
       <div className="itemsbckg">

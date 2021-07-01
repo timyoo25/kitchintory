@@ -59,6 +59,7 @@ export default function ItemEdit(props) {
       handleSubmit={props.handleSubmit}
       handleChange={props.handleChange}
       setSearchResult={props.setSearchResult}
+      searchInput={props.searchInput}
       setSearchInput={props.setSearchInput}
     >
       <div className="item-edit-parent">
@@ -98,10 +99,12 @@ export default function ItemEdit(props) {
                   <div className="in-form-div item-edit--div">
                     <h3 className="in-form-label">Quantity:</h3>
                     <input
+                      type="number"
                       className="item-edit-input item-edit-input-quantity"
                       placeholder="Quantity"
                       value={item.quantity}
                       name="quantity"
+                      min="0"
                       required
                       onChange={handleChange}
                     />
@@ -109,10 +112,12 @@ export default function ItemEdit(props) {
                   <div className="in-form-div item-edit--div">
                     <h3 className="in-form-label">Price:</h3>
                     <input
+                      type="number"
                       className="item-edit-input item-edit-input-price-price"
                       placeholder="Price"
                       value={item.price}
                       name="price"
+                      min="0"
                       required
                       onChange={handleChange}
                     />
