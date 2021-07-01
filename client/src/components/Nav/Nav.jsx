@@ -101,11 +101,10 @@ export default function Nav(props) {
             searchInput={searchInput}
           />
 
-        </div>
-
           :
           ""
         }
+        </div>
         {user && <div className="welcome">Welcome, {user.username}!</div>}
         {!user && (
           <div className="welcome">Sign up to get your stock in shape!</div>
