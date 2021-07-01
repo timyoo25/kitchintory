@@ -42,14 +42,15 @@ const Items = (props) => {
     }
   }
 
-  // function handleCategory(e) {
-  //   let name = e.target.innerText;
-  //   let itemsCategory = items.filter(
-  //     (item) => item.category === name.toLowerCase()
-  //   );
-  //   setCategoryArr(itemsCategory);
-  //   console.log(itemsCategory, categoryArr);
-  // } //onClick={handleCategory}
+  function handleCategory(e) {
+    let name = e.target.innerText;
+    let itemsCategory = items.filter(
+      (item) => item.category === name.toLowerCase()
+    );
+    setCategoryArr(itemsCategory);
+    setSearchResult(itemsCategory)
+    console.log(itemsCategory, categoryArr);
+  } //onClick={handleCategory}
 
   return (
     <Layout
@@ -71,19 +72,19 @@ const Items = (props) => {
           </h3>
           <h4>Categories:</h4>
           <div className="categoriesSelection">
-            <div className="categories-icons">
+            <div className="categories-icons" onClick={handleCategory}>
               <i className="far fa-snowflake"></i>
               <div className="categories-title">
                 <h5>Freezer</h5>
               </div>
             </div>
-            <div className="categories-icons">
+            <div className="categories-icons" onClick={handleCategory}>
               <i className="fas fa-wind"></i>
               <div className="categories-title">
                 <h5>Refrigerator </h5>
               </div>
             </div>
-            <div className="categories-icons">
+            <div className="categories-icons" onClick={handleCategory}>
               <i className="fas fa-box-open"></i>
               {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
               <div className="categories-title">
@@ -91,6 +92,7 @@ const Items = (props) => {
               </div>
             </div>
           </div>
+          {/* {searchResult?.map((item, index) => { */}
           {searchResult?.map((item, index) => {
             return (
               <div className="items-container" key={index}>
