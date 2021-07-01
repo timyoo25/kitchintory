@@ -83,20 +83,34 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
+
         <div className="nav-user-prompt-or-welcome">
           {user && <div className="welcome">Welcome, {user.username}!</div>}
           {!user && (
             <div className="welcome">Sign up to get your stock in shape!</div>
           )}
         </div>
-        <dav className="nav-search-bar">
+        <div className="nav-search-bar">
+
+        {user ? 
+
           <Search
             className="search"
             handleSubmit={handleSubmit}
             handleChange={handleChange}
             searchInput={searchInput}
           />
-        </dav>
+
+        </div>
+
+          :
+          ""
+        }
+        {user && <div className="welcome">Welcome, {user.username}!</div>}
+        {!user && (
+          <div className="welcome">Sign up to get your stock in shape!</div>
+        )}
+
       </div>
       <div className="nav-links">
         {alwaysOptions}
