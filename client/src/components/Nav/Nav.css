@@ -1,6 +1,6 @@
-Nav {
+/* Nav {
   display: flex;
-}
+} */
 
 .nav-parent {
   background-color: #dcd7cc;
@@ -21,7 +21,16 @@ Nav {
   /* background: rgb(153, 152, 150); */
 }
 
+.search {
+  margin-top: 13.5%;
+}
+
+.welcome {
+  margin-bottom: 2%;
+}
+
 .nav-link-to-home > img {
+  /* margin-top: 30.5%; */
   width: 165px;
   height: auto;
 }
@@ -110,7 +119,7 @@ Nav {
 .nav-auth-parent {
   display: flex;
   align-items: center;
-  margin-bottom: 18%;
+  /* margin-bottom: 18%; */
   /* background-color: blue; */
 }
 
