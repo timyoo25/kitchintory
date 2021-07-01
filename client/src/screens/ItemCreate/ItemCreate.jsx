@@ -46,7 +46,7 @@ export default function ItemCreate(props) {
     >
       <div className="create-item-master">
         <div className="create-item-image">
-          <img src="https://i.imgur.com/Fpi2uSF.png" />
+          <img className='add-item-img'src="https://i.imgur.com/Fpi2uSF.png" />
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
@@ -105,7 +105,6 @@ export default function ItemCreate(props) {
                   />
                 </div>
               </div>
-
             <hr className='create-form-line' />
             <button type='submit' className='create-submit-button'>
               Submit
