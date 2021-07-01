@@ -1,7 +1,7 @@
 .form-container-parent {
   display: flex;
   flex-flow: column;
-  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -10,10 +10,11 @@
   /* position: absolute; */
   width: 450px;
   height: 58%;
-  /* margin: auto; */
-  /* box-shadow: -10px 10px 35px rgba(0, 0, 0, 0.2); */
+  margin: 0px auto;
+  min-height: 570px;
   box-shadow: -20px 14px 10px rgb(44 82 102 / 25%);
-  margin-bottom: 20px;
+  /* z-index: -1; */
+  /* overflow: hidden; */
 }
 .form-container h3 {
   margin-top: 5px;
@@ -37,11 +38,12 @@ a:visited {
   background: rgba(44, 82, 102, 0.29);
   /* box-shadow: -10px 10px 10px rgba(44, 82, 102, 0.25); */
   box-shadow: inset 0px 0px 10px 20px rgb(44 82 102 / 25%);
+  height: 53%;
+  min-height: 280px;
   display: flex;
   flex-flow: row wrap;
-  margin: auto;
-  height: 53%;
-  width: 70%;
+  margin: 0px auto;
+  width: 75%;
   padding: 30px;
   justify-content: center;
   /* margin-bottom: 30px; */

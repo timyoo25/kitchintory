@@ -48,7 +48,11 @@ const SignIn = (props) => {
         </button>
       );
     } else {
-      return <button type="submit" className='sign-in-button'>Sign In</button>;
+      return (
+        <button type="submit" className="sign-in-button">
+          Sign In
+        </button>
+      );
     }
   };
   const { username, password } = form;
@@ -63,7 +67,7 @@ const SignIn = (props) => {
           <br />
           <form className="form" onSubmit={onSignIn} id="sign-in-form">
             <div className="username-container">
-              <label>Username</label>
+              <label className="sign-in-label">Username</label>
               <br />
               <input
                 required
@@ -76,7 +80,7 @@ const SignIn = (props) => {
             </div>
             <br />
             <div className="password-container">
-              <label>Password</label>
+              <label className="sign-in-label">Password</label>
               <br />
               <input
                 required
@@ -93,7 +97,10 @@ const SignIn = (props) => {
           <br />
           <div className="link">
             <p className="sign-in-prompt">
-              Don't have an Account? <Link to="/sign-up">Sign Up Here</Link>
+              Don't have an Account?
+              <Link to="/sign-up">
+                <i>Sign Up Here!</i>
+              </Link>
             </p>
           </div>
         </div>
