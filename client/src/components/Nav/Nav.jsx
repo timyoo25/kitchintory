@@ -27,41 +27,46 @@ export default function Nav(props) {
   const authenticatedOptions = (
     <div className="nav-auth-parent">
       <NavLink
-        className="link nav-link-to-items"
+        className="nav-auth-link nav-link-to-items"
         to="/items"
         onClick={clearSearchAll}
       >
-        Your Stock
+        <p className="nav-auth-stock-link">Your Stock</p>
       </NavLink>
       <NavLink
-        className="link nav-link-to-items-create"
+        className="nav-auth-link nav-link-to-items-create"
         to="/create"
         onClick={clearSearchNull}
       >
-        Add Item
+        <img
+          className="nav-auth-icon nav-add-item-logo"
+          src="https://i.imgur.com/ag15z7l.png"
+        />
       </NavLink>
-      <NavLink className="link nav-sign-out-link" to="/sign-out">
-        Sign Out
+      <NavLink className="nav-auth-link nav-sign-out-link" to="/sign-out">
+        <img
+          className="nav-auth-icon nav-sign-out-logo"
+          src="https://i.imgur.com/8ZYKbn8.png"
+        />
       </NavLink>
     </div>
   );
 
   const unauthenticatedOptions = (
     <div className="nav-unauth-parent">
-      <div className="nav-sign-up-container">
+      {/* <div className="nav-sign-up-container">
         <NavLink className="link nav-sign-up-link" to="/sign-up">
+        </NavLink>
+      </div> */}
+      <div className="nav-sign-in-container">
+        <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-in">
+          <br />
           <img
-            className="nav-sign-up-logo"
+            className="nav-sign-in-logo"
             src="https://i.imgur.com/0reVlNp.png"
           />
         </NavLink>
       </div>
-      {/* <div className="nav-sign-in-container">
-        <NavLink className="link nav-sign-in-link" to="/sign-in">
-          <br />
-          Sign In
-        </NavLink>
-      </div> */}
     </div>
   );
   const alwaysOptions = <></>;
@@ -81,7 +86,7 @@ export default function Nav(props) {
         <Search handleSubmit={handleSubmit} handleChange={handleChange} searchInput={searchInput}/>
       </div>
       <div className="nav-links">
-        {user && <div className="welcome">Welcome, {user.username}</div>}
+        {user && <div className="welcome">Welcome, {user.username}!</div>}
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </div>

@@ -11,10 +11,6 @@ Nav {
   height: 150px;
 }
 
-.link {
-  text-decoration: none;
-}
-
 .nav-icon {
   display: flex;
   flex-flow: row wrap;
@@ -63,13 +59,70 @@ Nav {
   /* background: rgb(255, 81, 0); */
 }
 
-.nav-sign-up-link {
+.nav-sign-in-link {
   padding-right: 10px;
 }
 
-.nav-sign-up-logo {
-  width: 50px;
-}
 .nav-sign-in-logo {
-  width: 60px;
+  width: 50px;
+  margin-bottom: 30%;
+}
+
+.nav-unauth-link {
+  text-decoration: none;
+}
+
+.nav-auth-link {
+  text-decoration: none;
+  /* background-color: aqua; */
+  height: 100%;
+}
+
+.nav-link-to-items {
+  /* background-color: aliceblue; */
+  height: 100%;
+}
+
+.nav-link-to-items:visited {
+  color: black;
+}
+
+.nav-link-to-items:hover {
+  animation: shift 0.8s ease-in-out;
+}
+
+@keyframes shift {
+  0%,
+  55%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+}
+
+.nav-auth-parent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18%;
+  /* background-color: blue; */
+}
+
+.nav-auth-icon {
+  margin: 0px 10px;
+}
+
+.nav-sign-out-logo {
+  width: 40px;
+}
+
+.nav-add-item-logo {
+  /* margin-top: 5px; */
+  width: 38px;
 }
