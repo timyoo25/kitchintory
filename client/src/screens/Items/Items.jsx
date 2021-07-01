@@ -44,6 +44,7 @@ const Items = (props) => {
 
   function handleCategory(e) {
     let name = e.target.innerText;
+    console.log()
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
@@ -89,7 +90,7 @@ const Items = (props) => {
                 <h5 className="categories-text">Dry Storage</h5>
               </i>
               {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
-              <div className="categories-title"></div>
+
             </div>
           </div>
           {/* {searchResult?.map((item, index) => { */}
