@@ -1,0 +1,85 @@
+.item-detail-parent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  font-family: "Mohave", sans-serif;
+  background: #ffffff url("https://i.imgur.com/71o2pdM.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+}
+.item-detail-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+  margin: 10% auto;
+  padding: 0 5%;
+  border-radius: 3px;
+  background-color: #b5d4e7b5;
+}
+.item-detail-img-column {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+.item-detail-img {
+  width: 100%;
+  height: 100%;
+  margin: 10% auto;
+  border-radius: 3px;
+  box-shadow: -2px 2px 10px black;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.item-detail-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+
+.line {
+  border: 1px solid rgba(0, 0, 0, 0.44);
+  margin: 3px;
+}
+
+.item-detail-name {
+  font-family: "Mohave", sans-serif;
+  font-size: 55px;
+}
+
+.item-detail-details {
+  display: flex;
+  flex-direction: column;
+  font-family: "Abel", sans-serif;
+  font-size: 35px;
+  height: 100%;
+  width: 100%;
+}
+
+.item-detail-quantity {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-detail-price {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-edit-button {
+  background: #ddf2d9;
+  padding: 1px 50px;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+  border: none;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.598);
+}

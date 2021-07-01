@@ -1,0 +1,152 @@
+.home-parent {
+  background-color: white;
+  height: 100vh;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://i.imgur.com/71o2pdM.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 30%;
+  min-height: 280px;
+}
+
+.home-about-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 630px;
+  height: 220px;
+  background-color: #f3fdff;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
+}
+
+.left {
+  padding-left: 10%;
+}
+
+.right {
+  padding-right: 10%;
+}
+
+.left > p {
+  text-align: left;
+}
+
+.home-about-card-body {
+  width: 325px;
+}
+
+.home-about-card-body-end {
+  text-align: center;
+}
+
+.left > img {
+  width: 120px;
+  height: auto;
+  padding-right: 15%;
+  padding-bottom: 2%;
+}
+
+.home-about-card-img {
+  width: 105%;
+  height: 95%;
+}
+
+/* .home-image {
+  width: 100%;
+  height: auto;
+} */
+
+.bottom {
+  background-color: rgb(144, 227, 238);
+  width: 100%;
+  height: 70%;
+}
+
+.home-about-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.home-about-text {
+  background-color: #f3fdff;
+  margin: 20px 0px 0px 0px;
+  width: 450px;
+  height: 220px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
+}
+
+.home-about-text-title {
+  margin-bottom: 10px;
+}
+
+.home-hr {
+  width: 90%;
+}
+
+.home-ul {
+  text-align: left;
+  width: 85%;
+}
+
+.home-about-organize {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+  background-color: #b5d4e7;
+  width: 450px;
+  height: 220px;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
+}
+
+.home-about-icons-title {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* .home-about-icons {
+  display: flex;
+  justify-content: space-around;
+} */
+
+.home-hr-icons-top {
+  margin-bottom: 20px;
+}
+.home-hr-icons-bottom {
+  margin-top: 15px;
+  margin-bottom: 17px;
+}
+
+/* .home-about-icons { */
+/* background: coral; */
+/* } */
+
+.home-about-icons {
+  width: 100%;
+}
+
+.home-about-logos-freezer {
+  width: 80px;
+  height: auto;
+  /* padding: 0px 20px; */
+}
+
+.home-about-logos-fridge {
+  width: 80px;
+  height: auto;
+  padding: 0px 10%;
+}
+
+.home-about-logos-dry {
+  width: 80px;
+  height: auto;
+  padding-left: 1%;
+}
