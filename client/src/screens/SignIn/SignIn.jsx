@@ -54,44 +54,48 @@ const SignIn = (props) => {
   const { username, password } = form;
   return (
     <Layout>
-      <div className="form-container">
-        <div className="title">
-          <h3>Sign In Here</h3>
-        <hr className='sign-in-line' />
-        </div>
-        <br />
-        <form className="form" onSubmit={onSignIn} id='sign-in-form'>
-          <div className="username-container">
-            <label>Username</label>
-            <br />
-            <input
-              required
-              type="text"
-              name="username"
-              value={username}
-              // placeholder='Enter Username'
-              onChange={handleChange}
-            />
+      <div className="form-container-parent">
+        <div className="form-container">
+          <div className="title">
+            <h3>Sign In Here</h3>
+            <hr className="sign-in-line" />
           </div>
-          <div className="password-container">
-            <label>Password</label>
+          <br />
+          <form className="form" onSubmit={onSignIn} id="sign-in-form">
+            <div className="username-container">
+              <label>Username</label>
+              <br />
+              <input
+                required
+                type="text"
+                name="username"
+                value={username}
+                // placeholder='Enter Username'
+                onChange={handleChange}
+              />
+            </div>
             <br />
-            <input
-              required
-              name="password"
-              value={password}
-              type="password"
-              // placeholder='Password'
-              onChange={handleChange}
-            />
+            <div className="password-container">
+              <label>Password</label>
+              <br />
+              <input
+                required
+                name="password"
+                value={password}
+                type="password"
+                // placeholder='Password'
+                onChange={handleChange}
+              />
+            </div>
+            <br />
+            {renderError()}
+          </form>
+          <br />
+          <div className="link">
+            <p className="sign-in-prompt">
+              Don't have an Account? <Link to="/sign-up">Sign Up Here</Link>
+            </p>
           </div>
-          {/* <br /> */}
-          {renderError()}
-        </form>
-        <div className="link">
-          <p className="sign-in-prompt">
-            Don't have an Account? <Link to="/sign-up">Sign Up Here</Link>
-          </p>
         </div>
       </div>
     </Layout>

@@ -7,10 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(https://i.imgur.com/By1ulN9.png);
+  background: url(https://i.imgur.com/71o2pdM.jpg);
   background-size: cover;
   width: 100%;
-  height: 29.5%;
+  height: 30%;
+  min-height: 280px;
 }
 
 .home-about-card {
@@ -63,7 +64,7 @@
 .bottom {
   background-color: rgb(144, 227, 238);
   width: 100%;
-  height: 70.5%;
+  height: 70%;
 }
 
 .home-about-container {
