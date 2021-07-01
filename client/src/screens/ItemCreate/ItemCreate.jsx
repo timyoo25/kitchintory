@@ -49,81 +49,63 @@ export default function ItemCreate(props) {
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
-            <h3>Add Item</h3>
+            <h2>Add Item</h2>
           </div>
-
           <hr className='add-item-line' />
-          <form className='create-item-form' onSubmit={handleSubmit}>
-            <div className='create-item-titles' id='create-name'>
-
-              <h5>Name</h5>
-              <input
-                className="input-name create-input"
-                value={item.name}
-                name="name"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="create-item-titles">
-              <h5>Quantity</h5>
-              <input
-                className="input-quantity create-input"
-                value={item.quantity}
-                name="quantity"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="create-item-titles">
-              <h5>Price</h5>
-              <input
-                className="input-price create-input"
-                value={item.price}
-                name="price"
-                onChange={handleChange}
-              />
-            </div>
-
-            {/* //replace with select */}
-            <div className='create-item-titles'>
-              <h5>Category</h5>
-              <select name="category" id="category" onChange={handleChange}>
-                <option value="freezer">Freezer</option>
-                <option value="refrigerator">Refrigerator</option>
-                <option value="dry storage">Dry Storage</option>
-              </select>
-              {/* <input
-                className='input-category create-input'
-
-            <div className="create-item-titles">
-              <h5>Category</h5>
-              <input
-                className="input-category create-input"
-
-                value={item.category}
-                name="category"
-                onChange={handleChange}
-
-              /> */}
-
-         
-
-            </div>
-            <div className="create-item-titles" id="create-imgURL">
-              <h5>Image URL</h5>
-              <input
-                className="input-imgURL create-input"
-                value={item.imgURL}
-                name="imgURL"
-                onChange={handleChange}
-              />
-            </div>
-
+          <div>
+            <form className='create-item-form' onSubmit={handleSubmit}>
+              <div className='create-item-container'>
+                <div className='create-item-titles' id='create-name'>
+                  <h5>Name</h5>
+                  <input
+                    className="input-name create-input"
+                    value={item.name}
+                    name="name"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="create-item-titles">
+                  <h5>Quantity</h5>
+                  <input
+                    className="input-quantity create-input"
+                    value={item.quantity}
+                    name="quantity"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="create-item-titles">
+                  <h5>Price</h5>
+                  <input
+                    className="input-price create-input"
+                    value={item.price}
+                    name="price"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className='create-item-titles'>
+                  <h5>Category</h5>
+                  <select name="category" className='input-category' onChange={handleChange}>
+                    <option value="freezer">Freezer</option>
+                    <option value="refrigerator">Refrigerator</option>
+                    <option value="dry storage">Dry Storage</option>
+                  </select>
+                </div>
+                <div className="create-item-titles" id="create-imgURL">
+                  <h5>Image URL</h5>
+                  <input
+                    className="input-imgURL create-input"
+                    value={item.imgURL}
+                    name="imgURL"
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
             <hr className='create-form-line' />
             <button type='submit' className='create-submit-button'>
-
               Submit
             </button>
           </form>
+          </div>
         </div>
       </div>
     </Layout>
