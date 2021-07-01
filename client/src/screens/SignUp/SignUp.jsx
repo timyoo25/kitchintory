@@ -15,42 +15,68 @@ const SignUp = (props) => {
     errorMsg: "",
   });
 
-  const handleChange = (event) =>
+  const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
     });
+  };
+
+  const checkPassword = () => {
+    let check = form.password === form.passwordConfirmation ? true : false;
+    return check;
+  };
 
   const onSignUp = async (e) => {
     e.preventDefault();
     const { setUser } = props;
-    try {
-      const user = await signUp(form);
-      setUser(user);
-      history.push("/items"); // <----double check path
-    } catch (error) {
-      console.error(error);
+    console.log(checkPassword());
+    if (checkPassword()) {
+      try {
+        const user = await signUp(form);
+        setUser(user);
+        history.push("/items"); // <----double check path
+      } catch (error) {
+        console.error(error);
+        setForm({
+          username: "",
+          email: "",
+          password: "",
+          passwordConfirmation: "",
+          isError: true,
+          errorMsg: "Sign Up Details Invalid",
+        });
+      }
+    } else {
       setForm({
         username: "",
         email: "",
         password: "",
         passwordConfirmation: "",
         isError: true,
-        errorMsg: "Sign Up Details Invalid",
+        errorMsg: "The passwords must match.",
       });
     }
   };
 
   const renderError = () => {
     const toggleForm = form.isError ? "danger" : "";
+    console.log(form.isError, form.errorMsg);
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          {form.errorMsg}
-        </button>
+        <div>
+          <button type="submit" className="signup-btn">
+            Sign Up
+          </button>
+          <div className={toggleForm}>{form.errorMsg}</div>
+        </div>
       );
     } else {
-      return <button type="submit">Sign Up</button>;
+      return (
+        <button type="submit" className="signup-btn">
+          Sign Up
+        </button>
+      );
     }
   };
 
