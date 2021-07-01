@@ -1,3 +1,7 @@
+.create-item-master {
+  height: 100vh;
+  margin-top: auto;
+}
 .create-item-container {
   background: rgba(1, 36, 55, 0.29);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -39,13 +43,14 @@
   width: 100%;
 }
 
-img {
-  width: 50vw;
+.add-item-img {
+  width: 49.5vw;
+  height: 100.1%;
 }
 
-/* .create-item-image {
+.create-item-image {
   width: 50%;
-} */
+}
 
 .input-name,
 .input-quantity,
