@@ -126,7 +126,6 @@ export default function ItemEdit(props) {
                   <h3 className="in-form-label">Category:</h3>
                     <select name="category" className='item-edit-input category'
                       onChange={handleChange}>
-                      {console.log(item.category)}
                       <option value="freezer"
                         selected={item.category === "freezer"} >Freezer</option>
                       <option value="refrigerator"
