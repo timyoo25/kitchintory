@@ -83,12 +83,16 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
-        <Search
-          className="search"
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          searchInput={searchInput}
-        />
+        {user ? 
+          <Search
+            className="search"
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            searchInput={searchInput}
+          />
+          :
+          ""
+        }
         {user && <div className="welcome">Welcome, {user.username}!</div>}
         {!user && (
           <div className="welcome">Sign up to get your stock in shape!</div>

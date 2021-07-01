@@ -40,21 +40,30 @@ const SignIn = (props) => {
   };
 
   const renderError = () => {
-    const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      );
+        <p className="invalid-msg">{form.errorMsg}</p>
+      )
     } else {
-      return (
-        <button type="submit" className="sign-in-button">
-          Sign In
-        </button>
-      );
+      <p></p>
     }
-  };
+  }
+    // const toggleForm = form.isError ? "danger" : "";
+  //   if (form.isError) {
+  //     return (
+  //       <button type="submit" className={toggleForm}>
+  //         {form.errorMsg}
+  //       </button>
+  //     );
+  //   } else {
+  //     return (
+  //       <button type="submit" className="sign-in-button">
+  //         Sign In
+  //       </button>
+  //     );
+  //   }
+  // };
+    
   const { username, password } = form;
   return (
     <Layout>
@@ -92,6 +101,9 @@ const SignIn = (props) => {
               />
             </div>
             <br />
+            <button type="submit" className="sign-in-button">
+              Sign In
+            </button>
             {renderError()}
           </form>
           <br />
