@@ -83,10 +83,15 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
-        <Search handleSubmit={handleSubmit} handleChange={handleChange} searchInput={searchInput}/>
+        <Search
+          className="search"
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          searchInput={searchInput}
+        />
+        {user && <div className="welcome">Welcome, {user.username}!</div>}
       </div>
       <div className="nav-links">
-        {user && <div className="welcome">Welcome, {user.username}!</div>}
         {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </div>

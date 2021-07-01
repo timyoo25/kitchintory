@@ -83,47 +83,49 @@ const SignUp = (props) => {
   const { username, password, passwordConfirmation } = form;
   return (
     <Layout user={props.user}>
-      <div className="form-container">
-        <h3>
-          Sign Up Here
-          <hr className="hrstyle" />
-        </h3>
-        <form onSubmit={onSignUp} id="sign-up-form">
-          <label>Username:</label>
-          <input
-            required
-            type="text"
-            name="username"
-            value={username}
-            placeholder="Enter username"
-            onChange={handleChange}
-          />
-          <label>Password:</label>
-          <input
-            required
-            name="password"
-            value={password}
-            type="password"
-            placeholder="Enter password"
-            onChange={handleChange}
-          />
-          <label>Confirm Password:</label>
-          <input
-            required
-            name="passwordConfirmation"
-            value={passwordConfirmation}
-            type="password"
-            placeholder="Confirm Password"
-            onChange={handleChange}
-          />
-          {renderError()}
-        </form>
-        <p>
-          Have an account?{" "}
-          <Link to="/sign-in">
-            <i>Sign-In Here!</i>
-          </Link>
-        </p>
+      <div className="form-container-parent">
+        <div className="form-container">
+          <h3>
+            Sign Up Here
+            <hr className="hrstyle" />
+          </h3>
+          <form onSubmit={onSignUp} id="sign-up-form">
+            <label>Username:</label>
+            <input
+              required
+              type="text"
+              name="username"
+              value={username}
+              placeholder="Enter username"
+              onChange={handleChange}
+            />
+            <label>Password:</label>
+            <input
+              required
+              name="password"
+              value={password}
+              type="password"
+              placeholder="Enter password"
+              onChange={handleChange}
+            />
+            <label>Confirm Password:</label>
+            <input
+              required
+              name="passwordConfirmation"
+              value={passwordConfirmation}
+              type="password"
+              placeholder="Confirm Password"
+              onChange={handleChange}
+            />
+            {renderError()}
+          </form>
+          <p>
+            Have an account?{" "}
+            <Link to="/sign-in">
+              <i>Sign-In Here!</i>
+            </Link>
+          </p>
+        </div>
       </div>
     </Layout>
   );

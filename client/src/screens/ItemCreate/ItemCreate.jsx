@@ -46,14 +46,13 @@ export default function ItemCreate(props) {
     >
       <div className="create-item-master">
         <div className="create-item-image">
-          <img src="https://image.shutterstock.com/image-photo/healthy-food-clean-eating-selection-260nw-722718082.jpg" />
+          <img src="https://i.imgur.com/Fpi2uSF.png" />
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
             <h2>Add Item</h2>
           </div>
           <hr className='add-item-line' />
-
           <div>
             <form className='create-item-form' onSubmit={handleSubmit}>
               <div className='create-item-container'>
@@ -66,28 +65,28 @@ export default function ItemCreate(props) {
                     onChange={handleChange}
                   />
                 </div>
-                  <div className="create-item-titles">
-                    <h5>Quantity</h5>
-                    <input
-                      type="number"
-                      className="input-quantity create-input"
-                      value={item.quantity}
-                      name="quantity"
-                      min="0"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="create-item-titles">
-                    <h5>Price</h5>
-                    <input
-                      type="number"
-                      className="input-price create-input"
-                      value={item.price}
-                      name="price"
-                      min="0"
-                      onChange={handleChange}
-                    />
-                  </div>
+                <div className="create-item-titles">
+                  <h5>Quantity</h5>
+                  <input
+                    type="number"
+                    className="input-quantity create-input"
+                    value={item.quantity}
+                    name="quantity"
+                    min="0"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="create-item-titles">
+                  <h5>Price</h5>
+                  <input
+                    type="number"
+                    className="input-price create-input"
+                    value={item.price}
+                    name="price"
+                    min="0"
+                    onChange={handleChange}
+                  />
+                </div>
                 <div className='create-item-titles'>
                   <h5>Category</h5>
                   <select name="category" className='input-category' onChange={handleChange}>

@@ -39,13 +39,13 @@
   width: 100%;
 }
 
-/* img {
+img {
   width: 50vw;
-} */
-
-.create-item-image {
-  width: 50%;
 }
+
+/* .create-item-image {
+  width: 50%;
+} */
 
 .input-name,
 .input-quantity,
