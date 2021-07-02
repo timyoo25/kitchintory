@@ -70,12 +70,10 @@
 }
 
 .home-about-container {
-  background-color: rgba(112, 98, 98, 0.096);
   background-color: #012437;
-
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
   height: 50%;
   padding-bottom: 2%;
   border-bottom: 1px solid black;
@@ -83,24 +81,31 @@
 }
 
 .home-about-text {
-  background-color: #f3fdff;
-  margin: 20px 0px 0px 0px;
+  /* background-color: #f3fdff; */
+  /* margin: 20px 0px 0px 0px; */
   width: 450px;
   height: 220px;
-  box-shadow: -5px 5px 5px rgba(170, 170, 170, 0.24);
+  /* box-shadow: -5px 5px 5px rgba(170, 170, 170, 0.24); */
 }
 
 .home-about-text-title {
   margin-bottom: 10px;
 }
 
-.home-hr {
+.home-hr-icons {
   width: 90%;
+  margin-bottom: 0px;
 }
 
 .home-ul {
   text-align: left;
   width: 85%;
+}
+
+.home-dark-blue-image-item {
+  padding-top: 2%;
+  width: 40%;
+  height: auto;
 }
 
 .home-about-organize {
@@ -109,15 +114,19 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0px 0px 0px;
-  background-color: #b5d4e7;
   width: 450px;
   height: 220px;
-  box-shadow: -5px 5px 5px rgba(170, 170, 170, 0.24);
 }
 
 .home-about-icons-title {
+  color: white;
   text-align: center;
   margin-bottom: 0px;
+}
+
+.home-organize-icons {
+  padding: 0px 2%;
+  color: white;
 }
 
 /* .home-about-icons {
@@ -162,11 +171,9 @@
 .home-bottom-image {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 50%;
   padding: 1% 0px;
-  /* background-color: red; */
-  /* width: 200px;
-  height: auto; */
 }
 
 .home-bottom-images {
