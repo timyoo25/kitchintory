@@ -30,6 +30,7 @@ const Items = (props) => {
       }
     };
     fetchItems();
+    //eslint-disable-next-line
   }, []);
 
   function checkIcons(item) {
@@ -44,14 +45,14 @@ const Items = (props) => {
 
   function handleCategory(e) {
     let name = e.target.innerText;
-    console.log()
+    console.log();
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
     setCategoryArr(itemsCategory);
     setSearchResult(itemsCategory);
     console.log(itemsCategory, categoryArr);
-  } //onClick={handleCategory}
+  }
 
   return (
     <Layout
@@ -92,11 +93,8 @@ const Items = (props) => {
               <i className="fas fa-box-open">
                 <h5 className="categories-text">Dry Storage</h5>
               </i>
-              {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
-
             </div>
           </div>
-          {/* {searchResult?.map((item, index) => { */}
           {searchResult?.map((item, index) => {
             return (
               <div className="items-container" key={index}>

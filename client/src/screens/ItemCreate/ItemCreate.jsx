@@ -46,17 +46,21 @@ export default function ItemCreate(props) {
     >
       <div className="create-item-master">
         <div className="create-item-image">
-          <img className='add-item-img'src="https://i.imgur.com/Fpi2uSF.png" />
+          <img
+            className="add-item-img"
+            src="https://i.imgur.com/Fpi2uSF.png"
+            alt="add item"
+          />
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
             <h2>Add Item</h2>
           </div>
-          <hr className='add-item-line' />
+          <hr className="add-item-line" />
           <div>
-            <form className='create-item-form' onSubmit={handleSubmit}>
-              <div className='create-item-container'>
-                <div className='create-item-titles' id='create-name'>
+            <form className="create-item-form" onSubmit={handleSubmit}>
+              <div className="create-item-container">
+                <div className="create-item-titles" id="create-name">
                   <h5>Name</h5>
                   <input
                     className="input-name create-input"
@@ -87,9 +91,13 @@ export default function ItemCreate(props) {
                     onChange={handleChange}
                   />
                 </div>
-                <div className='create-item-titles'>
+                <div className="create-item-titles">
                   <h5>Category</h5>
-                  <select name="category" className='input-category' onChange={handleChange}>
+                  <select
+                    name="category"
+                    className="input-category"
+                    onChange={handleChange}
+                  >
                     <option value="freezer">Freezer</option>
                     <option value="refrigerator">Refrigerator</option>
                     <option value="dry storage">Dry Storage</option>
@@ -105,11 +113,11 @@ export default function ItemCreate(props) {
                   />
                 </div>
               </div>
-            <hr className='create-form-line' />
-            <button type='submit' className='create-submit-button'>
-              Submit
-            </button>
-          </form>
+              <hr className="create-form-line" />
+              <button type="submit" className="create-submit-button">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
