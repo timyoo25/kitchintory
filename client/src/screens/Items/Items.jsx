@@ -102,18 +102,16 @@ const Items = (props) => {
                   <div className="item-img">
                     <img src={item.imgURL} alt={item.name} />
                   </div>
-                  <h2 className="item-name">
-                    {item.name}
-                    <hr />
-                  </h2>
-                  <p className="item-quantity">
+                  <h2 className="item-name">{item.name}</h2>
+                  <hr className="item-name-hr" />
+                  <p className="item-quantity item-specifics">
                     <b>Quantity: </b>
                     {item.quantity}
                   </p>
-                  <p className="item-price">
-                    <b>Price:</b> {item.price}
+                  <p className="item-price  item-specifics">
+                    <b>Price:</b> ${item.price}
                   </p>
-                  <p className="item-category">
+                  <p className="item-category  item-specifics">
                     <b>Category:</b> {item.category}
                     <span className="category-icon">{checkIcons(item)}</span>
                   </p>

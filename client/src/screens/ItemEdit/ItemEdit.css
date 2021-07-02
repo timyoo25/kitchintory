@@ -16,6 +16,8 @@
 }
 
 .item-edit-right-side {
+  background-image: url(https://i.imgur.com/2OuCFqZ.png);
+  background-size: cover;
   display: flex;
   align-items: center;
   width: 50%;
