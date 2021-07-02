@@ -67,13 +67,15 @@ export default function ItemDetail(props) {
               <div className="item-detail-quantity">
                 Quantity: {item.quantity}
               </div>
+
               <div className="item-detail-price">
-                Price: ${item.price}
+               Price: ${item.price?.toFixed(2)}
               </div>
               <div className='item-detail-category'>
                 Location: {item.category}
               </div>
               <hr className="edit-line" />
+
             </div>
             <Link className="item-detail-to-edit" to={`${item._id}/edit`}>
               <button className="item-edit-button">Edit</button>

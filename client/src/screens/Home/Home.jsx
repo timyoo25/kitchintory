@@ -59,7 +59,7 @@ export default function Home(props) {
               <hr className="home-hr" />
               <ul className="home-ul">
                 <li className="home-li">
-                  Add what’s in you kitchens’ freezer, refrigerator, and dry
+                  Add items for your kitchen's freezer, refrigerator, and dry
                   storage.
                 </li>
                 <li className="home-li">
