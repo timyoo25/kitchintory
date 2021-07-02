@@ -67,8 +67,8 @@ export default function ItemDetail(props) {
               <div className="item-detail-price">
                 Price: ${item.price?.toFixed(2)}
               </div>
-              <div className="item-detail-category">
-                Location: {item.category}
+              <div className='item-detail-category'>
+                Category: {item.category}
               </div>
               <hr className="edit-line" />
             </div>
