@@ -41,12 +41,14 @@ export default function Nav(props) {
         <img
           className="nav-auth-icon nav-add-item-logo"
           src="https://i.imgur.com/ag15z7l.png"
+          alt="add item"
         />
       </NavLink>
       <NavLink className="nav-auth-link nav-sign-out-link" to="/sign-out">
         <img
           className="nav-auth-icon nav-sign-out-logo"
           src="https://i.imgur.com/8ZYKbn8.png"
+          alt="sign-out"
         />
       </NavLink>
     </div>
@@ -64,6 +66,7 @@ export default function Nav(props) {
           <img
             className="nav-sign-in-logo"
             src="https://i.imgur.com/0reVlNp.png"
+            alt="sign in"
           />
         </NavLink>
       </div>
@@ -78,7 +81,7 @@ export default function Nav(props) {
           <img
             clasName="kitchintory"
             src="https://i.imgur.com/ClX3n7u.png"
-            alt="Kitchin-tory"
+            alt="Kitchin-tory logo"
           />
         </Link>
       </div>
