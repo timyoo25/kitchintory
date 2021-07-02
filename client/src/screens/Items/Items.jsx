@@ -44,7 +44,7 @@ const Items = (props) => {
 
   function handleCategory(e) {
     let name = e.target.innerText;
-    console.log()
+    console.log();
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
@@ -90,7 +90,6 @@ const Items = (props) => {
                 <h5 className="categories-text">Dry Storage</h5>
               </i>
               {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
-
             </div>
           </div>
           {/* {searchResult?.map((item, index) => { */}
@@ -101,18 +100,16 @@ const Items = (props) => {
                   <div className="item-img">
                     <img src={item.imgURL} alt={item.name} />
                   </div>
-                  <h2 className="item-name">
-                    {item.name}
-                    <hr />
-                  </h2>
-                  <p className="item-quantity">
+                  <h2 className="item-name">{item.name}</h2>
+                  <hr className="item-name-hr" />
+                  <p className="item-quantity item-specifics">
                     <b>Quantity: </b>
                     {item.quantity}
                   </p>
-                  <p className="item-price">
-                    <b>Price:</b> {item.price}
+                  <p className="item-price  item-specifics">
+                    <b>Price:</b> ${item.price}
                   </p>
-                  <p className="item-category">
+                  <p className="item-category  item-specifics">
                     <b>Category:</b> {item.category}
                     <span className="category-icon">{checkIcons(item)}</span>
                   </p>
