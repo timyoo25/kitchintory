@@ -44,7 +44,11 @@
 
 .item-edit-hr {
   border: 0.5px solid rgba(0, 0, 0, 0.699);
-  width: 80%;
+  width: 54%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* padding: 5%; */
+  /* padding-top: 2%; */
 }
 
 .item-edit-all-forms {
@@ -112,9 +116,9 @@
 }
 
 .item-edit-small {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  width: 35px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  width: 15%;
 }
 
 .item-edit-delete {
