@@ -1,5 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 import "./Home.css";
+import { Link } from 'react-router-dom'
+
 
 export default function Home(props) {
   const {
@@ -26,21 +28,19 @@ export default function Home(props) {
           <div className="home-about-card">
             <div className="left">
               <p className="home-about-card-body">
-                Too much is thrown out in kitchens because they don’t keep a
-                close eye on inventory. We want you to better keep track of your
-                stock to cut down on waste and panic in your kitchen. Throwing
-                away food = throwing away profits.
+                <p className="call-to-action"><Link to="/sign-up" className="sign-up-link">SIGN UP</Link> FOR KITCHINTORY TODAY!</p>
+               Throwing Away Food = Throwing Away Profits
                 <br />
                 <br />
                 <strong className="home-about-card-body-end">
                   Never forget what’s in your kitchen..
                 </strong>
               </p>
-              <img
+              {/* <img
                 clasName="home-kitchintory"
                 src="https://i.imgur.com/ClX3n7u.png"
                 alt="basket of food"
-              />
+              /> */}
             </div>
             <div className="right">
               <img

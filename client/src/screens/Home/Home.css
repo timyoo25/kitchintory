@@ -24,8 +24,20 @@
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
 }
 
+.call-to-action {
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+.sign-up-link {
+  text-decoration: none;
+  color: #b5d4e7;
+}
 .left {
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-bottom: 3%;
 }
 
 .right {
@@ -33,11 +45,14 @@
 }
 
 .left > p {
-  text-align: left;
+  text-align: center;
 }
 
 .home-about-card-body {
   width: 325px;
+  font-family: "Abel", sans-serif;
+
+  font-size: 15px;
 }
 
 .home-about-card-body-end {
@@ -47,12 +62,13 @@
 .left > img {
   width: 120px;
   height: auto;
+
   padding-right: 15%;
   padding-bottom: 2%;
 }
 
 .home-about-card-img {
-  width: 105%;
+  width: 90%;
   height: 95%;
 }
 
