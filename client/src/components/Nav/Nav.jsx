@@ -83,20 +83,28 @@ export default function Nav(props) {
         </Link>
       </div>
       <div className="nav-search">
-        {user ? 
-          <Search
-            className="search"
-            handleSubmit={handleSubmit}
-            handleChange={handleChange}
-            searchInput={searchInput}
-          />
-          :
-          ""
-        }
-        {user && <div className="welcome">Welcome, {user.username}!</div>}
+        <div className="nav-user-prompt-or-welcome">
+          {user && <div className="welcome">Welcome, {user.username}!</div>}
+          {!user && (
+            <div className="welcome">Sign up to get your stock in shape!</div>
+          )}
+        </div>
+        <div className="nav-search-bar">
+          {user ? (
+            <Search
+              className="search"
+              handleSubmit={handleSubmit}
+              handleChange={handleChange}
+              searchInput={searchInput}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+        {/* {user && <div className="welcome">Welcome, {user.username}!</div>}
         {!user && (
           <div className="welcome">Sign up to get your stock in shape!</div>
-        )}
+        )} */}
       </div>
       <div className="nav-links">
         {alwaysOptions}

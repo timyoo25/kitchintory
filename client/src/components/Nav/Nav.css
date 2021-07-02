@@ -21,10 +21,6 @@
   /* background: rgb(153, 152, 150); */
 }
 
-.search {
-  margin-top: 13.5%;
-}
-
 .welcome {
   margin-bottom: 2%;
 }
@@ -43,6 +39,25 @@
   width: 50%;
   height: 150px;
   /* background: rgb(105, 91, 65); */
+}
+
+/* .search { */
+/* margin-top: 13.5%; */
+/* } */
+
+.nav-user-prompt-or-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aliceblue; */
+  width: 100%;
+  height: 32%;
+}
+
+.nav-search-bar {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 58%;
 }
 
 .nav-unauth-parent {

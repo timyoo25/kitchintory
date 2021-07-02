@@ -44,6 +44,7 @@ const Items = (props) => {
 
   function handleCategory(e) {
     let name = e.target.innerText;
+    console.log()
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
@@ -69,30 +70,30 @@ const Items = (props) => {
         <br />
         <br />
         <div className="items-parent">
-          <h3>
+          <h2 className="items-your-stock">
             Your Stock
             <hr />
-          </h3>
+          </h2>
           <h4>Categories:</h4>
-          <div className="categoriesSelection">
+          <div className="categories-selection">
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="far fa-snowflake"></i>
-              <div className="categories-title">
-                <h5>Freezer</h5>
-              </div>
+              <i className="far fa-snowflake">
+                <h5 className="categories-text">Freezer</h5>
+              </i>
+              <div className="categories-title"></div>
             </div>
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="fas fa-wind"></i>
-              <div className="categories-title">
-                <h5>Refrigerator </h5>
-              </div>
+              <i className="fas fa-wind">
+                <h5 className="categories-text">Refrigerator </h5>
+              </i>
+              <div className="categories-title"></div>
             </div>
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="fas fa-box-open"></i>
+              <i className="fas fa-box-open">
+                <h5 className="categories-text">Dry Storage</h5>
+              </i>
               {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
-              <div className="categories-title">
-                <h5>Dry Storage</h5>
-              </div>
+
             </div>
           </div>
           {/* {searchResult?.map((item, index) => { */}
