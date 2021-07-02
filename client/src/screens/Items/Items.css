@@ -1,9 +1,28 @@
-.itemsbckg {
-  background-image: url(https://i.imgur.com/71o2pdM.jpg);
-  background-size: cover;
+/* .itemsbckg {
+  /* background-image: url(https://i.imgur.com/71o2pdM.jpg); */
+/* background-size: cover;
   background-attachment: scroll;
   background-position: center;
   margin-top: auto;
+}*/
+/* source for backgorund image: https://css-tricks.com/perfect-full-page-background-image/  */
+#bckg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+#bckg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%; /*try 55% */
+  min-height: 50%;
 }
 .items-parent {
   display: flex;

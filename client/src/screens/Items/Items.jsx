@@ -48,7 +48,7 @@ const Items = (props) => {
       (item) => item.category === name.toLowerCase()
     );
     setCategoryArr(itemsCategory);
-    setSearchResult(itemsCategory)
+    setSearchResult(itemsCategory);
     console.log(itemsCategory, categoryArr);
   } //onClick={handleCategory}
 
@@ -63,6 +63,9 @@ const Items = (props) => {
       setSearchInput={setSearchInput}
     >
       <div className="itemsbckg">
+        <div id="bckg">
+          <img src="https://i.imgur.com/71o2pdM.jpg" alt="kitchen" />
+        </div>
         <br />
         <br />
         <div className="items-parent">
