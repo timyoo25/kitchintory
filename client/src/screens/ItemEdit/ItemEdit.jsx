@@ -104,6 +104,7 @@ export default function ItemEdit(props) {
                       placeholder="Quantity"
                       value={item.quantity}
                       name="quantity"
+                      step="0.01"
                       min="0"
                       required
                       onChange={handleChange}
@@ -117,7 +118,6 @@ export default function ItemEdit(props) {
                       placeholder="Price"
                       value={item.price}
                       name="price"
-                      step="0.01"
                       min="0"
                       required
                       onChange={handleChange}
