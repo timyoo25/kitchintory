@@ -56,6 +56,11 @@ export default function ItemCreate(props) {
           <div className="add-item-title">
             <h2>Add Item</h2>
           </div>
+          <img
+            src="https://i.imgur.com/qqDf7bL.png"
+            alt="add kitchen logo"
+            id="addlogo"
+          />
           <hr className="add-item-line" />
           <div>
             <form className="create-item-form" onSubmit={handleSubmit}>
