@@ -52,20 +52,29 @@ export default function ItemDetail(props) {
             <img className="item-detail-img" src={item.imgURL} alt="" />
           </div>
           <div className="item-detail-column">
-            <div className="item-detail-name">
-              {item.name}
-              <hr className="line" />
+            <div>
+              <div className="item-detail-title">
+                <div className='item-detail-name'>
+                  {item.name}
+                </div>
+                <div className="category-detail-icon">
+                  {checkIcons(item)}
+                </div>
+              </div>
+                <hr className="title-line" />
             </div>
-
             <div className="item-detail-details">
               <div className="item-detail-quantity">
                 Quantity: {item.quantity}
               </div>
-              <div className="item-detail-price">Price: ${item.price}</div>
-          <span className="categorydetail-icon">{checkIcons(item)}</span>
-              <hr className="line" />
+              <div className="item-detail-price">
+                Price: ${item.price}
+              </div>
+              <div className='item-detail-category'>
+                Location: {item.category}
+              </div>
+              <hr className="edit-line" />
             </div>
-
             <Link className="item-detail-to-edit" to={`${item._id}/edit`}>
               <button className="item-edit-button">Edit</button>
             </Link>

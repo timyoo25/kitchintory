@@ -47,14 +47,24 @@
   height: 30vh;
 }
 
-.line {
-  border: 1px solid rgba(0, 0, 0, 0.44);
-  margin: 3px;
+.edit-line {
+  border: 1px solid black;
+  margin-top: 30px;
+  width: 300px;
+}
+
+.title-line {
+  border: 1px solid black;
+  margin-top: 10px;
+  width: 300px;
 }
 
 .item-detail-name {
   font-family: "Mohave", sans-serif;
   font-size: 55px;
+  /* text-align: left; */
+  /* margin-right: 100px; */
+  width: 50%;
 }
 
 .item-detail-details {
@@ -66,12 +76,9 @@
   width: 100%;
 }
 
-.item-detail-quantity {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.item-detail-price {
+.item-detail-quantity,
+.item-detail-price,
+.item-detail-category {
   display: flex;
   justify-content: flex-start;
 }
@@ -86,10 +93,17 @@
   margin-top: 10px;
 }
 
-.categorydetail-icon {
+.category-detail-icon {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  width: 100%;
+  flex-flow: wrap;
+  /* justify-content: flex-end; */
+  /* margin-bottom: 20px; */
+  width: 50%;
+  padding-top: 6%;
+  padding-left: 15%;
+  size: 100px;
+}
+
+.item-detail-title {
+  display: flex;
 }
