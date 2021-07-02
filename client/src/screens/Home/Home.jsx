@@ -54,7 +54,7 @@ export default function Home(props) {
         {/* <img className="home-image" src="https://i.imgur.com/DiYwkus.png" /> */}
         <div className="bottom">
           <div className="home-about-container">
-            <div className="home-about-text">
+            <div className="home-about-text home-about-container-child">
               <h2 className="home-about-text-title">A Taste Of Kitchintory</h2>
               <hr className="home-hr" />
               <ul className="home-ul">
@@ -72,7 +72,7 @@ export default function Home(props) {
               </ul>
               <hr className="home-hr" />
             </div>
-            <div className="home-about-organize">
+            <div className="home-about-organize home-about-container-child">
               <h2 className="home-about-icons-title">
                 Organize what’s in stock by
               </h2>
@@ -96,6 +96,16 @@ export default function Home(props) {
               </div>
               <hr className="home-hr home-hr-icons-bottom" />
             </div>
+          </div>
+          <div className="home-bottom-image">
+            <img
+              className="home-bottom-images home-bottom-image-item"
+              src="https://i.imgur.com/PtCcirm.png"
+            />
+            <img
+              className="home-bottom-images home-bottom-image-detail"
+              src="https://i.imgur.com/9wOK9zR.png"
+            />
           </div>
         </div>
       </div>

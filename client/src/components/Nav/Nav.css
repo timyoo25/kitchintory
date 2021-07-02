@@ -9,6 +9,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 150px;
+  border-bottom: 1px solid black;
 }
 
 .nav-icon {
