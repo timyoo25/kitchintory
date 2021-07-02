@@ -1,12 +1,15 @@
 import "./Search.css";
 import { useContext } from "react";
-import { Context } from '../../Context'
+import { userContext, itemContext, resultContext, inputContext } from '../../Context'
 import { useHistory } from 'react-router-dom'
 
 
 const Search = (props) => {
-const [user, setUser, items, setItems,
-  searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context)
+  const [user, setUser] = useContext(userContext)
+  const [items, setItems] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput, setSearchInput] = useContext(inputContext)
+
 const history = useHistory() 
 const handleChange = (event) => {
   event.preventDefault()

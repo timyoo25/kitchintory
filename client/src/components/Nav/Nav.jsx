@@ -1,14 +1,17 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import { Context } from '../../Context'
+import { userContext, itemContext, resultContext, inputContext } from '../../Context'
 import Search from "../Search/Search";
 import { verifyUser } from "../../services/users"
 import { Link } from "react-router-dom";
 
 export default function Nav(props) {
-  const [user, setUser, items, setItems,
-    searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context)
+
+  const [user, setUser] = useContext(userContext)
+  const [items, setItems] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput, setSearchInput] = useContext(inputContext)
   const {
     // user,
     // items,

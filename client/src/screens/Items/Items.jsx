@@ -1,6 +1,6 @@
 import { getItems } from "../../services/items";
 import { useEffect, useState, useContext } from "react";
-import { Context } from '../../Context'
+import { userContext, itemContext, resultContext, inputContext } from '../../Context'
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Items.css";
@@ -17,8 +17,11 @@ const Items = (props) => {
     // searchInput,
     // setSearchInput,
   } = props;
-  const [user, setUser, items, setItems,
-    searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context)
+
+  const [items, setItems] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput, setSearchInput] = useContext(inputContext)
+
   const [categoryArr, setCategoryArr] = useState([]);
 
   useEffect(() => {

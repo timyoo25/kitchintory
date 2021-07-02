@@ -14,7 +14,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const [input, setInput] = useState(item);
+  // const [input, setInput] = useState(item);
   const { id } = useParams();
 
   useEffect(() => {

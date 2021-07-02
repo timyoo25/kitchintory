@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Context } from '../../Context'
+import { userContext, itemContext, resultContext, inputContext } from '../../Context'
 import { signUp } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
@@ -7,8 +7,7 @@ import "./SignUp.css";
 
 const SignUp = (props) => {
   const history = useHistory();
-  const [user, setUser, items, setItems,
-    searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context);
+  const [user, setUser] = useContext(userContext)
   const [form, setForm] = useState({
     username: "",
     password: "",
