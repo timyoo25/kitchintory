@@ -122,9 +122,13 @@
   overflow: hidden; */
   width: 180px;
   margin-bottom: 0px;
+  padding-top: 2%;
 }
 .items-container hr {
+  background: black;
+  /* margin: 0px; */
   margin-top: 0px;
+  /* margin-bottom: -5px; */
   width: 80%;
   /* border: 1px solid black;
   background-color: black; */
