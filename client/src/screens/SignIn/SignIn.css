@@ -8,12 +8,11 @@
 .sign-in-line {
   border: 1px solid rgba(0, 0, 0, 0.541);
   width: 80%;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
 #sign-in-form {
   background: rgba(44, 82, 102, 0.29);
-  /* box-shadow: -10px 10px 10px rgba(44, 82, 102, 0.25); */
   box-shadow: inset 0px 0px 10px 20px rgb(44 82 102 / 25%);
   height: 53%;
   min-height: 280px;
@@ -27,19 +26,23 @@
 }
 
 .sign-in-label {
-  /* background-color: rgb(69, 82, 82); */
   font-size: x-large;
-  width: 200px;
-  padding: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.username-container,
+.password-container {
   text-align: left;
 }
 
-/* .password-container { */
-/* background-color: aqua; */
-/* } */
+.sign-in-password,
+.sign-in-username {
+  align-self: center;
+}
 
 #sign-in-form input {
-  width: 80%;
+  width: 90%;
   padding: 7px 15px;
   margin: auto;
   font-size: 1rem;

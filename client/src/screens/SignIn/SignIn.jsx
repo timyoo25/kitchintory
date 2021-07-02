@@ -48,21 +48,6 @@ const SignIn = (props) => {
       <p></p>
     }
   }
-    // const toggleForm = form.isError ? "danger" : "";
-  //   if (form.isError) {
-  //     return (
-  //       <button type="submit" className={toggleForm}>
-  //         {form.errorMsg}
-  //       </button>
-  //     );
-  //   } else {
-  //     return (
-  //       <button type="submit" className="sign-in-button">
-  //         Sign In
-  //       </button>
-  //     );
-  //   }
-  // };
     
   const { username, password } = form;
   return (
@@ -76,29 +61,33 @@ const SignIn = (props) => {
           <br />
           <form className="form" onSubmit={onSignIn} id="sign-in-form">
             <div className="username-container">
-              <label className="sign-in-label">Username</label>
-              <br />
-              <input
-                required
-                type="text"
-                name="username"
-                value={username}
-                // placeholder='Enter Username'
-                onChange={handleChange}
-              />
+              <div className="sign-in-label">
+                <label>Username:</label>
+              </div>
+              <div className='sign-in-username'>
+                <input
+                  required
+                  type="text"
+                  name="username"
+                  value={username}
+                  onChange={handleChange}
+                  />
+              </div>
             </div>
             <br />
             <div className="password-container">
-              <label className="sign-in-label">Password</label>
-              <br />
-              <input
-                required
-                name="password"
-                value={password}
-                type="password"
-                // placeholder='Password'
-                onChange={handleChange}
-              />
+              <div className="sign-in-label">
+                <label>Password:</label>
+              </div>
+              <div className='sign-in-password'>
+                <input
+                  required
+                  name="password"
+                  value={password}
+                  type="password"
+                  onChange={handleChange}
+                  />
+              </div>
             </div>
             <br />
             <button type="submit" className="sign-in-button">

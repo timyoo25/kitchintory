@@ -70,5 +70,5 @@ a:visited {
   font-size: medium;
 }
 #sign-up-form .danger {
-  background: #e57373;
+  color: red;
 }

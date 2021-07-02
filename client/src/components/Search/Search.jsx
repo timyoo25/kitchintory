@@ -1,7 +1,7 @@
 import "./Search.css";
 
 const Search = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <form className="search-form" onSubmit={(e) => props.handleSubmit(e)}>
       <input

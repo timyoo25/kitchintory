@@ -39,12 +39,14 @@ export default function Home(props) {
               <img
                 clasName="home-kitchintory"
                 src="https://i.imgur.com/ClX3n7u.png"
+                alt="basket of food"
               />
             </div>
             <div className="right">
               <img
                 className="home-about-card-img"
                 src="https://i.imgur.com/PnpBTp7.png"
+                alt="about card"
               />
             </div>
           </div>
@@ -79,14 +81,17 @@ export default function Home(props) {
                 <img
                   className="home-about-logos-freezer"
                   src="https://i.imgur.com/3TQ43M3.png"
+                  alt="freezer logo"
                 ></img>
                 <img
                   className="home-about-logos-fridge"
                   src="https://i.imgur.com/pBM793j.png"
+                  alt="fridge logo"
                 ></img>
                 <img
                   className="home-about-logos-dry"
                   src="https://i.imgur.com/cLEkiJ3.png"
+                  alt="dry logo"
                 ></img>
               </div>
               <hr className="home-hr home-hr-icons-bottom" />
