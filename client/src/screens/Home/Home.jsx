@@ -54,57 +54,36 @@ export default function Home(props) {
         {/* <img className="home-image" src="https://i.imgur.com/DiYwkus.png" /> */}
         <div className="bottom">
           <div className="home-about-container">
-            <div className="home-about-text home-about-container-child">
-              <h2 className="home-about-text-title">A Taste Of Kitchintory</h2>
-              <hr className="home-hr" />
-              <ul className="home-ul">
-                <li className="home-li">
-                  Add items for your kitchen's freezer, refrigerator, and dry
-                  storage.
-                </li>
-                <li className="home-li">
-                  Update the price and quantity as your business grows and
-                  booms!
-                </li>
-                <li className="home-li">
-                  Edit and Delete items you have as you change your needs.
-                </li>
-              </ul>
-              <hr className="home-hr" />
-            </div>
+            <img
+              className=" home-dark-blue-image-item"
+              src="https://i.imgur.com/Jguggtc.png"
+            />
             <div className="home-about-organize home-about-container-child">
               <h2 className="home-about-icons-title">
                 Organize what’s in stock by
               </h2>
-              <hr className="home-hr home-hr-icons-top" />
+              <hr className="home-hr home-hr-icons" />
               <div className="home-about-icons">
-                <img
-                  className="home-about-logos-freezer"
-                  src="https://i.imgur.com/3TQ43M3.png"
-                  alt="freezer logo"
-                ></img>
-                <img
-                  className="home-about-logos-fridge"
-                  src="https://i.imgur.com/pBM793j.png"
-                  alt="fridge logo"
-                ></img>
-                <img
-                  className="home-about-logos-dry"
-                  src="https://i.imgur.com/cLEkiJ3.png"
-                  alt="dry logo"
-                ></img>
+                <i className="far fa-snowflake home-snowflake home-organize-icons">
+                  <h5 className="categories-text">Freezer</h5>
+                </i>
+                <i className="fas fa-wind home-fridge home-organize-icons">
+                  <h5 className="categories-text">Refrigerator </h5>
+                </i>
+                <i className="fas fa-box-open home-dry home-organize-icons">
+                  <h5 className="categories-text">Dry Storage</h5>
+                </i>
               </div>
-              <hr className="home-hr home-hr-icons-bottom" />
             </div>
           </div>
           <div className="home-bottom-image">
-            <img
-              className="home-bottom-images home-bottom-image-item"
-              src="https://i.imgur.com/PtCcirm.png"
-            />
+            <div className="home-about-text home-about-container-child">
+              <h2 className="home-about-text-title">A Taste Of Kitchintory</h2>
+              <hr className="home-hr" />
+            </div>
             <img
               className="home-bottom-images home-bottom-image-detail"
-              src="https://i.imgur.com/9wOK9zR.png"
+              src="https://i.imgur.com/0A5m41r.png"
             />
           </div>
         </div>
