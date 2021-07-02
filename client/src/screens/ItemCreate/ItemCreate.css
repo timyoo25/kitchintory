@@ -1,13 +1,15 @@
 .create-item-master {
   height: 100vh;
   margin-top: auto;
+  /* overflow: auto; */
 }
 
 .create-item-container {
   background: rgba(1, 36, 55, 0.29);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  margin: 10px 40px 40px 40px;
+  padding: 100px 40px;
+  margin: 80px 100px 80px 100px;
+  height: 150%;
 }
 
 .create-item-image {
@@ -19,6 +21,10 @@
   width: 50%;
   height: 100%;
   padding: auto;
+}
+
+.create-item-form {
+  margin-top: -20px;
 }
 
 .create-item-parent {
@@ -40,7 +46,8 @@
   display: flex;
   flex-flow: flex-end;
   justify-content: space-between;
-  margin: -20px 10px;
+  /* margin: -20px 10px; */
+  margin: 20px;
 }
 
 #create-imgURL {
@@ -70,11 +77,16 @@
 .input-price,
 .input-category,
 .input-imgURL {
-  height: 80%;
+  /* height: 100%; */
+  padding: 10px;
   width: 60%;
   align-content: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   border: none;
+}
+
+.input-name {
+  padding-top: -20px;
 }
 
 .add-item-line {

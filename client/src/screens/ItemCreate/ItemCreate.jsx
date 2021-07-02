@@ -54,7 +54,7 @@ export default function ItemCreate(props) {
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
-            <h2>Add Item</h2>
+            <h1>Add Item</h1>
           </div>
           <img
             src="https://i.imgur.com/qqDf7bL.png"
@@ -66,7 +66,7 @@ export default function ItemCreate(props) {
             <form className="create-item-form" onSubmit={handleSubmit}>
               <div className="create-item-container">
                 <div className="create-item-titles" id="create-name">
-                  <h5>Name</h5>
+                  <h2>Name</h2>
                   <input
                     className="input-name create-input"
                     value={item.name}
@@ -75,7 +75,7 @@ export default function ItemCreate(props) {
                   />
                 </div>
                 <div className="create-item-titles">
-                  <h5>Quantity</h5>
+                  <h2>Quantity</h2>
                   <input
                     type="number"
                     className="input-quantity create-input"
@@ -86,7 +86,7 @@ export default function ItemCreate(props) {
                   />
                 </div>
                 <div className="create-item-titles">
-                  <h5>Price</h5>
+                  <h2>Price</h2>
                   <input
                     type="number"
                     className="input-price create-input"
@@ -98,7 +98,7 @@ export default function ItemCreate(props) {
                   />
                 </div>
                 <div className="create-item-titles">
-                  <h5>Category</h5>
+                  <h2>Category</h2>
                   <select
                     name="category"
                     className="input-category"
@@ -111,7 +111,7 @@ export default function ItemCreate(props) {
                   </select>
                 </div>
                 <div className="create-item-titles" id="create-imgURL">
-                  <h5>Image URL</h5>
+                  <h2>Image URL</h2>
                   <input
                     className="input-imgURL create-input"
                     value={item.imgURL}
