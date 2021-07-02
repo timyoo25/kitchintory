@@ -54,14 +54,10 @@ export default function ItemDetail(props) {
           <div className="item-detail-column">
             <div>
               <div className="item-detail-title">
-                <div className='item-detail-name'>
-                  {item.name}
-                </div>
-                <div className="category-detail-icon">
-                  {checkIcons(item)}
-                </div>
+                <div className="item-detail-name">{item.name}</div>
+                <div className="category-detail-icon">{checkIcons(item)}</div>
               </div>
-                <hr className="title-line" />
+              <hr className="title-line" />
             </div>
             <div className="item-detail-details">
               <div className="item-detail-quantity">
@@ -69,13 +65,12 @@ export default function ItemDetail(props) {
               </div>
 
               <div className="item-detail-price">
-               Price: ${item.price?.toFixed(2)}
+                Price: ${item.price?.toFixed(2)}
               </div>
               <div className='item-detail-category'>
                 Category: {item.category}
               </div>
               <hr className="edit-line" />
-
             </div>
             <Link className="item-detail-to-edit" to={`${item._id}/edit`}>
               <button className="item-edit-button">Edit</button>
