@@ -122,18 +122,33 @@ export default function ItemEdit(props) {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='in-form-div item-edit--div'>
-                  <h3 className="in-form-label">Category:</h3>
-                    <select name="category" className='item-edit-input category'
-                      onChange={handleChange}>
-                      <option value="freezer"
-                        selected={item.category === "freezer"} >Freezer</option>
-                      <option value="refrigerator"
-                        selected={item.category === "refrigerator"}>Refrigerator</option>
-                      <option value="dry storage"
-                        selected={item.category === "dry storage"}>Dry Storage</option>
-                  </select>
-                </div>
+                  <div className="in-form-div item-edit--div">
+                    <h3 className="in-form-label">Category:</h3>
+                    <select
+                      name="category"
+                      className="item-edit-input category"
+                      onChange={handleChange}
+                    >
+                      <option
+                        value="freezer"
+                        selected={item.category === "freezer"}
+                      >
+                        Freezer
+                      </option>
+                      <option
+                        value="refrigerator"
+                        selected={item.category === "refrigerator"}
+                      >
+                        Refrigerator
+                      </option>
+                      <option
+                        value="dry storage"
+                        selected={item.category === "dry storage"}
+                      >
+                        Dry Storage
+                      </option>
+                    </select>
+                  </div>
                 </div>
                 <hr className="item-edit-hr item-edit-form-button-hr" />
                 <div className="item-edit-buttons">
@@ -159,7 +174,7 @@ export default function ItemEdit(props) {
           </div>
         </div>
         <div className="item-edit-right-side">
-          <img src="https://i.imgur.com/2OuCFqZ.png" />
+          {/* <img src="https://i.imgur.com/2OuCFqZ.png" /> */}
         </div>
       </div>
     </Layout>

@@ -2,11 +2,17 @@
   height: 100vh;
   margin-top: auto;
 }
+
 .create-item-container {
   background: rgba(1, 36, 55, 0.29);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 5px;
   margin: 10px 40px 40px 40px;
+}
+
+.create-item-image {
+  background-image: url(https://i.imgur.com/Fpi2uSF.png);
+  background-size: cover;
 }
 
 .create-item-parent {
