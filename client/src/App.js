@@ -26,6 +26,7 @@ function App() {
       user ? setUser(user) : setUser(null);
     };
     fetchUser();
+  // eslint-disable-next-line
   }, []);
 
   const handleChange = (event) => {
