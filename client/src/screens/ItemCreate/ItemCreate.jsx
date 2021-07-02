@@ -86,6 +86,7 @@ export default function ItemCreate(props) {
                     className="input-price create-input"
                     value={item.price}
                     name="price"
+                    step="0.01"
                     min="0"
                     onChange={handleChange}
                   />
@@ -97,6 +98,7 @@ export default function ItemCreate(props) {
                     className="input-category"
                     onChange={handleChange}
                   >
+                    <option value=""></option>
                     <option value="freezer">Freezer</option>
                     <option value="refrigerator">Refrigerator</option>
                     <option value="dry storage">Dry Storage</option>
