@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { userContext, itemContext, resultContext, inputContext } from '../../Context'
+import { userContext } from '../../Context'
 import { signIn } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";

@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { userContext, itemContext, resultContext, inputContext } from '../../Context'
+import { userContext } from '../../Context'
 import { signOut } from '../../services/users'
 import { useHistory } from 'react-router-dom'
 

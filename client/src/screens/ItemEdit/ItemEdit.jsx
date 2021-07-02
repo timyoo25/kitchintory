@@ -14,7 +14,6 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  // const [input, setInput] = useState(item);
   const { id } = useParams();
 
   useEffect(() => {
@@ -53,15 +52,7 @@ export default function ItemEdit(props) {
   }
 
   return (
-    <Layout
-      // user={props.user}
-      // items={props.items}
-      handleSubmit={props.handleSubmit}
-      handleChange={props.handleChange}
-      // setSearchResult={props.setSearchResult}
-      // searchInput={props.searchInput}
-      // setSearchInput={props.setSearchInput}
-    >
+    <Layout>
       <div className="item-edit-parent">
         <div className="item-edit-left-side">
           {/* <img className="edit-item-image" src={item.imgURL} alt={item.name} /> */}

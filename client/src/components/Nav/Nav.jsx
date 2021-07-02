@@ -12,15 +12,6 @@ export default function Nav(props) {
   const [items, setItems] = useContext(itemContext)
   const [searchResult, setSearchResult] = useContext(resultContext)
   const [searchInput, setSearchInput] = useContext(inputContext)
-  const {
-    // user,
-    // items,
-    handleSubmit,
-    handleChange,
-    // setSearchResult,
-    // searchInput,
-    // setSearchInput,
-  } = props;
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -108,8 +99,8 @@ export default function Nav(props) {
           {user ? (
             <Search
               className="search"
-              handleSubmit={handleSubmit}
-              handleChange={handleChange}
+              // handleSubmit={handleSubmit}
+              // handleChange={handleChange}
               // searchInput={searchInput}
             />
           ) : (

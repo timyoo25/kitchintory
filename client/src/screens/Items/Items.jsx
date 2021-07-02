@@ -1,23 +1,11 @@
 import { getItems } from "../../services/items";
 import { useEffect, useState, useContext } from "react";
-import { userContext, itemContext, resultContext, inputContext } from '../../Context'
+import { itemContext, resultContext, inputContext } from '../../Context'
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
-const Items = (props) => {
-  const {
-    // user,
-    // items,
-    handleSubmit,
-    handleChange,
-    // setItems,
-    // setSearchResult,
-    // searchResult,
-    // searchInput,
-    // setSearchInput,
-  } = props;
-
+const Items = () => {
   const [items, setItems] = useContext(itemContext)
   const [searchResult, setSearchResult] = useContext(resultContext)
   const [searchInput, setSearchInput] = useContext(inputContext)
@@ -59,15 +47,7 @@ const Items = (props) => {
   } //onClick={handleCategory}
 
   return (
-    <Layout
-      // user={user}
-      // items={items}
-      handleSubmit={handleSubmit}
-      handleChange={handleChange}
-      // setSearchResult={setSearchResult}
-      // searchInput={searchInput}
-      // setSearchInput={setSearchInput}
-    >
+    <Layout>
       <div className="itemsbckg">
         <br />
         <br />

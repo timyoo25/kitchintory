@@ -5,17 +5,16 @@ import { useHistory } from 'react-router-dom'
 
 
 const Search = (props) => {
-  const [user, setUser] = useContext(userContext)
   const [items, setItems] = useContext(itemContext)
   const [searchResult, setSearchResult] = useContext(resultContext)
   const [searchInput, setSearchInput] = useContext(inputContext)
 
 const history = useHistory() 
+
 const handleChange = (event) => {
   event.preventDefault()
-  // console.log(event)
+
   setSearchInput(
-    // ...searchInput,
     event.target.value
   )
 }
@@ -33,6 +32,7 @@ const handleSubmit = (event) => {
   // setSearchInput("")
   history.push('/items')
 }
+  
   return (
     <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
       <input
