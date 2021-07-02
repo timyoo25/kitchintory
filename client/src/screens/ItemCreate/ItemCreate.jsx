@@ -4,8 +4,9 @@ import { createItem } from "../../services/items";
 import { Redirect } from "react-router-dom";
 import "./ItemCreate.css";
 
-export default function ItemCreate() {
 
+export default function ItemCreate(props) {
+  // const { user } = props //
   const [item, setItem] = useState({
     name: "",
     quantity: 0,
