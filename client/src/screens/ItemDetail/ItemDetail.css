@@ -18,7 +18,8 @@
   height: 80%;
   padding: 0 5%;
   border-radius: 3px;
-  background-color: #b5d4e7b5;
+  background-color: #b5d4e7e0;
+  box-shadow: -5px 5px 20px rgb(0 0 0 / 60%);
 }
 .item-detail-img-column {
   display: flex;
