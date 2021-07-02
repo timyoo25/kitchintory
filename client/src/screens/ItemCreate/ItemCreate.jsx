@@ -17,6 +17,7 @@ export default function ItemCreate(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!item.imgURL) item.imgURL = 'https://res.cloudinary.com/willnolin/image/upload/v1625236095/color_basket_utvt7n.png'
     const created = await createItem(item);
     setCreated({ created });
   };

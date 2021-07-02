@@ -109,7 +109,7 @@ const Items = (props) => {
                     {item.quantity}
                   </p>
                   <p className="item-price  item-specifics">
-                    <b>Price:</b> ${item.price.toFixed(2)}
+                    <b>Price:</b> ${item.price?.toFixed(2)}
                   </p>
                   <p className="item-category  item-specifics">
                     <b>Category:</b> {item.category}
