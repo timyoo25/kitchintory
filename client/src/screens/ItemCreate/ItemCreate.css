@@ -33,6 +33,7 @@
 .add-item-title {
   align-self: center;
   /* margin: 5px; */
+  margin-bottom: -30px;
 }
 
 .create-item-titles {
@@ -96,4 +97,11 @@
   border: none;
   margin: 20px;
   background-color: #ddf2d9;
+}
+
+#addlogo {
+  width: 50px;
+  height: 50px;
+  margin-left: 28px;
+  margin-top: -13px;
 }
