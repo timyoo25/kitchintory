@@ -61,7 +61,7 @@ export default function ItemDetail(props) {
               <div className="item-detail-quantity">
                 Quantity: {item.quantity}
               </div>
-              <div className="item-detail-price">Price: ${item.price}</div>
+              <div className="item-detail-price">Price: ${item.price.toFixed(2)}</div>
           <span className="categorydetail-icon">{checkIcons(item)}</span>
               <hr className="line" />
             </div>
