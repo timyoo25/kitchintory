@@ -62,6 +62,7 @@ export default function ItemDetail(props) {
                 Quantity: {item.quantity}
               </div>
               <div className="item-detail-price">Price: ${item.price}</div>
+          <span className="categorydetail-icon">{checkIcons(item)}</span>
               <hr className="line" />
             </div>
 
@@ -70,7 +71,6 @@ export default function ItemDetail(props) {
             </Link>
             <br />
           </div>
-          <span className="categorydetail-icon">{checkIcons(item)}</span>
         </div>
       </div>
     </Layout>
