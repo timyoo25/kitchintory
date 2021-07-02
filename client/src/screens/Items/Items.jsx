@@ -75,7 +75,7 @@ const Items = (props) => {
             Your Stock
             <hr />
           </h2>
-          <h4>Categories:</h4>
+          <h3 className="items-your-stock-category-title">Categories:</h3>
           <div className="categories-selection">
             <div className="categories-icons" onClick={handleCategory}>
               <i className="far fa-snowflake">
