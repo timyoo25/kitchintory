@@ -45,11 +45,11 @@ export default function ItemCreate(props) {
     >
       <div className="create-item-master">
         <div className="create-item-image">
-          <img
+          {/* <img
             className="add-item-img"
             src="https://i.imgur.com/Fpi2uSF.png"
             alt="add item"
-          />
+          /> */}
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
