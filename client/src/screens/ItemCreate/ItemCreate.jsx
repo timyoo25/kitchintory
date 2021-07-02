@@ -36,13 +36,13 @@ export default function ItemCreate(props) {
 
   return (
     <Layout
-      user={props.user}
-      items={props.items}
+      // user={props.user}
+      // items={props.items}
       handleSubmit={props.handleSubmit}
       handleChange={props.handleChange}
-      setSearchResult={props.setSearchResult}
-      searchInput={props.searchInput}
-      setSearchInput={props.setSearchInput}
+      // setSearchResult={props.setSearchResult}
+      // searchInput={props.searchInput}
+      // setSearchInput={props.setSearchInput}
     >
       <div className="create-item-master">
         <div className="create-item-image">

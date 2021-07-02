@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from '../../Context'
 import { signIn } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
@@ -6,7 +7,8 @@ import "./SignIn.css";
 
 const SignIn = (props) => {
   const history = useHistory();
-
+  const [user, setUser, items, setItems,
+    searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context);
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -23,7 +25,7 @@ const SignIn = (props) => {
 
   const onSignIn = async (e) => {
     e.preventDefault();
-    const { setUser } = props;
+
     try {
       const user = await signIn(form);
       setUser(user);

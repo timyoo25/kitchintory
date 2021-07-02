@@ -1,22 +1,24 @@
 import { getItems } from "../../services/items";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { Context } from '../../Context'
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Items.css";
 
 const Items = (props) => {
   const {
-    user,
-    items,
+    // user,
+    // items,
     handleSubmit,
     handleChange,
-    setItems,
-    setSearchResult,
-    searchResult,
-    searchInput,
-    setSearchInput,
+    // setItems,
+    // setSearchResult,
+    // searchResult,
+    // searchInput,
+    // setSearchInput,
   } = props;
-
+  const [user, setUser, items, setItems,
+    searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context)
   const [categoryArr, setCategoryArr] = useState([]);
 
   useEffect(() => {
@@ -55,13 +57,13 @@ const Items = (props) => {
 
   return (
     <Layout
-      user={user}
-      items={items}
+      // user={user}
+      // items={items}
       handleSubmit={handleSubmit}
       handleChange={handleChange}
-      setSearchResult={setSearchResult}
-      searchInput={searchInput}
-      setSearchInput={setSearchInput}
+      // setSearchResult={setSearchResult}
+      // searchInput={searchInput}
+      // setSearchInput={setSearchInput}
     >
       <div className="itemsbckg">
         <br />

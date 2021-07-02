@@ -7,7 +7,11 @@ import './ItemDetail.css'
 
 export default function ItemDetail(props) {
   const [item, setItem] = useState({});
-  const { user, items, handleSubmit, handleChange, setSearchResult, searchInput, setSearchInput } = props;
+  const {
+    // user, items,
+    handleSubmit, handleChange,
+    // setSearchResult, searchInput, setSearchInput
+  } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -19,8 +23,15 @@ export default function ItemDetail(props) {
   }, [id]);
 
   return (
-    <Layout user={user} items={items} handleSubmit={handleSubmit} handleChange={handleChange}
-      setSearchResult={setSearchResult} searchInput={searchInput} setSearchInput={setSearchInput}>
+    <Layout
+      // user={user}
+      // items={items}
+      handleSubmit={handleSubmit}
+      handleChange={handleChange}
+      // setSearchResult={setSearchResult}
+      // searchInput={searchInput}
+      // setSearchInput={setSearchInput}
+    >
       <div className="item-detail-parent">
         <div className="item-detail-container">
           <div className="item-detail-img-column">

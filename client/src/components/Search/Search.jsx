@@ -1,13 +1,41 @@
 import "./Search.css";
+import { useContext } from "react";
+import { Context } from '../../Context'
+import { useHistory } from 'react-router-dom'
+
 
 const Search = (props) => {
-  console.log(props)
+const [user, setUser, items, setItems,
+  searchResult, setSearchResult, searchInput, setSearchInput] = useContext(Context)
+const history = useHistory() 
+const handleChange = (event) => {
+  event.preventDefault()
+  // console.log(event)
+  setSearchInput(
+    // ...searchInput,
+    event.target.value
+  )
+}
+
+const handleSubmit = (event) => {
+  event.preventDefault()
+  if (searchInput) {
+    const results = items.filter((item) =>
+      item.name.toLowerCase().includes(searchInput.toLowerCase())
+    )
+    setSearchResult(results)
+  } else {
+    setSearchResult(items)
+  }
+  // setSearchInput("")
+  history.push('/items')
+}
   return (
-    <form className="search-form" onSubmit={(e) => props.handleSubmit(e)}>
+    <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
       <input
         className="search search-input"
-        value={props?.searchInput}
-        onChange={(e) => props.handleChange(e)}
+        value={searchInput}
+        onChange={(e) => handleChange(e)}
         name="Search"
         placeholder="Search"
         type="text"

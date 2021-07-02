@@ -54,13 +54,13 @@ export default function ItemEdit(props) {
 
   return (
     <Layout
-      user={props.user}
-      items={props.items}
+      // user={props.user}
+      // items={props.items}
       handleSubmit={props.handleSubmit}
       handleChange={props.handleChange}
-      setSearchResult={props.setSearchResult}
-      searchInput={props.searchInput}
-      setSearchInput={props.setSearchInput}
+      // setSearchResult={props.setSearchResult}
+      // searchInput={props.searchInput}
+      // setSearchInput={props.setSearchInput}
     >
       <div className="item-edit-parent">
         <div className="item-edit-left-side">

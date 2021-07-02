@@ -3,23 +3,23 @@ import "./Home.css";
 
 export default function Home(props) {
   const {
-    user,
-    items,
+    // user,
+    // items,
     handleSubmit,
     handleChange,
-    setSearchResult,
-    searchInput,
-    setSearchInput,
+    // setSearchResult,
+    // searchInput,
+    // setSearchInput,
   } = props;
   return (
     <Layout
-      user={user}
-      items={items}
+      // user={user}
+      // items={items}
       handleSubmit={handleSubmit}
       handleChange={handleChange}
-      setSearchResult={setSearchResult}
-      searchInput={searchInput}
-      setSearchInput={setSearchInput}
+      // setSearchResult={setSearchResult}
+      // searchInput={searchInput}
+      // setSearchInput={setSearchInput}
     >
       <div className="home-parent">
         <div className="top">
