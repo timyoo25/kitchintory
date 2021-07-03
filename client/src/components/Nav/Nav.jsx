@@ -62,12 +62,15 @@ export default function Nav(props) {
       </div> */}
       <div className="nav-sign-in-container">
         <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-up">
-          <br />
-          <img
-            className="nav-sign-in-logo"
-            src="https://i.imgur.com/0reVlNp.png"
-            alt="sign in"
-          />
+          <div className="nav-sign-in-container">
+            <br />
+            <img
+              className="nav-sign-in-logo"
+              src="https://i.imgur.com/0reVlNp.png"
+              alt="sign up"
+            />
+          </div>
+          <div className="nav-sign-in-text">Sign Up</div>
         </NavLink>
       </div>
     </div>
@@ -88,9 +91,6 @@ export default function Nav(props) {
       <div className="nav-search">
         <div className="nav-user-prompt-or-welcome">
           {user && <div className="welcome">Welcome, {user.username}!</div>}
-          {!user && (
-            <div className="welcome">Sign up to get your stock in shape!</div>
-          )}
         </div>
         <div className="nav-search-bar">
           {user ? (
@@ -101,7 +101,7 @@ export default function Nav(props) {
               searchInput={searchInput}
             />
           ) : (
-            ""
+            "Welcome to Kitchin-tory!"
           )}
         </div>
         {/* {user && <div className="welcome">Welcome, {user.username}!</div>}

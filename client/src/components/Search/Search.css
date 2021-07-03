@@ -2,10 +2,13 @@
   height: 30px;
   width: 300px;
   border: 0px;
+  padding-left: 2%;
+  font-family: Abel;
 }
 
 .search-button {
   background-color: #b5d4e7;
   height: 32px;
   border: 0px;
+  font-family: Abel;
 }
