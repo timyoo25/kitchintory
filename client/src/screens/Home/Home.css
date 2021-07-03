@@ -51,7 +51,6 @@
 .home-about-card-body {
   width: 325px;
   font-family: "Abel", sans-serif;
-
   font-size: 15px;
 }
 
@@ -72,13 +71,7 @@
   height: 95%;
 }
 
-/* .home-image {
-  width: 100%;
-  height: auto;
-} */
-
 .bottom {
-  /* background-color: rgb(144, 227, 238); */
   width: 100%;
   height: 60%;
   padding-bottom: 1%;
@@ -96,34 +89,6 @@
   border-top: 1px solid black;
 }
 
-.home-about-text {
-  /* background-color: #f3fdff; */
-  /* margin: 20px 0px 0px 0px; */
-  width: 450px;
-  height: 220px;
-  /* box-shadow: -5px 5px 5px rgba(170, 170, 170, 0.24); */
-}
-
-.home-about-text-title {
-  margin-bottom: 10px;
-}
-
-.home-hr-icons {
-  width: 90%;
-  margin-bottom: 0px;
-}
-
-.home-ul {
-  text-align: left;
-  width: 85%;
-}
-
-.home-dark-blue-image-item {
-  padding-top: 2%;
-  width: 40%;
-  height: auto;
-}
-
 .home-about-organize {
   display: flex;
   flex-flow: row wrap;
@@ -138,50 +103,51 @@
   color: white;
   text-align: center;
   margin-bottom: 0px;
+  font-size: 35px;
+}
+
+.home-hr-icons {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.home-dark-blue-image-item {
+  padding-top: 2%;
+  width: 40%;
+  height: auto;
 }
 
 .home-organize-icons {
   padding: 0px 2%;
   color: white;
+  font-size: 65px;
 }
-
-/* .home-about-icons {
-  display: flex;
-  justify-content: space-around;
-} */
-
-.home-hr-icons-top {
-  margin-bottom: 20px;
-}
-.home-hr-icons-bottom {
-  margin-top: 15px;
-  margin-bottom: 17px;
-}
-
-/* .home-about-icons { */
-/* background: coral; */
-/* } */
 
 .home-about-icons {
   width: 100%;
 }
 
-.home-about-logos-freezer {
-  width: 80px;
-  height: auto;
-  /* padding: 0px 20px; */
+.home-about-text {
+  width: 450px;
+  height: 220px;
 }
 
-.home-about-logos-fridge {
-  width: 80px;
-  height: auto;
-  padding: 0px 10%;
+.home-about-text-title {
+  font-size: 35px;
 }
 
-.home-about-logos-dry {
-  width: 80px;
-  height: auto;
-  padding-left: 1%;
+.home-hr-last {
+  margin: 5% 0px;
+  border: 1px solid black;
+}
+
+.home-add-example {
+  width: 15%;
+  padding: 0px 5%;
+}
+
+.home-add-sign-example {
+  width: 19%;
 }
 
 .home-bottom-image {

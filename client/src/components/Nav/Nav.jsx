@@ -61,7 +61,7 @@ export default function Nav(props) {
         </NavLink>
       </div> */}
       <div className="nav-sign-in-container">
-        <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-in">
+        <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-up">
           <br />
           <img
             className="nav-sign-in-logo"

@@ -1,7 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 import "./Home.css";
-import { Link } from 'react-router-dom'
-
+import { Link } from "react-router-dom";
 
 export default function Home(props) {
   const {
@@ -28,8 +27,13 @@ export default function Home(props) {
           <div className="home-about-card">
             <div className="left">
               <p className="home-about-card-body">
-                <p className="call-to-action"><Link to="/sign-up" className="sign-up-link">SIGN UP</Link> FOR KITCHINTORY TODAY!</p>
-               Throwing Away Food = Throwing Away Profits
+                <p className="call-to-action">
+                  <Link to="/sign-up" className="sign-up-link">
+                    SIGN UP
+                  </Link>{" "}
+                  FOR KITCHINTORY TODAY!
+                </p>
+                Throwing Away Food = Throwing Away Profits
                 <br />
                 <br />
                 <strong className="home-about-card-body-end">
@@ -79,7 +83,17 @@ export default function Home(props) {
           <div className="home-bottom-image">
             <div className="home-about-text home-about-container-child">
               <h2 className="home-about-text-title">A Taste Of Kitchintory</h2>
-              <hr className="home-hr" />
+              <hr className="home-hr-last" />
+              <Link className="nav-unauth-link nav-sign-in-link" to="/sign-up">
+                <img
+                  className="home-add-example home-add-sign-example"
+                  src="https://i.imgur.com/0reVlNp.png"
+                />
+              </Link>
+              <img
+                className="home-add-example home-add-item-example"
+                src="https://i.imgur.com/ag15z7l.png"
+              />
             </div>
             <img
               className="home-bottom-images home-bottom-image-detail"
