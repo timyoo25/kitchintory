@@ -1,0 +1,56 @@
+.watchlist-modalClass {
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+#watchlist-modal {
+  width: 30%;
+  height: 50%;
+  overflow: auto;
+  background-color: #012437;
+  color: wheat;
+  margin: auto;
+}
+
+#watchlist-header {
+  display: flex;
+  flex-flow: row wrap;
+}
+#watchlist-modal-title {
+  text-align: center;
+  width: 95%;
+  font-size: larger;
+}
+#close-modal {
+  font-size: large;
+}
+#close-modal:hover {
+  color: red;
+}
+#watchlist-list-items > li > a:hover {
+  color: rgba(13, 156, 184, 0.77);
+}
+#watchlist-list-items > li > a {
+  text-decoration: none;
+  color: wheat;
+}
+#watchlist-list-items {
+  justify-content: center;
+}
+.watchlist-specification {
+  text-align: center;
+}
+#watchlist-form > input {
+  padding: 5px;
+  padding-left: 10px;
+  margin-right: 10px;
+  height: 15px;
+}
+#watchlist-btn {
+  height: 29px;
+  margin-right: 10px;
+}

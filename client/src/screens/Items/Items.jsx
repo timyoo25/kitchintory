@@ -2,6 +2,7 @@ import { getItems } from "../../services/items";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
 const Items = (props) => {
@@ -18,6 +19,8 @@ const Items = (props) => {
   } = props;
 
   const [categoryArr, setCategoryArr] = useState([]);
+  const [show, setShow] = useState(false);
+  const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -35,23 +38,39 @@ const Items = (props) => {
 
   function checkIcons(item) {
     if (item.category === "freezer") {
-      return <i class="far fa-snowflake"></i>;
+      return <i className="far fa-snowflake"></i>;
     } else if (item.category === "dry storage") {
-      return <i class="fas fa-box-open"></i>;
+      return <i className="fas fa-box-open"></i>;
     } else {
-      return <i class="fas fa-wind"></i>;
+      return <i className="fas fa-wind"></i>;
     }
   }
 
   function handleCategory(e) {
     let name = e.target.innerText;
-    console.log();
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
     setCategoryArr(itemsCategory);
     setSearchResult(itemsCategory);
-    console.log(itemsCategory, categoryArr);
+  }
+
+  //to close modal
+  function closeModal() {
+    setShow(false);
+  }
+  //to generate watchlist based on generic/specified quantity
+  function handleWatchlist(e, num) {
+    if (num === undefined) {
+      num = 10;
+    }
+    setWatchlist(items.filter((item) => item.quantity <= num));
+    setShow(true);
+  }
+
+  //show all items on your stock page
+  function resetStock() {
+    setSearchResult(items);
   }
 
   return (
@@ -71,6 +90,20 @@ const Items = (props) => {
         <br />
         <br />
         <div className="items-parent">
+          <div id="stock-menu-btns">
+            <button type="button" onClick={resetStock}>
+              Reset
+            </button>
+            <button type="button" onClick={handleWatchlist}>
+              Watchlist
+            </button>
+            <WatchlistModal
+              watchlist={watchlist}
+              closeModal={closeModal}
+              show={show}
+              handleWatchlist={handleWatchlist}
+            />
+          </div>
           <h2 className="items-your-stock">
             Your Stock
             <hr />
