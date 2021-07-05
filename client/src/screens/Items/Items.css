@@ -123,6 +123,9 @@
   width: 180px;
   margin-bottom: 0px;
   padding-top: 2%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .items-container hr {
   background: black;

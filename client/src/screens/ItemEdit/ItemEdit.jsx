@@ -14,7 +14,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const [input, setInput] = useState(item);
+  const [input] = useState(item); //removed setInput for warning
   const { id } = useParams();
 
   useEffect(() => {
@@ -65,11 +65,10 @@ export default function ItemEdit(props) {
       <div className="item-edit-parent">
         <div className="item-edit-left-side">
           {/* <img className="edit-item-image" src={item.imgURL} alt={item.name} /> */}
+
           <div className="item-edit-form-title-div">
-            <h2 className="item-edit-form-title">
-              Edit Items
-              <hr className="item-edit-hr item-edit-form-title-hr" />
-            </h2>
+            <h2 className="item-edit-form-title">Edit Item</h2>
+            <hr className="item-edit-hr item-edit-form-title-hr" />
           </div>
           <div className="item-edit-all-forms">
             <div className="item-edit-all-forms-container">
@@ -106,7 +105,6 @@ export default function ItemEdit(props) {
                       placeholder="Quantity"
                       value={item.quantity}
                       name="quantity"
-                      step="0.01"
                       min="0"
                       required
                       onChange={handleChange}
@@ -120,6 +118,7 @@ export default function ItemEdit(props) {
                       placeholder="Price"
                       value={item.price}
                       name="price"
+                      step="0.01"
                       min="0"
                       required
                       onChange={handleChange}
@@ -157,7 +156,6 @@ export default function ItemEdit(props) {
                 <div className="item-edit-buttons">
                   <button
                     className="item-edit-button item-edit-save"
-                    type="button"
                     type="submit"
                   >
                     Save
