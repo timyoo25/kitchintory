@@ -12,6 +12,7 @@ export default function Home(props) {
     searchInput,
     setSearchInput,
   } = props;
+
   return (
     <Layout
       user={user}
@@ -26,25 +27,19 @@ export default function Home(props) {
         <div className="top">
           <div className="home-about-card">
             <div className="left">
-              <p className="home-about-card-body">
+              <div className="home-about-card-body">
                 <p className="call-to-action">
                   <Link to="/sign-up" className="sign-up-link">
-                    SIGN UP
+                    SIGN UP<> </>
                   </Link>
                   FOR KITCHIN-TORY TODAY!
                 </p>
                 Throwing Away Food = Throwing Away Profits
                 <br />
-                <br />
                 <strong className="home-about-card-body-end">
                   Never forget what’s in your kitchen..
                 </strong>
-              </p>
-              {/* <img
-                clasName="home-kitchintory"
-                src="https://i.imgur.com/ClX3n7u.png"
-                alt="basket of food"
-              /> */}
+              </div>
             </div>
             <div className="right">
               <img
@@ -92,7 +87,7 @@ export default function Home(props) {
                       to="/sign-up"
                     >
                       <img
-                        className="home-add-example home-add-sign-example"
+                        className="home-add-example home-sign-example"
                         src="https://i.imgur.com/0reVlNp.png"
                       />
                     </Link>
@@ -106,7 +101,7 @@ export default function Home(props) {
 
                 <div className="home-about-functionality">
                   <p className="home-about-functionality-call-to-action">
-                    <strong>After signing up, you can :</strong>
+                    <strong>After joining, you can :</strong>
                   </p>
                   <div className="home-about-sign-up-to-view-stock">
                     {/* <img
@@ -115,7 +110,7 @@ export default function Home(props) {
                     /> */}
                     <div className="home-about-add-item-text-top">
                       <li className="home-about-add-item-text-li">
-                        View Stock
+                        View Your Stock
                       </li>
                     </div>
                   </div>
@@ -126,7 +121,7 @@ export default function Home(props) {
                     /> */}
                     <div className="home-about-add-item-text-middle">
                       <li className="home-about-add-item-text-li">
-                        Add to Stock
+                        Add to Your Stock
                       </li>
                     </div>
                   </div>
@@ -137,7 +132,7 @@ export default function Home(props) {
                     /> */}
                     <div className=" home-about-add-item-text-bottom">
                       <li className="home-about-add-item-text-li">
-                        Edit Stock
+                        Edit Your Stock
                       </li>
                     </div>
                   </div>
