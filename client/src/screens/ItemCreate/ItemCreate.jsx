@@ -2,7 +2,8 @@ import { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { createItem } from "../../services/items";
 import { Redirect } from "react-router-dom";
-import "./ItemCreate.css";
+// import "./ItemCreate.css";
+import './ItemCreatev2.css'
 
 export default function ItemCreate(props) {
   const [item, setItem] = useState({
@@ -62,7 +63,7 @@ export default function ItemCreate(props) {
             id="addlogo"
           />
           <hr className="add-item-line" />
-          <div>
+          <div className='create-item-form-parent'>
             <form className="create-item-form" onSubmit={handleSubmit}>
               <div className="create-item-container">
                 <div className="create-item-titles" id="create-name">
@@ -101,7 +102,7 @@ export default function ItemCreate(props) {
                   <h2>Category</h2>
                   <select
                     name="category"
-                    className="input-category"
+                    className="input-category create-input"
                     onChange={handleChange}
                   >
                     <option value=""></option>
