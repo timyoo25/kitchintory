@@ -40,7 +40,7 @@ export default function ItemEdit(props) {
         item.shelfLife = 15;
         break;
       case "refrigerator":
-        item.shelfLife = 7;
+        item.shelfLife = 2;
         break;
       case "dry storage":
         item.shelfLife = 30;

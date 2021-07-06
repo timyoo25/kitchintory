@@ -73,8 +73,18 @@ export default function ItemDetail(props) {
                 <b>Shelf Life:</b>&nbsp; {item.shelfLife} days
               </div>
               <div className="item-detail-expiration">
-                <b>Expires in:</b> &nbsp; {item.shelfLife - item.expiration}{" "}
-                days
+                <b>Expires in:</b> &nbsp;&nbsp;
+                <p
+                  className="expire-days"
+                  style={
+                    item.shelfLife - item.expiration < 3
+                      ? { color: "red" }
+                      : { color: "black" }
+                  }
+                >
+                  {item.shelfLife - item.expiration}
+                  &nbsp;days
+                </p>
               </div>
 
               <hr className="edit-line" />
