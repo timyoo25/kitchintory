@@ -110,6 +110,10 @@
   justify-content: flex-start;
 }
 
+.expire-days {
+  margin: 0px;
+}
+
 .item-edit-button {
   background: #ddf2d9;
   padding: 1px 50px;
