@@ -265,22 +265,9 @@
   padding: 5% 0px;
 }
 
-/* .home-about-add-item-bottom {
-  background: cornflowerblue;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  width: 50%;
-} */
-
 .home-add-item-example {
   width: 30.6%;
 }
-
-/* .home-about-add-item-text {
-  width: 100%;
-  background: cyan;
-} */
 
 .home-bottom-image {
   display: flex;
@@ -293,4 +280,13 @@
 .home-bottom-images {
   width: 48%;
   height: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .home-about-organize {
+    width: 45%;
+  }
+  .home-about-text {
+    width: 45%;
+  }
 }
