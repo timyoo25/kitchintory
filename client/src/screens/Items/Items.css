@@ -89,7 +89,7 @@
   overflow: hidden;
 }
 .items-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: -2px 2px 10px black;
 }
 /* Source for box on item container: https://blog.logrocket.com/how-to-create-fancy-corners-in-css/ */
