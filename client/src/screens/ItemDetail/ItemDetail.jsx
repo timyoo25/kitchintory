@@ -69,9 +69,15 @@ export default function ItemDetail(props) {
                 <b>Category:</b>&nbsp;
                 {item.category}
               </div>
+              <div className='item-detail-shelfLife'>
+              <b>Shelf Life:</b>&nbsp; {item.shelfLife} days
+              </div>
+              <div className='item-detail-expiration'>
+                <b>Expires in:</b> &nbsp; {item.shelfLife - item.expiration} days
+              </div>
+
               <div className="category-detail-icon">{checkIcons(item)}</div>
             </div>
-
             <hr className="edit-line" />
             <Link className="item-detail-to-edit" to={`${item._id}/edit`}>
               <button className="item-edit-button">Edit</button>

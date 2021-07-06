@@ -19,6 +19,19 @@ export default function ItemCreate(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!item.imgURL) item.imgURL = 'https://res.cloudinary.com/willnolin/image/upload/v1625236095/color_basket_utvt7n.png'
+    switch (item.category) {
+      case "freezer":
+        item.shelfLife = 15;
+        break;
+      case "refrigerator":
+        item.shelfLife = 7;
+        break;
+      case "dry storage":
+        item.shelfLife = 30;
+        break;
+      default:
+        item.shelfLife = 7;
+    }
     const created = await createItem(item);
     setCreated({ created });
   };

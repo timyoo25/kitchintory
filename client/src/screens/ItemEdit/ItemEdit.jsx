@@ -35,6 +35,19 @@ export default function ItemEdit(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    switch (item.category) {
+      case "freezer":
+        item.shelfLife = 15;
+        break;
+      case "refrigerator":
+        item.shelfLife = 7;
+        break;
+      case "dry storage":
+        item.shelfLife = 30;
+        break;
+      default:
+        item.shelfLife = 7;
+    }
     const updated = await updateItem(id, item);
     console.log(updated);
     setUpdated({ updated });

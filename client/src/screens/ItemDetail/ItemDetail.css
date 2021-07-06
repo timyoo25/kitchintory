@@ -101,7 +101,9 @@
 
 .item-detail-quantity,
 .item-detail-price,
-.item-detail-category {
+.item-detail-category,
+.item-detail-shelfLife,
+.item-detail-expiration {
   display: flex;
   justify-content: flex-start;
 }
