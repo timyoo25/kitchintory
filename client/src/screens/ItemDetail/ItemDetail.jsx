@@ -51,7 +51,6 @@ export default function ItemDetail(props) {
           <div className="item-detail-img-column">
             <img className="item-detail-img" src={item.imgURL} alt="" />
           </div>
-          <div id="details-divider"></div>
           <div className="item-detail-column">
             <div className="item-title-contain">
               <div className="item-detail-title">
@@ -63,15 +62,14 @@ export default function ItemDetail(props) {
               <div className="item-detail-quantity">
                 <b>Quantity:</b> &nbsp;{item.quantity}
               </div>
-
               <div className="item-detail-price">
                 <b>Price:</b> &nbsp; ${item.price?.toFixed(2)}
               </div>
               <div className="item-detail-category">
                 <b>Category:</b>&nbsp;
                 {item.category}
-                <div className="category-detail-icon">{checkIcons(item)}</div>
               </div>
+              <div className="category-detail-icon">{checkIcons(item)}</div>
             </div>
 
             <hr className="edit-line" />
