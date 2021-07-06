@@ -60,6 +60,13 @@
   font-size: medium;
   align-self: center;
 }
+
+.sign-in-button {
+  min-width: 80px;
+  max-width: 80px;
+  border: 0px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.399);
+}
 .sign-in-prompt {
   margin: 0px;
   margin-top: -25px;
