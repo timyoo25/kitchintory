@@ -81,9 +81,10 @@ export default function ItemDetail(props) {
                       ? { color: "red" }
                       : { color: "black" }
                   }
-                >
-                  {item.shelfLife - item.expiration}
-                  &nbsp;days
+                > {item.shelfLife - item.expiration !== 0 ?
+                  `${item.shelfLife - item.expiration} days` :
+                  `Expired!`}
+
                 </p>
               </div>
 
