@@ -5,17 +5,8 @@ import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout.jsx";
 import "./ItemDetail.css";
 
-export default function ItemDetail(props) {
+export default function ItemDetail() {
   const [item, setItem] = useState({});
-  const {
-    user,
-    items,
-    handleSubmit,
-    handleChange,
-    setSearchResult,
-    searchInput,
-    setSearchInput,
-  } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -37,15 +28,7 @@ export default function ItemDetail(props) {
   }
 
   return (
-    <Layout
-      user={user}
-      items={items}
-      handleSubmit={handleSubmit}
-      handleChange={handleChange}
-      setSearchResult={setSearchResult}
-      searchInput={searchInput}
-      setSearchInput={setSearchInput}
-    >
+    <Layout>
       <div className="item-detail-parent">
         <div className="item-detail-container">
           <div className="item-detail-img-column">
@@ -83,7 +66,7 @@ export default function ItemDetail(props) {
                   }
                 >
                   {" "}
-                  {item.shelfLife - item.expiration !== 0
+                  {item.shelfLife - item.expiration > 0
                     ? `${item.shelfLife - item.expiration} days`
                     : `Expired!`}
                 </p>

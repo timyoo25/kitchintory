@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { userContext } from '../../Context'
 import { signIn } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./SignIn.css";
 
-const SignIn = (props) => {
+const SignIn = () => {
   const history = useHistory();
-
+  const [user, setUser] = useContext(userContext)
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -23,7 +24,6 @@ const SignIn = (props) => {
 
   const onSignIn = async (e) => {
     e.preventDefault();
-    const { setUser } = props;
     try {
       const user = await signIn(form);
       setUser(user);

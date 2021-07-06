@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { userContext } from '../../Context'
 import { signUp } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./SignUp.css";
 
-const SignUp = (props) => {
+const SignUp = () => {
   const history = useHistory();
-
+  const [user, setUser] = useContext(userContext)
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -29,7 +30,6 @@ const SignUp = (props) => {
 
   const onSignUp = async (e) => {
     e.preventDefault();
-    const { setUser } = props;
     console.log(checkPassword());
     if (checkPassword()) {
       try {
@@ -82,7 +82,7 @@ const SignUp = (props) => {
 
   const { username, password, passwordConfirmation } = form;
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div className="form-container-parent">
         <div className="form-container">
           <h3>

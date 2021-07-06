@@ -2,27 +2,9 @@ import Layout from "../../components/Layout/Layout";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
-export default function Home(props) {
-  const {
-    user,
-    items,
-    handleSubmit,
-    handleChange,
-    setSearchResult,
-    searchInput,
-    setSearchInput,
-  } = props;
-
+export default function Home() {
   return (
-    <Layout
-      user={user}
-      items={items}
-      handleSubmit={handleSubmit}
-      handleChange={handleChange}
-      setSearchResult={setSearchResult}
-      searchInput={searchInput}
-      setSearchInput={setSearchInput}
-    >
+    <Layout>
       <div className="home-parent">
         <div className="top">
           <div className="home-about-card">
