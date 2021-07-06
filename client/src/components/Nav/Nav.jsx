@@ -1,19 +1,25 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
-
+import { useContext, useEffect } from "react";
+import { userContext, itemContext, resultContext, inputContext } from '../../Context'
 import Search from "../Search/Search";
+import { verifyUser } from "../../services/users"
 import { Link } from "react-router-dom";
 
-export default function Nav(props) {
-  const {
-    user,
-    items,
-    handleSubmit,
-    handleChange,
-    setSearchResult,
-    searchInput,
-    setSearchInput,
-  } = props;
+export default function Nav() {
+  const [user, setUser] = useContext(userContext)
+  const [items] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput, setSearchInput] = useContext(inputContext)
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  // eslint-disable-next-line
+  }, []);
 
   const clearSearchNull = () => {
     setSearchResult(null);
@@ -97,9 +103,6 @@ export default function Nav(props) {
             {user ? (
               <Search
                 className="search"
-                handleSubmit={handleSubmit}
-                handleChange={handleChange}
-                searchInput={searchInput}
               />
             ) : (
               "Welcome to Kitchin-tory!"

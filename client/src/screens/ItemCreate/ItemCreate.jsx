@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 // import "./ItemCreate.css";
 import "./ItemCreatev2.css";
 
-export default function ItemCreate(props) {
+export default function ItemCreate() {
   const [item, setItem] = useState({
     name: "",
     quantity: 0,
@@ -51,15 +51,7 @@ export default function ItemCreate(props) {
   }
 
   return (
-    <Layout
-      user={props.user}
-      items={props.items}
-      handleSubmit={props.handleSubmit}
-      handleChange={props.handleChange}
-      setSearchResult={props.setSearchResult}
-      searchInput={props.searchInput}
-      setSearchInput={props.setSearchInput}
-    >
+    <Layout>
       <div className="create-item-master">
         <div className="create-item-image">
           {/* <img

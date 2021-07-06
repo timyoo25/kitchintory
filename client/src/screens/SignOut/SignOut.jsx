@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from "react";
+import { userContext } from '../../Context'
 import { signOut } from '../../services/users'
 import { useHistory } from 'react-router-dom'
 
-const SignOut = (props) => {
-  const { setUser } = props
+const SignOut = () => {
+  const [user, setUser] = useContext(userContext)
   const history = useHistory()
 
   useEffect(() => {

@@ -1,22 +1,15 @@
 import { getItems } from "../../services/items";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { itemContext, resultContext, inputContext } from '../../Context'
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
 const Items = (props) => {
-  const {
-    user,
-    items,
-    handleSubmit,
-    handleChange,
-    setItems,
-    setSearchResult,
-    searchResult,
-    searchInput,
-    setSearchInput,
-  } = props;
+  const [items, setItems] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput, setSearchInput] = useContext(inputContext)
 
   const [categoryArr, setCategoryArr] = useState([]);
   const [show, setShow] = useState(false);
@@ -74,15 +67,7 @@ const Items = (props) => {
   }
 
   return (
-    <Layout
-      user={user}
-      items={items}
-      handleSubmit={handleSubmit}
-      handleChange={handleChange}
-      setSearchResult={setSearchResult}
-      searchInput={searchInput}
-      setSearchInput={setSearchInput}
-    >
+    <Layout>
       <div className="itemsbckg">
         <div id="bckg">
           <img src="https://i.imgur.com/71o2pdM.jpg" alt="kitchen" />
@@ -141,7 +126,7 @@ const Items = (props) => {
                     <img src={item.imgURL} alt={item.name} />
                     <p className="expired-overlay"
                     style={
-                      item.shelfLife - item.expiration === 0
+                      item.shelfLife - item.expiration <= 0
                         ? { display: "block" }
                         : { display: "none"}
                     }>EXPIRED</p>
