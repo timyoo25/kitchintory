@@ -56,6 +56,7 @@ export default function Home(props) {
             <img
               className=" home-dark-blue-image-item"
               src="https://i.imgur.com/Jguggtc.png"
+              alt="dark-blue-img"
             />
             <div className="home-about-organize home-about-container-child">
               <h2 className="home-about-icons-title">
@@ -89,6 +90,7 @@ export default function Home(props) {
                       <img
                         className="home-add-example home-sign-example"
                         src="https://i.imgur.com/0reVlNp.png"
+                        alt="home-add"
                       />
                     </Link>
                     <div className="home-about-sign-up-text">
@@ -142,6 +144,7 @@ export default function Home(props) {
             <img
               className="home-bottom-images home-bottom-image-detail"
               src="https://i.imgur.com/0A5m41r.png"
+              alt="bottom-images"
             />
           </div>
         </div>
