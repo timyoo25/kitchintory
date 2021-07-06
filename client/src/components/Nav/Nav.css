@@ -93,7 +93,7 @@
 }
 
 .nav-sign-up-text {
-  padding-bottom: 8px;
+  padding-bottom: 26px;
   font-family: Abel;
   font-size: 20px;
 }
@@ -119,19 +119,20 @@
 }
 
 .nav-auth-stock-link {
-  font-size: 15px;
+  font-size: 17.5px;
   margin-bottom: 3px;
   font-family: abel;
 }
 
 .nav-auth-hr {
-  margin: 0px;
+  margin: auto;
+  width: 80%;
   background-color: rgba(0, 0, 0, 0.692);
   border: 1px solid rgba(0, 0, 0, 0.437);
 }
 
 .nav-auth-add-link {
-  font-size: 15px;
+  font-size: 17.5px;
   margin-top: 2px;
   font-family: Abel;
 }
@@ -179,8 +180,14 @@
 .nav-auth-parent {
   display: flex;
   align-items: center;
+  width: 250px;
   padding-bottom: 3%;
   /* background-color: rgb(215, 215, 221); */
+}
+
+.nav-auth-links-parent {
+  width: 40%;
+  /* background: blueviolet; */
 }
 
 .nav-auth-stock-link-container {
@@ -203,12 +210,12 @@
 }
 
 .nav-sign-out-link {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .nav-sign-out-link-caption {
   font-family: Abel;
-  font-size: 15px;
+  font-size: 20px;
   margin: 0px;
 }
 
