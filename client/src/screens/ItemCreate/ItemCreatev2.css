@@ -1,6 +1,6 @@
 .create-item-master {
   display: flex;
-  height: 110vh;
+  min-height: 100vh;
   background: rgba(164, 197, 216, 0.8);
 }
 
@@ -18,7 +18,7 @@
 .add-item-title {
   display: inline-flex;
   /* background: green; */
-  /* margin-bottom: 50px; */
+  margin-bottom: 50px;
 }
 
 #addlogo {
@@ -90,7 +90,7 @@
 
 .create-submit-button {
   /* background: pink; */
-  /* margin-top: 80px; */
+  margin-top: 80px;
   border: none;
   width: 25%;
   height: 30px;
