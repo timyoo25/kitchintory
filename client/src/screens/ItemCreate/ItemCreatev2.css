@@ -16,11 +16,15 @@
   align-self: center;
 }
 
+.add-item-title-text {
+  font-size: 70px;
+  margin: 0px;
+}
+
 .add-item-title {
   display: inline-flex;
   /* background: green; */
   margin-bottom: 50px;
-  font-size: x-large;
 }
 
 #addlogo {
@@ -35,7 +39,7 @@
 .add-item-line {
   background: black;
   border: 1px solid black;
-  width: 80%;
+  width: 75%;
   margin-top: -50px;
   margin-bottom: 50px;
 }
@@ -47,20 +51,22 @@
   justify-content: center;
 }
 
-.create-item-form {
-  /* background: pink; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-}
+/* .create-item-form {
+  background: pink;
+  display: flex;
+  justify-content: space-between;
+} */
 
 .create-item-container {
   background: rgba(1, 36, 55, 0.29);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: column;
-  padding: 30px;
+  padding: 30px 0px;
+  max-width: 430px;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .create-item-titles {
@@ -70,6 +76,11 @@
   align-items: center;
   margin: 5px 10px;
   justify-content: space-between;
+}
+
+.create-item-titles-text {
+  font-size: 30px;
+  margin: 2%;
 }
 
 .create-input {
@@ -90,14 +101,17 @@
 .create-form-line {
   background: black;
   border: 1px solid black;
-  width: 520px;
+  width: 100%;
   margin-top: 50px;
 }
 
 .create-submit-button {
   /* background: pink; */
-  margin-top: 80px;
-  border: none;
-  width: 25%;
-  height: 30px;
+  font-size: 20px;
+  background-color: #ddf2d9;
+  border: 0px;
+  width: 150px;
+  height: 40px;
+  margin-top: 2.5%;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
 }
