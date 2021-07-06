@@ -12,14 +12,11 @@
 }
 .watchlist-modalClass::-webkit-scrollbar-track {
   box-shadow: inset -3px 6px 6px rgb(0 0 0 / 30%);
-  background-color: #b5d4e7e0;
-}
-.watchlist-modalClass::-webkit-scrollbar-button {
-  background-color: white;
+  background-color: #012437;
 }
 .watchlist-modalClass::-webkit-scrollbar-thumb {
-  background-color: rgb(204, 204, 204);
-  outline: 4px dashed #012437;
+  background-color: rgb(245, 229, 200); /*rgb(204, 204, 204);*/
+  outline: 4px dashed white;
 }
 #watchlist-modal {
   width: 25%;
