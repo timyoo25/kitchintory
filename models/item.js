@@ -17,8 +17,16 @@ const Item = new Schema(
       enum: ["freezer", "refrigerator", "dry storage"],
       required: true,
     },
+    shelfLife: {
+      type: Number
+    }
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true }}
 );
+
+Item.virtual('expiration').get(function () {
+  const date = new Date().getTime()
+  return(Math.floor((date - this.createdAt.getTime())/(1000*60*60*24)))
+})
 
 export default mongoose.model("items", Item);
