@@ -2,6 +2,7 @@ import { getItems } from "../../services/items";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
 const Items = (props) => {
@@ -18,6 +19,8 @@ const Items = (props) => {
   } = props;
 
   const [categoryArr, setCategoryArr] = useState([]);
+  const [show, setShow] = useState(false);
+  const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -30,15 +33,16 @@ const Items = (props) => {
       }
     };
     fetchItems();
+    //eslint-disable-next-line
   }, []);
 
   function checkIcons(item) {
     if (item.category === "freezer") {
-      return <i class="far fa-snowflake"></i>;
+      return <i className="far fa-snowflake"></i>;
     } else if (item.category === "dry storage") {
-      return <i class="fas fa-box-open"></i>;
+      return <i className="fas fa-box-open"></i>;
     } else {
-      return <i class="fas fa-wind"></i>;
+      return <i className="fas fa-wind"></i>;
     }
   }
 
@@ -48,9 +52,26 @@ const Items = (props) => {
       (item) => item.category === name.toLowerCase()
     );
     setCategoryArr(itemsCategory);
-    setSearchResult(itemsCategory)
-    console.log(itemsCategory, categoryArr);
-  } //onClick={handleCategory}
+    setSearchResult(itemsCategory);
+  }
+
+  //to close modal
+  function closeModal() {
+    setShow(false);
+  }
+  //to generate watchlist based on generic/specified quantity
+  function handleWatchlist(e, num) {
+    if (num === undefined) {
+      num = 10;
+    }
+    setWatchlist(items.filter((item) => item.quantity <= num));
+    setShow(true);
+  }
+
+  //show all items on your stock page
+  function resetStock() {
+    setSearchResult(items);
+  }
 
   return (
     <Layout
@@ -63,36 +84,50 @@ const Items = (props) => {
       setSearchInput={setSearchInput}
     >
       <div className="itemsbckg">
+        <div id="bckg">
+          <img src="https://i.imgur.com/71o2pdM.jpg" alt="kitchen" />
+        </div>
         <br />
         <br />
         <div className="items-parent">
-          <h3>
+          <div id="stock-menu-btns">
+            <button type="button" onClick={resetStock}>
+              Reset
+            </button>
+            <button type="button" onClick={handleWatchlist}>
+              Watchlist
+            </button>
+            <WatchlistModal
+              watchlist={watchlist}
+              closeModal={closeModal}
+              show={show}
+              handleWatchlist={handleWatchlist}
+            />
+          </div>
+          <h2 className="items-your-stock">
             Your Stock
             <hr />
-          </h3>
-          <h4>Categories:</h4>
-          <div className="categoriesSelection">
+          </h2>
+          <h3 className="items-your-stock-category-title">Categories:</h3>
+          <div className="categories-selection">
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="far fa-snowflake"></i>
-              <div className="categories-title">
-                <h5>Freezer</h5>
-              </div>
+              <i className="far fa-snowflake">
+                <h5 className="categories-text">Freezer</h5>
+              </i>
+              <div className="categories-title"></div>
             </div>
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="fas fa-wind"></i>
-              <div className="categories-title">
-                <h5>Refrigerator </h5>
-              </div>
+              <i className="fas fa-wind">
+                <h5 className="categories-text">Refrigerator </h5>
+              </i>
+              <div className="categories-title"></div>
             </div>
             <div className="categories-icons" onClick={handleCategory}>
-              <i className="fas fa-box-open"></i>
-              {/* <i className="fab fa-dropbox" onClick={handleCategory}></i> */}
-              <div className="categories-title">
-                <h5>Dry Storage</h5>
-              </div>
+              <i className="fas fa-box-open">
+                <h5 className="categories-text">Dry Storage</h5>
+              </i>
             </div>
           </div>
-          {/* {searchResult?.map((item, index) => { */}
           {searchResult?.map((item, index) => {
             return (
               <div className="items-container" key={index}>
@@ -100,18 +135,16 @@ const Items = (props) => {
                   <div className="item-img">
                     <img src={item.imgURL} alt={item.name} />
                   </div>
-                  <h2 className="item-name">
-                    {item.name}
-                    <hr />
-                  </h2>
-                  <p className="item-quantity">
+                  <h2 className="item-name">{item.name}</h2>
+                  <hr className="item-name-hr" />
+                  <p className="item-quantity item-specifics">
                     <b>Quantity: </b>
                     {item.quantity}
                   </p>
-                  <p className="item-price">
-                    <b>Price:</b> {item.price}
+                  <p className="item-price  item-specifics">
+                    <b>Price:</b> ${item.price?.toFixed(2)}
                   </p>
-                  <p className="item-category">
+                  <p className="item-category  item-specifics">
                     <b>Category:</b> {item.category}
                     <span className="category-icon">{checkIcons(item)}</span>
                   </p>

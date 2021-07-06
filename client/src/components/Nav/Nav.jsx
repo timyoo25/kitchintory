@@ -26,45 +26,51 @@ export default function Nav(props) {
 
   const authenticatedOptions = (
     <div className="nav-auth-parent">
-      <NavLink
-        className="nav-auth-link nav-link-to-items"
-        to="/items"
-        onClick={clearSearchAll}
-      >
-        <p className="nav-auth-stock-link">Your Stock</p>
-      </NavLink>
-      <NavLink
-        className="nav-auth-link nav-link-to-items-create"
-        to="/create"
-        onClick={clearSearchNull}
-      >
-        <img
-          className="nav-auth-icon nav-add-item-logo"
-          src="https://i.imgur.com/ag15z7l.png"
-        />
-      </NavLink>
+      <div className="nav-auth-links-parent">
+        <div className="nav-auth-stock-link-container">
+          <NavLink
+            className="nav-auth-link nav-link-to-items"
+            to="/items"
+            onClick={clearSearchAll}
+          >
+            <p className="nav-auth-stock-link">Your Stock</p>
+          </NavLink>
+        </div>
+        <hr className="nav-auth-hr" />
+        <div className="nav-auth-add-link-container">
+          <NavLink
+            className="nav-auth-link nav-link-to-items-create"
+            to="/create"
+            onClick={clearSearchNull}
+          >
+            <p className="nav-auth-add-link">Add item</p>
+          </NavLink>
+        </div>
+      </div>
       <NavLink className="nav-auth-link nav-sign-out-link" to="/sign-out">
-        <img
+        {/* <img
           className="nav-auth-icon nav-sign-out-logo"
           src="https://i.imgur.com/8ZYKbn8.png"
-        />
+          alt="sign-out"
+        /> */}
+        <p className="nav-sign-out-link-caption">Sign Out</p>
       </NavLink>
     </div>
   );
 
   const unauthenticatedOptions = (
     <div className="nav-unauth-parent">
-      {/* <div className="nav-sign-up-container">
-        <NavLink className="link nav-sign-up-link" to="/sign-up">
-        </NavLink>
-      </div> */}
       <div className="nav-sign-in-container">
-        <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-in">
-          <br />
-          <img
-            className="nav-sign-in-logo"
-            src="https://i.imgur.com/0reVlNp.png"
-          />
+        <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-up">
+          <div className="nav-sign-up-container">
+            <br />
+            {/* <img
+              className="nav-sign-in-logo"
+              src="https://i.imgur.com/0reVlNp.png"
+              alt="sign up"
+            /> */}
+          </div>
+          <div className="nav-sign-up-text">Sign Up</div>
         </NavLink>
       </div>
     </div>
@@ -76,23 +82,35 @@ export default function Nav(props) {
       <div className="nav-icon">
         <Link className="nav-link-to-home" to="/">
           <img
-            clasName="kitchintory"
+            className="kitchintory"
             src="https://i.imgur.com/ClX3n7u.png"
-            alt="Kitchin-tory"
+            alt="Kitchin-tory logo"
           />
         </Link>
       </div>
       <div className="nav-search">
-        <Search
-          className="search"
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          searchInput={searchInput}
-        />
-        {user && <div className="welcome">Welcome, {user.username}!</div>}
+        <div className="nav-user-prompt-or-welcome">
+          {user && <div className="welcome">Welcome, {user.username}!</div>}
+        </div>
+        <div className="nav-search-bar-parent">
+          <div className="nav-search-bar">
+            {user ? (
+              <Search
+                className="search"
+                handleSubmit={handleSubmit}
+                handleChange={handleChange}
+                searchInput={searchInput}
+              />
+            ) : (
+              "Welcome to Kitchin-tory!"
+            )}
+          </div>
+        </div>
+        <div className="nav-empty-div"></div>
+        {/* {user && <div className="welcome">Welcome, {user.username}!</div>}
         {!user && (
           <div className="welcome">Sign up to get your stock in shape!</div>
-        )}
+        )} */}
       </div>
       <div className="nav-links">
         {alwaysOptions}

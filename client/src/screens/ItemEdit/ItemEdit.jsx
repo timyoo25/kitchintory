@@ -14,7 +14,7 @@ export default function ItemEdit(props) {
   });
   const [isUpdated, setUpdated] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const [input, setInput] = useState(item);
+  const [input] = useState(item); //removed setInput for warning
   const { id } = useParams();
 
   useEffect(() => {
@@ -35,6 +35,19 @@ export default function ItemEdit(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    switch (item.category) {
+      case "freezer":
+        item.shelfLife = 15;
+        break;
+      case "refrigerator":
+        item.shelfLife = 7;
+        break;
+      case "dry storage":
+        item.shelfLife = 30;
+        break;
+      default:
+        item.shelfLife = 7;
+    }
     const updated = await updateItem(id, item);
     console.log(updated);
     setUpdated({ updated });
@@ -65,8 +78,9 @@ export default function ItemEdit(props) {
       <div className="item-edit-parent">
         <div className="item-edit-left-side">
           {/* <img className="edit-item-image" src={item.imgURL} alt={item.name} /> */}
+
           <div className="item-edit-form-title-div">
-            <h2 className="item-edit-form-title">Edit Items</h2>
+            <h2 className="item-edit-form-title">Edit Item</h2>
             <hr className="item-edit-hr item-edit-form-title-hr" />
           </div>
           <div className="item-edit-all-forms">
@@ -117,29 +131,44 @@ export default function ItemEdit(props) {
                       placeholder="Price"
                       value={item.price}
                       name="price"
+                      step="0.01"
                       min="0"
                       required
                       onChange={handleChange}
                     />
                   </div>
-                  <div className='in-form-div item-edit--div'>
-                  <h3 className="in-form-label">Category:</h3>
-                    <select name="category" className='item-edit-input category'
-                      onChange={handleChange}>
-                      <option value="freezer"
-                        selected={item.category === "freezer"} >Freezer</option>
-                      <option value="refrigerator"
-                        selected={item.category === "refrigerator"}>Refrigerator</option>
-                      <option value="dry storage"
-                        selected={item.category === "dry storage"}>Dry Storage</option>
-                  </select>
-                </div>
+                  <div className="in-form-div item-edit--div">
+                    <h3 className="in-form-label">Category:</h3>
+                    <select
+                      name="category"
+                      className="item-edit-input category"
+                      onChange={handleChange}
+                    >
+                      <option
+                        value="freezer"
+                        selected={item.category === "freezer"}
+                      >
+                        Freezer
+                      </option>
+                      <option
+                        value="refrigerator"
+                        selected={item.category === "refrigerator"}
+                      >
+                        Refrigerator
+                      </option>
+                      <option
+                        value="dry storage"
+                        selected={item.category === "dry storage"}
+                      >
+                        Dry Storage
+                      </option>
+                    </select>
+                  </div>
                 </div>
                 <hr className="item-edit-hr item-edit-form-button-hr" />
                 <div className="item-edit-buttons">
                   <button
                     className="item-edit-button item-edit-save"
-                    type="button"
                     type="submit"
                   >
                     Save
@@ -159,7 +188,7 @@ export default function ItemEdit(props) {
           </div>
         </div>
         <div className="item-edit-right-side">
-          <img src="https://i.imgur.com/2OuCFqZ.png" />
+          {/* <img src="https://i.imgur.com/2OuCFqZ.png" /> */}
         </div>
       </div>
     </Layout>

@@ -96,7 +96,6 @@ const SignUp = (props) => {
               type="text"
               name="username"
               value={username}
-              placeholder="Enter username"
               onChange={handleChange}
             />
             <label>Password:</label>
@@ -105,7 +104,6 @@ const SignUp = (props) => {
               name="password"
               value={password}
               type="password"
-              placeholder="Enter password"
               onChange={handleChange}
             />
             <label>Confirm Password:</label>
@@ -114,7 +112,6 @@ const SignUp = (props) => {
               name="passwordConfirmation"
               value={passwordConfirmation}
               type="password"
-              placeholder="Confirm Password"
               onChange={handleChange}
             />
             {renderError()}

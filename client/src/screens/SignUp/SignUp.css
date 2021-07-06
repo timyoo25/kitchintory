@@ -2,7 +2,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  padding: 10% 0px;
 }
 
 .form-container {
@@ -70,5 +71,5 @@ a:visited {
   font-size: medium;
 }
 #sign-up-form .danger {
-  background: #e57373;
+  color: red;
 }

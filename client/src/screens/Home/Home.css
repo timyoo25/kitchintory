@@ -1,6 +1,6 @@
 .home-parent {
   background-color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 .top {
@@ -11,7 +11,7 @@
   background-size: cover;
   width: 100%;
   height: 30%;
-  min-height: 280px;
+  min-height: 295px;
 }
 
 .home-about-card {
@@ -25,74 +25,73 @@
 }
 
 .left {
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-bottom: 3%;
 }
 
-.right {
+/* .right {
   padding-right: 10%;
+} */
+
+.sign-up-link {
+  text-decoration: none;
+}
+.sign-up-link:visited {
+  color: #5998c0;
+}
+
+.call-to-action {
+  text-decoration: none;
+  color: black;
+  font-family: "Abel", sans-serif;
+  font-size: 19px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5%;
 }
 
 .left > p {
-  text-align: left;
+  text-align: center;
 }
 
 .home-about-card-body {
   width: 325px;
+  font-family: "Abel", sans-serif;
+  font-size: 18px;
 }
 
 .home-about-card-body-end {
   text-align: center;
 }
 
-.left > img {
+/* .left > img {
   width: 120px;
   height: auto;
   padding-right: 15%;
   padding-bottom: 2%;
-}
-
-.home-about-card-img {
-  width: 105%;
-  height: 95%;
-}
-
-/* .home-image {
-  width: 100%;
-  height: auto;
 } */
 
+.home-about-card-img {
+  width: 55%;
+  height: 60%;
+}
+
 .bottom {
-  background-color: rgb(144, 227, 238);
   width: 100%;
-  height: 70%;
+  height: 60%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid black;
 }
 
 .home-about-container {
-  background-color: white;
+  background-color: #012437;
   display: flex;
   justify-content: space-around;
-  height: 100%;
-}
-
-.home-about-text {
-  background-color: #f3fdff;
-  margin: 20px 0px 0px 0px;
-  width: 450px;
-  height: 220px;
-  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
-}
-
-.home-about-text-title {
-  margin-bottom: 10px;
-}
-
-.home-hr {
-  width: 90%;
-}
-
-.home-ul {
-  text-align: left;
-  width: 85%;
+  align-items: center;
+  height: 50%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .home-about-organize {
@@ -101,52 +100,197 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0px 0px 0px;
-  background-color: #b5d4e7;
   width: 450px;
   height: 220px;
-  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
 }
 
 .home-about-icons-title {
+  font-family: Abel;
+  color: white;
   text-align: center;
+  margin-bottom: 0px;
+  font-size: 38px;
+}
+
+.home-hr-icons {
+  width: 100%;
   margin-bottom: 0px;
 }
 
-/* .home-about-icons {
-  display: flex;
-  justify-content: space-around;
-} */
-
-.home-hr-icons-top {
-  margin-bottom: 20px;
-}
-.home-hr-icons-bottom {
-  margin-top: 15px;
-  margin-bottom: 17px;
+.home-dark-blue-image-item {
+  padding-top: 2%;
+  width: 48%;
+  height: auto;
 }
 
-/* .home-about-icons { */
-/* background: coral; */
-/* } */
+.home-organize-icons {
+  padding: 0px 2%;
+  color: white;
+  font-size: 65px;
+  animation: fade-in 0.9s;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .home-about-icons {
   width: 100%;
 }
 
-.home-about-logos-freezer {
-  width: 80px;
-  height: auto;
-  /* padding: 0px 20px; */
+.home-about-text {
+  width: 450px;
+  height: 20%;
+  /* background: blue; */
 }
 
-.home-about-logos-fridge {
-  width: 80px;
-  height: auto;
-  padding: 0px 10%;
+.home-about-text-title {
+  font-family: Abel;
+  font-size: 43px;
+  font-weight: 20;
+  margin: 0px;
+  padding-bottom: 1%;
 }
 
-.home-about-logos-dry {
-  width: 80px;
+.home-hr-last {
+  margin: 2% 0px 0px 0px;
+  background: black;
+  border: 1px solid black;
+}
+
+.home-about-below-hr {
+  /* background: chartreuse; */
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  width: 100%;
+  height: 90%;
+}
+
+.home-about-sign-up-bottom {
+  /* background: chocolate; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 49.7%;
+}
+
+.home-about-sign-up-bottom-effect {
+  width: 57%;
+  /* margins-top: 3%; */
+  /* background: crimson; */
+}
+
+.home-about-sign-up-bottom-effect:hover {
+  box-shadow: -2px 2px 5px rgb(54, 56, 57);
+}
+
+.home-sign-example {
+  padding-top: 5%;
+  width: 60%;
+  animation: shake 1.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(-1px, 0, 0);
+  }
+}
+
+.home-about-sign-up-text {
+  width: 100%;
+}
+
+.home-about-sign-up-p {
+  margin-bottom: 0px;
+  padding-bottom: 4%;
+}
+
+.home-about-vl {
+  background: black;
+  width: 0.45%;
+}
+
+.home-about-functionality {
+  /* background: crimson; */
+  width: 49.7%;
+}
+
+.home-about-functionality-call-to-action {
+  font-size: 17 px;
+}
+
+.home-about-add-item-text-li {
+  text-align: left;
+  padding-left: 10%;
+  padding-bottom: 5%;
+}
+
+.home-about-add-item-text-top {
+  padding: 5% 0px;
+}
+
+.home-about-add-item-text-middle {
+  padding: 5% 0px;
+}
+
+.home-about-add-item-text-bottom {
+  padding: 5% 0px;
+}
+
+/* .home-about-add-item-bottom {
+  background: cornflowerblue;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 50%;
+} */
+
+.home-add-item-example {
+  width: 30.6%;
+}
+
+/* .home-about-add-item-text {
+  width: 100%;
+  background: cyan;
+} */
+
+.home-bottom-image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  padding: 1% 0px;
+}
+
+.home-bottom-images {
+  width: 48%;
   height: auto;
-  padding-left: 1%;
 }

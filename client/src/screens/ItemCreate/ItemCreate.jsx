@@ -2,10 +2,10 @@ import { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { createItem } from "../../services/items";
 import { Redirect } from "react-router-dom";
-import "./ItemCreate.css";
+// import "./ItemCreate.css";
+import './ItemCreatev2.css'
 
 export default function ItemCreate(props) {
-  // const { user } = props
   const [item, setItem] = useState({
     name: "",
     quantity: 0,
@@ -18,6 +18,20 @@ export default function ItemCreate(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!item.imgURL) item.imgURL = 'https://res.cloudinary.com/willnolin/image/upload/v1625236095/color_basket_utvt7n.png'
+    switch (item.category) {
+      case "freezer":
+        item.shelfLife = 15;
+        break;
+      case "refrigerator":
+        item.shelfLife = 7;
+        break;
+      case "dry storage":
+        item.shelfLife = 30;
+        break;
+      default:
+        item.shelfLife = 7;
+    }
     const created = await createItem(item);
     setCreated({ created });
   };
@@ -46,18 +60,27 @@ export default function ItemCreate(props) {
     >
       <div className="create-item-master">
         <div className="create-item-image">
-          <img src="https://i.imgur.com/Fpi2uSF.png" />
+          {/* <img
+            className="add-item-img"
+            src="https://i.imgur.com/Fpi2uSF.png"
+            alt="add item"
+          /> */}
         </div>
         <div className="create-item-parent">
           <div className="add-item-title">
-            <h2>Add Item</h2>
+            <h1>Add Item</h1>
           </div>
-          <hr className='add-item-line' />
-          <div>
-            <form className='create-item-form' onSubmit={handleSubmit}>
-              <div className='create-item-container'>
-                <div className='create-item-titles' id='create-name'>
-                  <h5>Name</h5>
+          <img
+            src="https://i.imgur.com/qqDf7bL.png"
+            alt="add kitchen logo"
+            id="addlogo"
+          />
+          <hr className="add-item-line" />
+          <div className='create-item-form-parent'>
+            <form className="create-item-form" onSubmit={handleSubmit}>
+              <div className="create-item-container">
+                <div className="create-item-titles" id="create-name">
+                  <h2>Name</h2>
                   <input
                     className="input-name create-input"
                     value={item.name}
@@ -66,7 +89,7 @@ export default function ItemCreate(props) {
                   />
                 </div>
                 <div className="create-item-titles">
-                  <h5>Quantity</h5>
+                  <h2>Quantity</h2>
                   <input
                     type="number"
                     className="input-quantity create-input"
@@ -77,26 +100,32 @@ export default function ItemCreate(props) {
                   />
                 </div>
                 <div className="create-item-titles">
-                  <h5>Price</h5>
+                  <h2>Price</h2>
                   <input
                     type="number"
                     className="input-price create-input"
                     value={item.price}
                     name="price"
+                    step="0.01"
                     min="0"
                     onChange={handleChange}
                   />
                 </div>
-                <div className='create-item-titles'>
-                  <h5>Category</h5>
-                  <select name="category" className='input-category' onChange={handleChange}>
+                <div className="create-item-titles">
+                  <h2>Category</h2>
+                  <select
+                    name="category"
+                    className="input-category create-input"
+                    onChange={handleChange}
+                  >
+                    <option value=""></option>
                     <option value="freezer">Freezer</option>
                     <option value="refrigerator">Refrigerator</option>
                     <option value="dry storage">Dry Storage</option>
                   </select>
                 </div>
                 <div className="create-item-titles" id="create-imgURL">
-                  <h5>Image URL</h5>
+                  <h2>Image URL</h2>
                   <input
                     className="input-imgURL create-input"
                     value={item.imgURL}
@@ -105,12 +134,11 @@ export default function ItemCreate(props) {
                   />
                 </div>
               </div>
-
-            <hr className='create-form-line' />
-            <button type='submit' className='create-submit-button'>
-              Submit
-            </button>
-          </form>
+              <hr className="create-form-line" />
+              <button type="submit" className="create-submit-button">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>

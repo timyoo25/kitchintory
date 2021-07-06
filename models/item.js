@@ -1,21 +1,32 @@
 // THis is the blueprint for each Document in MongoDB
 // mongoose calls Objects -> Documents
-import mongoose from 'mongoose'
-const Schema = mongoose.Schema
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
 const Item = new Schema(
   {
     name: { type: String, required: true },
-    imgURL: { type: String },
+    imgURL: {
+      type: String,
+      default: 'https://res.cloudinary.com/willnolin/image/upload/v1625236095/color_basket_utvt7n.png'
+    },
     price: { type: Number, required: true },
     quantity: { type: Number, required: true },
     category: {
       type: String,
       enum: ["freezer", "refrigerator", "dry storage"],
-      required: true
+      required: true,
     },
+    shelfLife: {
+      type: Number
+    }
   },
-  { timestamps: true }
-)
+  { timestamps: true, toJSON: { virtuals: true }}
+);
 
-export default mongoose.model('items', Item)
+Item.virtual('expiration').get(function () {
+  const date = new Date().getTime()
+  return(Math.floor((date - this.createdAt.getTime())/(1000*60*60*24)))
+})
+
+export default mongoose.model("items", Item);

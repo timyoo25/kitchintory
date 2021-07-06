@@ -1,0 +1,103 @@
+.create-item-master {
+  display: flex;
+  min-height: 100vh;
+  background: rgba(164, 197, 216, 0.8);
+  font-family: Abel;
+}
+
+.create-item-image {
+  flex: 1;
+  background-image: url(https://i.imgur.com/Fpi2uSF.png);
+  background-size: cover;
+}
+
+.create-item-parent {
+  flex: 1;
+  align-self: center;
+}
+
+.add-item-title {
+  display: inline-flex;
+  /* background: green; */
+  margin-bottom: 50px;
+  font-size: x-large;
+}
+
+#addlogo {
+  display: flex;
+  /* background: yellow; */
+  width: 50px;
+  height: 50px;
+  margin-left: 28px;
+  /* margin-top: -50px; */
+}
+
+.add-item-line {
+  background: black;
+  border: 1px solid black;
+  width: 80%;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.create-item-form-parent {
+  /* background: blue; */
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.create-item-form {
+  /* background: pink; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.create-item-container {
+  background: rgba(1, 36, 55, 0.29);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-item-titles {
+  /* background: orange; */
+  display: flex;
+  width: 400px;
+  align-items: center;
+  margin: 5px 10px;
+  justify-content: space-between;
+}
+
+.create-input {
+  /* background: red; */
+  display: flex;
+  align-self: center;
+  width: 50%;
+  justify-content: space-between;
+  border: none;
+  padding: 10px;
+  font-size: large;
+}
+
+.input-category {
+  width: 55%;
+}
+
+.create-form-line {
+  background: black;
+  border: 1px solid black;
+  width: 520px;
+  margin-top: 50px;
+}
+
+.create-submit-button {
+  /* background: pink; */
+  margin-top: 80px;
+  border: none;
+  width: 25%;
+  height: 30px;
+}
