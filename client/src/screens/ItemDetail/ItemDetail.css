@@ -23,12 +23,6 @@
   margin: 40px;
 }
 .item-detail-img-column {
-  /* display: flex;
-  flex-direction: row;
-  /* justify-content: space-around; */
-  /* align-items: center;
-  width: 50%;
-  height: 50%; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -48,18 +42,12 @@
 }
 
 .item-detail-column {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 30vh; */
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
   height: auto;
   width: 50%;
-  /* margin-left: 15px; */
   margin-right: -62px;
   overflow: auto;
   border-left: 5px solid black;
@@ -69,8 +57,9 @@
 
 .edit-line {
   border: 1px solid black;
-  margin-top: 30px;
-  width: 80%; /* 300px */
+  margin-top: 32px;
+  margin-left: -9%;
+  width: 113%;
   background-color: #012437;
 }
 
@@ -84,8 +73,7 @@
 .item-detail-name {
   font-family: "Mohave", sans-serif;
   font-size: 8vh;
-  /* margin-right: 100px; */
-  width: 90%; /* fontsize 50px and w50%*/
+  width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -95,10 +83,11 @@
   display: flex;
   flex-flow: column;
   font-family: "Abel", sans-serif;
-  font-size: 5vh; /*35px; */
+  font-size: 5vh;
   height: 90%;
-  width: 83%; /* was 100% and */
+  width: 70%;
   margin-left: 20px;
+  margin-top: 3%;
 }
 
 .item-detail-quantity,
@@ -107,7 +96,9 @@
 .item-detail-shelfLife,
 .item-detail-expiration {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  margin-right: 8%;
+  margin-left: 2%;
 }
 
 .expire-days {
@@ -128,9 +119,10 @@
   display: flex;
   flex-flow: wrap;
   justify-content: flex-end;
-  margin-left: 93%;
+  margin-left: 95%;
   width: 7%;
   margin-top: -10%;
+  margin-bottom: 5%;
   font-size: x-large;
 }
 
@@ -163,6 +155,13 @@
     background-color: #b5d4e7e0;
     box-shadow: -5px 5px 20px rgb(0 0 0 / 60%);
     margin: 40px;
+  }
+  .edit-line {
+    border: 1px solid black;
+    margin-top: 32px;
+    margin-left: -9%;
+    width: 109%;
+    background-color: #012437;
   }
   .item-detail-img-column {
     display: flex;

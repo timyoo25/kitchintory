@@ -57,7 +57,8 @@
 .item-edit-form-title-hr {
   margin-top: 2%;
   margin-bottom: 8%;
-  margin-right: 22%;
+  margin-right: 27%;
+  width: 45%;
 }
 .edit-header {
   width: 90%;
@@ -68,7 +69,6 @@
 }
 .item-edit-hr {
   border: 0.5px solid rgba(0, 0, 0, 0.699);
-  width: 54%;
 }
 
 .item-edit-all-forms {
@@ -88,7 +88,7 @@
   align-items: center;
   /* flex-flow: column; */
   width: 100%;
-  height: 80%;
+  height: 90%;
   /* background: hsl(207, 46%, 45%); */
 }
 
@@ -161,4 +161,21 @@
 }
 .item-edit-form {
   height: 100%;
+  margin-top: 4%;
+}
+@media only screen and (max-width: 1050px) {
+  .item-edit-form-title-div {
+    height: 5%;
+    width: 90%;
+  }
+  .item-edit-form-title-hr {
+    margin-top: 2%;
+    margin-bottom: 8%;
+    margin-right: 0%;
+    width: 99%;
+  }
+  .item-edit-form {
+    height: 100%;
+    margin-top: -5%;
+  }
 }
