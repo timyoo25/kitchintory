@@ -2,7 +2,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  padding: 10% 0px;
 }
 
 .form-container {

@@ -96,6 +96,7 @@
   background: #01243769;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.322);
   max-height: 80%;
+  width: 100%;
   overflow: auto;
 }
 
