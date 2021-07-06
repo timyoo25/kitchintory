@@ -282,11 +282,110 @@
   height: auto;
 }
 
+@media screen and (min-width: 100px) {
+  .home-about-icons-title {
+    font-size: 42px;
+  }
+  .home-snowflake {
+    font-size: 75px;
+  }
+  .home-fridge {
+    font-size: 75px;
+  }
+  .home-dry {
+    font-size: 70px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .home-about-organize {
     width: 45%;
   }
   .home-about-text {
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  .home-about-icons-title {
+    font-size: 40px;
+  }
+  .home-snowflake {
+    font-size: 70px;
+  }
+  .home-fridge {
+    font-size: 70px;
+  }
+  .home-dry {
+    font-size: 65px;
+  }
+  .home-about-text-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 944px) {
+  .home-about-icons-title {
+    font-size: 37px;
+  }
+  .home-snowflake {
+    font-size: 70px;
+  }
+  .home-fridge {
+    font-size: 70px;
+  }
+  .home-dry {
+    font-size: 65px;
+  }
+  .home-about-text-title {
+    font-size: 37px;
+  }
+}
+
+@media screen and (max-width: 871px) {
+  .home-about-icons-title {
+    font-size: 35px;
+  }
+  .home-snowflake {
+    font-size: 60px;
+  }
+  .home-fridge {
+    font-size: 60px;
+  }
+  .home-dry {
+    font-size: 55px;
+  }
+  .home-bottom-image-detail {
+    width: 40%;
+  }
+  .home-dark-blue-image-item {
+    width: 40%;
+  }
+  .home-about-text-title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .home-about-icons-title {
+    font-size: 30px;
+  }
+  .home-snowflake {
+    font-size: 50px;
+  }
+  .home-fridge {
+    font-size: 50px;
+  }
+  .home-dry {
+    font-size: 45px;
+  }
+  .home-bottom-image-detail {
+    width: 43%;
+  }
+  .home-dark-blue-image-item {
+    width: 43%;
+  }
+  .home-about-text-title {
+    font-size: 35px;
   }
 }
