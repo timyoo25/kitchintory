@@ -1,5 +1,7 @@
 .create-item-master {
   display: flex;
+  height: 110vh;
+  background: rgba(164, 197, 216, 0.8);
 }
 
 .create-item-image {
@@ -10,14 +12,18 @@
 
 .create-item-parent {
   flex: 1;
+  align-self: center;
 }
 
 .add-item-title {
-  background: green;
+  display: inline-flex;
+  /* background: green; */
+  /* margin-bottom: 50px; */
 }
 
 #addlogo {
-  background: yellow;
+  display: flex;
+  /* background: yellow; */
   width: 50px;
   height: 50px;
   margin-left: 28px;
@@ -31,20 +37,21 @@
 }
 
 .create-item-form-parent {
-  background: blue;
+  /* background: blue; */
   display: flex;
   flex-flow: row;
   justify-content: center;
 }
 
 .create-item-form {
-  background: pink;
+  /* background: pink; */
   /* display: flex; */
   /* justify-content: space-between; */
 }
 
 .create-item-container {
-  background: purple;
+  background: rgba(1, 36, 55, 0.29);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: column;
   padding: 30px;
@@ -53,7 +60,7 @@
 }
 
 .create-item-titles {
-  background: orange;
+  /* background: orange; */
   display: flex;
   width: 400px;
   align-items: center;
@@ -62,24 +69,29 @@
 }
 
 .create-input {
-  background: red;
+  /* background: red; */
   display: flex;
   align-self: center;
   width: 50%;
   justify-content: space-between;
   border: none;
+  padding: 10px;
 }
 
 .input-category {
-  width: 51%;
+  width: 55%;
 }
 
 .create-form-line {
   background: black;
   border: 1px solid black;
-  width: 530px;
+  width: 520px;
 }
 
 .create-submit-button {
-  background: pink;
+  /* background: pink; */
+  /* margin-top: 80px; */
+  border: none;
+  width: 25%;
+  height: 30px;
 }
