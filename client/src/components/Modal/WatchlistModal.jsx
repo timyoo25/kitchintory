@@ -47,7 +47,8 @@ export default function WatchlistModal(props) {
         >
           <input
             type="number"
-            step="0.01"
+            step="0.1"
+            min="0"
             name="specifiedqty"
             placeholder="Quantity"
           />

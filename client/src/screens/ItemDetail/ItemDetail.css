@@ -63,6 +63,8 @@
   margin-right: -62px;
   overflow: auto;
   border-left: 5px solid black;
+  margin: 4% 0;
+  margin-right: -4%;
 }
 
 .edit-line {
@@ -137,6 +139,7 @@
 }
 .item-title-contain {
   width: 100%;
+  margin-top: 2%;
 }
 .category-detail-icon > .fas,
 .far {
@@ -184,6 +187,8 @@
     overflow: auto;
     margin-top: 5%;
     margin-bottom: 5%;
+    border-top: 5px solid black;
+    border-left: unset;
   }
 }
 @media only screen and (min-height: 1000px) and (min-width: 1000px) {
