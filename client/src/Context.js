@@ -16,12 +16,12 @@ export const Provider = (props) => {
     <>
       <userContext.Provider value={[user, setUser ]} >
         <itemContext.Provider value={[items, setItems]}>
-        <resultContext.Provider value={[searchResult, setSearchResult]}>
-        <inputContext.Provider value={[searchInput, setSearchInput]}>
+          <resultContext.Provider value={[searchResult, setSearchResult]}>
+            <inputContext.Provider value={[searchInput, setSearchInput]}>
         
-            {props.children}
-        </inputContext.Provider>
-        </resultContext.Provider>
+              {props.children}
+             </inputContext.Provider>
+          </resultContext.Provider>
         </itemContext.Provider>
       </userContext.Provider>
     </>

@@ -10,9 +10,6 @@ import SignUp from "./screens/SignUp/SignUp"
 import SignOut from "./screens/SignOut/SignOut"
 import { Provider } from './Context'
 import './App.css';
-import { verifyUser } from "./services/users"
-import { useHistory } from 'react-router-dom'
-
 
 function App() {
   return (
@@ -51,7 +48,7 @@ function App() {
           <Route exact path="/items/:id/edit">
             <ItemEdit/>
           </Route>
-          
+
         </Switch>
       </div>
     </Provider>
