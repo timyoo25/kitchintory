@@ -1,6 +1,7 @@
 .create-item-master {
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  min-height: 830px;
   background: rgba(164, 197, 216, 0.8);
   font-family: Abel;
 }
@@ -114,4 +115,10 @@
   height: 40px;
   margin-top: 2.5%;
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.322);
+}
+
+@media screen and (max-width: 768px) {
+  .create-item-image {
+    flex: 0.25;
+  }
 }
