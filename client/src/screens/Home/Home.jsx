@@ -32,7 +32,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <img className="home-image" src="https://i.imgur.com/DiYwkus.png" /> */}
         <div className="bottom">
           <div className="home-about-container">
             <img

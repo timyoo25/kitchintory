@@ -36,7 +36,6 @@ a:visited {
 }
 #sign-up-form {
   background: rgba(44, 82, 102, 0.29);
-  /* box-shadow: -10px 10px 10px rgba(44, 82, 102, 0.25); */
   box-shadow: inset 0px 0px 10px 20px rgb(44 82 102 / 25%);
   height: 53%;
   min-height: 280px;
@@ -46,7 +45,6 @@ a:visited {
   width: 75%;
   padding: 30px;
   justify-content: center;
-  /* margin-bottom: 30px; */
 }
 #sign-up-form label {
   font-size: x-large;
