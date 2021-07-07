@@ -12,3 +12,20 @@
   border: 0px;
   font-family: Abel;
 }
+
+@media screen and (max-width: 865px) {
+  .search-input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .search-input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .search-input {
+    width: 150px;
+  }
+}

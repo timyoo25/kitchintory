@@ -85,13 +85,11 @@ export default function Home() {
 
                 <div className="home-about-functionality">
                   <p className="home-about-functionality-call-to-action">
-                    <strong>After joining, you can :</strong>
+                    <strong className="home-about-functionality-call-to-action-text">
+                      After joining, you can :
+                    </strong>
                   </p>
                   <div className="home-about-sign-up-to-view-stock">
-                    {/* <img
-                      className="home-add-example home-add-item-example"
-                      src="https://i.imgur.com/ag15z7l.png"
-                    /> */}
                     <div className="home-about-add-item-text-top">
                       <li className="home-about-add-item-text-li">
                         View Your Stock
@@ -99,10 +97,6 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="home-about-sign-up-to-add-to-stock">
-                    {/* <img
-                      className="home-add-example home-add-item-example"
-                      src="https://i.imgur.com/7V3tEEJ.png"
-                    /> */}
                     <div className="home-about-add-item-text-middle">
                       <li className="home-about-add-item-text-li">
                         Add to Your Stock
@@ -110,10 +104,6 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="home-about-sign-up-to-edit-stock">
-                    {/* <img
-                      className="home-add-example home-add-item-example"
-                      src="https://i.imgur.com/C7i0rBu.png"
-                    /> */}
                     <div className=" home-about-add-item-text-bottom">
                       <li className="home-about-add-item-text-li">
                         Edit Your Stock
@@ -134,5 +124,3 @@ export default function Home() {
     </Layout>
   );
 }
-
-//src="https://i.imgur.com/MUdotoA.png"
