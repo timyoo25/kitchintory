@@ -1,20 +1,16 @@
 import "./Search.css";
 import { useContext } from "react";
-import { itemContext, resultContext, inputContext } from "../../Context";
+import { Context } from '../../Context'
 import { useHistory } from "react-router-dom";
 
 const Search = (props) => {
-  const [items] = useContext(itemContext);
-  // eslint-disable-next-line
-  const [searchResult, setSearchResult] = useContext(resultContext);
-  const [searchInput, setSearchInput] = useContext(inputContext);
-
+  const { items, setSearchResult,
+    searchInput, setSearchInput } = useContext(Context)
   const history = useHistory();
 
   const handleChange = (event) => {
     event.preventDefault();
     setSearchInput(
-      // ...searchInput,
       event.target.value
     );
   };
@@ -29,7 +25,6 @@ const Search = (props) => {
     } else {
       setSearchResult(items);
     }
-    // setSearchInput("")
     history.push("/items");
   };
   return (
