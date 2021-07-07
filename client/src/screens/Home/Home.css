@@ -383,6 +383,12 @@
   }
 }
 
+@media screen and (max-width: 795px) {
+  .home-about-sign-up-p {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 735px) {
   .home-about-functionality-call-to-action-text {
     font-size: 12px;
@@ -412,11 +418,20 @@
   .home-about-text-title {
     font-size: 25px;
   }
+  .home-about-sign-up-p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 660px) {
   .home-about-functionality-call-to-action-text {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 9px;
   }
 }
 
@@ -435,11 +450,14 @@
   }
 }
 
-@media screen and (max-width: 542px) {
-  .home-about-functionality-call-to-action-text {
+@media screen and (max-width: 555px) {
+  .home-about-add-item-text-li {
     font-size: 10px;
   }
-  .home-about-add-item-text-li {
+}
+
+@media screen and (max-width: 542px) {
+  .home-about-functionality-call-to-action-text {
     font-size: 10px;
   }
   .home-about-icons-title {
