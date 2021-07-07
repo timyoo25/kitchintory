@@ -6,10 +6,10 @@ import Layout from "../../components/Layout/Layout";
 import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
-const Items = (props) => {
+const Items = () => {
   const [items, setItems] = useContext(itemContext)
   const [searchResult, setSearchResult] = useContext(resultContext)
-  const [searchInput, setSearchInput] = useContext(inputContext)
+  const [searchInput] = useContext(inputContext)
 
   const [categoryArr, setCategoryArr] = useState([]);
   const [show, setShow] = useState(false);

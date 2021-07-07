@@ -72,7 +72,7 @@
 
 .item-detail-name {
   font-family: "Mohave", sans-serif;
-  font-size: 8vh;
+  font-size: 6vh;
   width: 90%;
   white-space: nowrap;
   overflow: hidden;
@@ -83,7 +83,7 @@
   display: flex;
   flex-flow: column;
   font-family: "Abel", sans-serif;
-  font-size: 5vh;
+  font-size: 3vh;
   height: 90%;
   width: 70%;
   margin-left: 20px;
