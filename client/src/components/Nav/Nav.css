@@ -232,3 +232,18 @@
     transform: translateY(0%);
   }
 }
+
+@media screen and (max-width: 714px) {
+  .nav-auth-stock-link {
+    font-size: 15px;
+  }
+  .nav-auth-add-link {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .nav-sign-out-link-caption {
+    font-size: 18px;
+  }
+}
