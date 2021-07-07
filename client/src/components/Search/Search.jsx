@@ -31,7 +31,7 @@ const Search = (props) => {
     <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
       <input
         className="search search-input"
-        value={props?.searchInput}
+        value={searchInput}
         onChange={(e) => handleChange(e)}
         name="Search"
         placeholder="Search"
