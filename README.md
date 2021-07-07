@@ -24,7 +24,7 @@ Kitchintory is an application for restaurant management. It's a tool to keep tra
 
 ## Component Hierarchy
 
-![](https://res.cloudinary.com/willnolin/image/upload/v1625667691/Components_casnhj.png | width=200)
+<img src="https://res.cloudinary.com/willnolin/image/upload/v1625667691/Components_casnhj.png" width="500" height="300" />
 [Component Hierarchy](https://whimsical.com/p3-kitchntory-VXuCpdbZA9bXaRWaTE2ubN)
 
 ## Schema
