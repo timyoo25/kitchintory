@@ -29,10 +29,6 @@
   padding-bottom: 3%;
 }
 
-/* .right {
-  padding-right: 10%;
-} */
-
 .sign-up-link {
   text-decoration: none;
 }
@@ -63,13 +59,6 @@
 .home-about-card-body-end {
   text-align: center;
 }
-
-/* .left > img {
-  width: 120px;
-  height: auto;
-  padding-right: 15%;
-  padding-bottom: 2%;
-} */
 
 .home-about-card-img {
   width: 55%;
@@ -149,7 +138,6 @@
 .home-about-text {
   width: 450px;
   height: 20%;
-  /* background: blue; */
 }
 
 .home-about-text-title {
@@ -167,7 +155,6 @@
 }
 
 .home-about-below-hr {
-  /* background: chartreuse; */
   display: flex;
   justify-content: center;
   padding-top: 5%;
@@ -176,7 +163,6 @@
 }
 
 .home-about-sign-up-bottom {
-  /* background: chocolate; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,8 +172,6 @@
 
 .home-about-sign-up-bottom-effect {
   width: 57%;
-  /* margins-top: 3%; */
-  /* background: crimson; */
 }
 
 .home-about-sign-up-bottom-effect:hover {
@@ -239,12 +223,12 @@
 }
 
 .home-about-functionality {
-  /* background: crimson; */
   width: 49.7%;
 }
 
 .home-about-functionality-call-to-action {
   font-size: 17 px;
+  margin-top: 0px;
 }
 
 .home-about-add-item-text-li {
@@ -387,5 +371,94 @@
   }
   .home-about-text-title {
     font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 15px;
+  }
+  .home-about-add-item-text-li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 12px;
+  }
+  .home-about-add-item-text-li {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .categories-text {
+    font-size: 15px;
+  }
+  .home-snowflake {
+    font-size: 42px;
+    padding-bottom: 35px;
+  }
+  .home-fridge {
+    font-size: 42px;
+  }
+  .home-dry {
+    font-size: 38px;
+  }
+  .home-about-icons-title {
+    font-size: 25px;
+  }
+  .home-about-text-title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 9px;
+  }
+  .home-about-add-item-text-li {
+    font-size: 11px;
+  }
+  .home-about-icons-title {
+    font-size: 23px;
+  }
+  .home-about-text-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .home-about-functionality-call-to-action-text {
+    font-size: 10px;
+  }
+  .home-about-add-item-text-li {
+    font-size: 10px;
+  }
+  .home-about-icons-title {
+    font-size: 22px;
+  }
+  .categories-text {
+    font-size: 15px;
+  }
+  .home-snowflake {
+    font-size: 40px;
+    padding-bottom: 35px;
+  }
+  .home-fridge {
+    font-size: 40px;
+  }
+  .home-dry {
+    font-size: 35px;
+  }
+  .home-about-text-title {
+    font-size: 20px;
   }
 }

@@ -1,16 +1,21 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import { userContext, itemContext, resultContext, inputContext } from '../../Context'
+import {
+  userContext,
+  itemContext,
+  resultContext,
+  inputContext,
+} from "../../Context";
 import Search from "../Search/Search";
-import { verifyUser } from "../../services/users"
+import { verifyUser } from "../../services/users";
 import { Link } from "react-router-dom";
 
 export default function Nav() {
-  const [user, setUser] = useContext(userContext)
-  const [items] = useContext(itemContext)
-  const [searchResult, setSearchResult] = useContext(resultContext)
-  const [searchInput, setSearchInput] = useContext(inputContext)
+  const [user, setUser] = useContext(userContext);
+  const [items] = useContext(itemContext);
+  const [searchResult, setSearchResult] = useContext(resultContext);
+  const [searchInput, setSearchInput] = useContext(inputContext);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -18,7 +23,7 @@ export default function Nav() {
       user ? setUser(user) : setUser(null);
     };
     fetchUser();
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   const clearSearchNull = () => {
@@ -54,11 +59,6 @@ export default function Nav() {
         </div>
       </div>
       <NavLink className="nav-auth-link nav-sign-out-link" to="/sign-out">
-        {/* <img
-          className="nav-auth-icon nav-sign-out-logo"
-          src="https://i.imgur.com/8ZYKbn8.png"
-          alt="sign-out"
-        /> */}
         <p className="nav-sign-out-link-caption">Sign Out</p>
       </NavLink>
     </div>
@@ -70,11 +70,6 @@ export default function Nav() {
         <NavLink className="nav-unauth-link nav-sign-in-link" to="/sign-up">
           <div className="nav-sign-up-container">
             <br />
-            {/* <img
-              className="nav-sign-in-logo"
-              src="https://i.imgur.com/0reVlNp.png"
-              alt="sign up"
-            /> */}
           </div>
           <div className="nav-sign-up-text">Sign Up</div>
         </NavLink>
@@ -100,20 +95,10 @@ export default function Nav() {
         </div>
         <div className="nav-search-bar-parent">
           <div className="nav-search-bar">
-            {user ? (
-              <Search
-                className="search"
-              />
-            ) : (
-              "Welcome to Kitchin-tory!"
-            )}
+            {user ? <Search className="search" /> : "Welcome to Kitchin-tory!"}
           </div>
         </div>
         <div className="nav-empty-div"></div>
-        {/* {user && <div className="welcome">Welcome, {user.username}!</div>}
-        {!user && (
-          <div className="welcome">Sign up to get your stock in shape!</div>
-        )} */}
       </div>
       <div className="nav-links">
         {alwaysOptions}
