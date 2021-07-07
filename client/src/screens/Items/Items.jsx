@@ -1,17 +1,18 @@
 import { getItems } from "../../services/items";
 import { useEffect, useState, useContext } from "react";
-import { itemContext, resultContext, inputContext } from '../../Context'
+import { itemContext, resultContext, inputContext } from "../../Context";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
+
 
 const Items = () => {
   const [items, setItems] = useContext(itemContext)
   const [searchResult, setSearchResult] = useContext(resultContext)
   const [searchInput] = useContext(inputContext)
 
-  const [categoryArr, setCategoryArr] = useState([]);
+
   const [show, setShow] = useState(false);
   const [watchlist, setWatchlist] = useState([]);
 
@@ -44,7 +45,6 @@ const Items = () => {
     let itemsCategory = items.filter(
       (item) => item.category === name.toLowerCase()
     );
-    setCategoryArr(itemsCategory);
     setSearchResult(itemsCategory);
   }
 
@@ -115,21 +115,28 @@ const Items = () => {
           </div>
           {searchResult?.map((item, index) => {
             return (
-              <div className="items-container" key={index}
-              style={
-                item.shelfLife - item.expiration < 3
-                  ? { background: "rgba(255, 0, 0, 0.4)" }
-                  : { background: "rgba(243, 253, 255, 0.77)"}
-              }>
+              <div
+                className="items-container"
+                key={index}
+                style={
+                  item.shelfLife - item.expiration < 3
+                    ? { background: "rgba(255, 0, 0, 0.4)" }
+                    : { background: "rgba(243, 253, 255, 0.77)" }
+                }
+              >
                 <Link className="items-link" to={`/items/${item._id}`}>
                   <div className="item-img">
                     <img src={item.imgURL} alt={item.name} />
-                    <p className="expired-overlay"
-                    style={
-                      item.shelfLife - item.expiration <= 0
-                        ? { display: "block" }
-                        : { display: "none"}
-                    }>EXPIRED</p>
+                    <p
+                      className="expired-overlay"
+                      style={
+                        item.shelfLife - item.expiration <= 0
+                          ? { display: "block" }
+                          : { display: "none" }
+                      }
+                    >
+                      EXPIRED
+                    </p>
                   </div>
                   <h2 className="item-name">{item.name}</h2>
                   <hr className="item-name-hr" />
