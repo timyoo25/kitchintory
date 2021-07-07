@@ -17,7 +17,7 @@ Kitchintory is an application for restaurant management. It's a tool to keep tra
 
 ## Wireframes
 
-<img src="https://res.cloudinary.com/willnolin/image/upload/v1625667447/NAV_u9zfsl.png" width="100" height=100/>
+<img src="https://res.cloudinary.com/willnolin/image/upload/v1625667447/NAV_u9zfsl.png" width="300" height=200/>
 ![](https://res.cloudinary.com/willnolin/image/upload/v1625667447/NAV_u9zfsl.png =100x20)
 ![](https://res.cloudinary.com/willnolin/image/upload/v1625667424/Add_item_ksyz6o.png | width:200)
 ![](https://res.cloudinary.com/willnolin/image/upload/v1625667329/items_khngll.png | width:200)
