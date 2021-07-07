@@ -6,11 +6,12 @@ import Layout from "../../components/Layout/Layout";
 import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
-const Items = (props) => {
-  const [items, setItems] = useContext(itemContext);
-  const [searchResult, setSearchResult] = useContext(resultContext);
-  // eslint-disable-next-line
-  const [searchInput, setSearchInput] = useContext(inputContext);
+
+const Items = () => {
+  const [items, setItems] = useContext(itemContext)
+  const [searchResult, setSearchResult] = useContext(resultContext)
+  const [searchInput] = useContext(inputContext)
+
 
   const [show, setShow] = useState(false);
   const [watchlist, setWatchlist] = useState([]);

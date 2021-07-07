@@ -2,14 +2,29 @@
 
 ## Project Description
 
-Kitchintory is an application for restaurant management to be able to better keep track of what's in stock and what is needed, so they can be better prepared for ordering and customer needs.
+Kitchintory is an application for restaurant management. It's a tool to keep track of what's in stock and what is needed so that you minimize waste and maximize profits.
+
+## Development
+
+- Fork and Clone.
+- "npm install" to install back-end packages
+- cd into client
+- "npm install" to install front-end packages
+- To run on local host:
+- cd kitchintory > npm run dev
+- Open new tab
+- cd client > npm start
 
 ## Wireframes
 
+![](https://res.cloudinary.com/willnolin/image/upload/v1625667447/NAV_u9zfsl.png | width:200)
+![](https://res.cloudinary.com/willnolin/image/upload/v1625667424/Add_item_ksyz6o.png | width:200)
+![](https://res.cloudinary.com/willnolin/image/upload/v1625667329/items_khngll.png | width:200)
 [Wireframes](https://www.figma.com/file/R5kAmuUW4CBAAPc2hMXrzt/Inventory?node-id=0%3A1&frame-preset-name=Desktop)
 
 ## Component Hierarchy
 
+![](https://res.cloudinary.com/willnolin/image/upload/v1625667691/Components_casnhj.png | width=200)
 [Component Hierarchy](https://whimsical.com/p3-kitchntory-VXuCpdbZA9bXaRWaTE2ubN)
 
 ## Schema
@@ -26,9 +41,16 @@ const Item = new Schema(
       enum: ['freezer', 'refrigerator', 'dry-storage'],
       required: true
     },
+    shelfLife: {
+      type: Number
+    }
   },
   { timestamps: true }
-)
+);
+Item.virtual('expiration').get(function () {
+  const date = new Date().getTime()
+  return(Math.floor((date - this.createdAt.getTime())/(1000*60*60*24)))
+})
 ```
 
 ### MVP/PostMVP
@@ -42,10 +64,10 @@ const Item = new Schema(
 #### PostMVP
 
 - Background images on add and edit page updating with whatever image the user inputs.
-- Utilizing pseudo classes and elemnts with CSS.
+- Utilizing pseudo classes and elements with CSS.
 - When clicking any of the three logos on the home page, you will be redirected to the proper location.
 - Adding best by dates to items.
-- 'Almost out of' list on the items page, listing every item the has a quantitiy of a certain number or lower.
+- 'Almost out of' list on the items page, listing every item the has a quantity of a certain number or lower.
 
 ## Project Schedule
 
