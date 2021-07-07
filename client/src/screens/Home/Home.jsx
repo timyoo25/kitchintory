@@ -36,7 +36,7 @@ export default function Home() {
           <div className="home-about-container">
             <img
               className=" home-dark-blue-image-item"
-              src="https://i.imgur.com/Jguggtc.png"
+              src="https://i.imgur.com/xCYZRQU.png"
               alt="dark-blue-img"
             />
             <div className="home-about-organize home-about-container-child">
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <img
               className="home-bottom-images home-bottom-image-detail"
-              src="https://i.imgur.com/0A5m41r.png"
+              src="https://i.imgur.com/ALmXhLj.png"
               alt="bottom-images"
             />
           </div>
