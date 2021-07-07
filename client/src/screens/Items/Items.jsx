@@ -1,15 +1,14 @@
 import { getItems } from "../../services/items";
 import { useEffect, useState, useContext } from "react";
-import { Context } from '../../Context'
+import { Context } from "../../Context";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import WatchlistModal from "../../components/Modal/WatchlistModal";
 import "./Items.css";
 
-
 const Items = () => {
-  const { items, setItems, searchResult, setSearchResult,
-  searchInput } = useContext(Context)
+  const { items, setItems, searchResult, setSearchResult, searchInput } =
+    useContext(Context);
 
   const [show, setShow] = useState(false);
   const [watchlist, setWatchlist] = useState([]);
@@ -75,7 +74,7 @@ const Items = () => {
         <div className="items-parent">
           <div id="stock-menu-btns">
             <button type="button" onClick={resetStock}>
-              Reset
+              Reset Search
             </button>
             <button type="button" onClick={handleWatchlist}>
               Watchlist
