@@ -43,20 +43,23 @@ export default function ItemDetail() {
             </div>
             <div className="item-detail-details">
               <div className="item-detail-quantity">
-                <b>Quantity:</b> &nbsp;{item.quantity}
+                <b className="item-detail-content">Quantity:</b> &nbsp;
+                {item.quantity}
               </div>
               <div className="item-detail-price">
-                <b>Price:</b> &nbsp; ${item.price?.toFixed(2)}
+                <b className="item-detail-content">Price:</b> &nbsp; $
+                {item.price?.toFixed(2)}
               </div>
               <div className="item-detail-category">
-                <b>Category:</b>&nbsp;
+                <b className="item-detail-content">Category:</b>&nbsp;
                 {item.category}
               </div>
               <div className="item-detail-shelfLife">
-                <b>Shelf Life:</b>&nbsp; {item.shelfLife} days
+                <b className="item-detail-content">Shelf Life:</b>&nbsp;
+                {item.shelfLife} days
               </div>
               <div className="item-detail-expiration">
-                <b>Expires in:</b> &nbsp;&nbsp;
+                <b className="item-detail-content">Expires in:</b> &nbsp;&nbsp;
                 <p
                   className="expire-days"
                   style={

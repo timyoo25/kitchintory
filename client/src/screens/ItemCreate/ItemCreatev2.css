@@ -71,7 +71,6 @@
 }
 
 .create-item-titles {
-  /* background: orange; */
   display: flex;
   width: 400px;
   align-items: center;
@@ -85,7 +84,6 @@
 }
 
 .create-input {
-  /* background: red; */
   display: flex;
   align-self: center;
   width: 50%;
@@ -107,7 +105,6 @@
 }
 
 .create-submit-button {
-  /* background: pink; */
   font-size: 20px;
   background-color: #ddf2d9;
   border: 0px;
@@ -119,6 +116,6 @@
 
 @media screen and (max-width: 768px) {
   .create-item-image {
-    flex: 0.25;
+    flex: 0.6;
   }
 }
