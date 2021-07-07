@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
+
 import { Context } from '../../Context'
+
 import { signIn } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
@@ -7,7 +9,9 @@ import "./SignIn.css";
 
 const SignIn = () => {
   const history = useHistory();
+
   const { setUser } = useContext(Context)
+
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -27,7 +31,9 @@ const SignIn = () => {
     try {
       const user = await signIn(form);
       setUser(user);
+
       history.push("/items"); 
+
     } catch (error) {
       console.error(error);
       setForm({
@@ -41,14 +47,12 @@ const SignIn = () => {
 
   const renderError = () => {
     if (form.isError) {
-      return (
-        <p className="invalid-msg">{form.errorMsg}</p>
-      )
+      return <p className="invalid-msg">{form.errorMsg}</p>;
     } else {
-      <p></p>
+      <p></p>;
     }
-  }
-    
+  };
+
   const { username, password } = form;
   return (
     <Layout>
@@ -64,14 +68,14 @@ const SignIn = () => {
               <div className="sign-in-label">
                 <label>Username:</label>
               </div>
-              <div className='sign-in-username'>
+              <div className="sign-in-username">
                 <input
                   required
                   type="text"
                   name="username"
                   value={username}
                   onChange={handleChange}
-                  />
+                />
               </div>
             </div>
             <br />
@@ -79,14 +83,14 @@ const SignIn = () => {
               <div className="sign-in-label">
                 <label>Password:</label>
               </div>
-              <div className='sign-in-password'>
+              <div className="sign-in-password">
                 <input
                   required
                   name="password"
                   value={password}
                   type="password"
                   onChange={handleChange}
-                  />
+                />
               </div>
             </div>
             <br />

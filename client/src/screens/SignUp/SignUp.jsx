@@ -1,5 +1,7 @@
 import { useState, useContext } from "react";
+
 import { Context } from '../../Context'
+
 import { signUp } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
@@ -7,7 +9,9 @@ import "./SignUp.css";
 
 const SignUp = () => {
   const history = useHistory();
+
   const { setUser } = useContext(Context)
+
   const [form, setForm] = useState({
     username: "",
     password: "",
@@ -35,7 +39,7 @@ const SignUp = () => {
       try {
         const user = await signUp(form);
         setUser(user);
-        history.push("/items"); // <----double check path
+        history.push("/items");
       } catch (error) {
         console.error(error);
         setForm({
@@ -117,7 +121,7 @@ const SignUp = () => {
             {renderError()}
           </form>
           <p>
-            Have an account?{" "}
+            Have an account?
             <Link to="/sign-in">
               <i>Sign-In Here!</i>
             </Link>
