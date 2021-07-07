@@ -1,9 +1,5 @@
 import React, { useState, createContext } from 'react';
 
-// export const userContext = createContext();
-// export const itemContext = createContext();
-// export const resultContext = createContext();
-// export const inputContext = createContext();
 export const Context = createContext();
 
 export const Provider = (props) => {
@@ -21,17 +17,9 @@ export const Provider = (props) => {
 
   return (
     <>
-      {/* <userContext.Provider value={[user, setUser ]} >
-        <itemContext.Provider value={[items, setItems]}>
-          <resultContext.Provider value={[searchResult, setSearchResult]}>
-            <inputContext.Provider value={[searchInput, setSearchInput]}> */}
-          <Context.Provider value={providerValue}>
-            {props.children}
-          </Context.Provider>
-             {/* </inputContext.Provider>
-          </resultContext.Provider>
-        </itemContext.Provider>
-      </userContext.Provider> */}
+      <Context.Provider value={providerValue}>
+        {props.children}
+      </Context.Provider>
     </>
   )
 }
