@@ -76,14 +76,14 @@ Item.virtual('expiration').get(function () {
 
 | Day        | Deliverable                                        | Status     |
 | ---------- | -------------------------------------------------- | ---------- |
-| June 25-27 | Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete |
-| June 28    | Project Approval                                   | Incomplete |
-| June 29    | Core Application Structure (HTML, CSS, etc.)       | Incomplete |
-| June 30    | Pseudocode / back end code.                        | Incomplete |
-| July 1     | Initial Clickable Model                            | Incomplete |
-| July 2     | MVP                                                | Incomplete |
-| July 3-5   | PMVP                                               | Incomplete |
-| July 6     | PMVP                                               | Incomplete |
+| June 25-27 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete |
+| June 28    | Project Approval                                   | Complete |
+| June 29    | Core Application Structure (HTML, CSS, etc.)       | Complete |
+| June 30    | Pseudocode / back end code.                        | Complete |
+| July 1     | Initial Clickable Model                            | Complete |
+| July 2     | MVP                                                | Complete |
+| July 3-5   | PMVP                                               | Complete |
+| July 6     | PMVP                                               | Complete |
 | July 7     | Presentations                                      | Incomplete |
 
 ## Timeframes
@@ -100,29 +100,30 @@ Item.virtual('expiration').get(function () {
 | Flow-Chart                                                      |    H     |       1        |       1       |      1      |
 | Git-Hub Repo Set Up                                             |    H     |       .5       |      .5       |     .5      |
 | Team Expectations                                               |    H     |       .5       |      .5       |     .5      |
-| B.E. Create Folders And Files                                   |    H     |       .5       |               |             |
-| B.E. Create Data base / Schema                                  |    H     |       .5       |               |             |
-| B.E. Connect To MongoDB                                         |    H     |       .5       |               |             |
-| B.E. Set Up Routes                                              |    H     |       .5       |               |             |
-| B.E. Connect To Heroku                                          |    H     |       .5       |               |             |
-| B.E. User Schema                                                |    H     |       .5       |               |             |
-| B.E. User Auth                                                  |    H     |       3        |               |             |
-| F.E. Create Folders And Files                                   |    H     |       .5       |               |             |
-| F.E. Create-React-App                                           |    H     |       .5       |               |             |
-| F.E. Api Calls / Testing                                        |    H     |       1        |               |             |
-| F.E. Display Data On Items Screen                               |    H     |       2        |               |             |
-| F.E. Display Data On Item Detail                                |    H     |       2        |               |             |
-| F.E. Clickable Model                                            |    H     |       2        |               |             |
-| F.E. Create Forms For User Authentication (sign in and up page) |    H     |       3        |               |             |
-| F.E. Testing User Auth                                          |    H     |       2        |               |             |
-| CSS For Home Screen                                             |    H     |       3        |               |             |
-| CSS For Items Screen                                            |    H     |       3        |               |             |
-| CSS For Item Detail Screen                                      |    H     |       3        |               |             |
-| CSS For Edit Item Screen                                        |    H     |       3        |               |             |
-| CSS For Add Item Screen                                         |    H     |       3        |               |             |
-| CSS For Sign In / Sign Up Screen                                |    H     |       3        |               |             |
-| PMVP                                                            |    H     |       4        |               |             |
-| Total                                                           |    H     |       55       |      13       |             |
+| B.E. Create Folders And Files                                   |    H     |       .5       |       .5      |   .5          |
+| B.E. Create Data base / Schema                                  |    H     |       .5       |       1       |      1       |
+| B.E. Connect To MongoDB                                         |    H     |       .5       |       1       |     1        |
+| B.E. Set Up Routes                                              |    H     |       .5       |       .5      |    .5         |
+| B.E. Connect To Heroku                                          |    H     |       .5       |       .5      |     .5        |
+| B.E. User Schema                                                |    H     |       .5       |       .5      |     .5         |
+| B.E. User Auth                                                  |    H     |       3        |        2.5    |     2.5        |
+| F.E. Create Folders And Files                                   |    H     |       .5       |      .5       |      .5       |
+| F.E. Create-React-App                                           |    H     |       .5       |      .5         |  .5           |
+| F.E. Api Calls / Testing                                        |    H     |       1        |      2         |    2         |
+| F.E. Display Data On Items Screen                               |    H     |       2        |      1         |     1        |
+| F.E. Display Data On Item Detail                                |    H     |       2        |      2         |      2       |
+| F.E. Clickable Model                                            |    H     |       2        |      2         |      2       |
+| F.E. Create Forms For User Authentication (sign in and up page) |    H     |       3        |      3         |      3       |
+| F.E. Testing User Auth                                          |    H     |       2        |      2         |      2       |
+| F.E. Search Functionality                                       |    H     |       3        |      3         |      3       |
+| CSS For Home Screen                                             |    H     |       3        |      3         |      3       |
+| CSS For Items Screen                                            |    H     |       3        |      3         |      3       |
+| CSS For Item Detail Screen                                      |    H     |       3        |      4         |      4       |
+| CSS For Edit Item Screen                                        |    H     |       3        |      4         |      4       |
+| CSS For Add Item Screen                                         |    H     |       3        |      3         |      3       |
+| CSS For Sign In / Sign Up Screen                                |    H     |       3        |      3.5         |    3.5         |
+| PMVP                                                            |    H     |       4        |       5        |       5      |
+| Total                                                           |    H     |       58       |     61      |      61      |
 
 ## SWOT Analysis
 
