@@ -2,7 +2,6 @@ import { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { createItem } from "../../services/items";
 import { Redirect } from "react-router-dom";
-// import "./ItemCreate.css";
 import "./ItemCreatev2.css";
 
 export default function ItemCreate() {
@@ -54,11 +53,6 @@ export default function ItemCreate() {
     <Layout>
       <div className="create-item-master">
         <div className="create-item-image">
-          {/* <img
-            className="add-item-img"
-            src="https://i.imgur.com/Fpi2uSF.png"
-            alt="add item"
-          /> */}
         </div>
         <div className="create-item-parent">
           <img

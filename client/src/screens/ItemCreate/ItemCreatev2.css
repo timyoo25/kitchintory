@@ -1,6 +1,5 @@
 .create-item-master {
   display: flex;
-  /* min-height: 100vh; */
   min-height: 830px;
   background: rgba(164, 197, 216, 0.8);
   font-family: Abel;
@@ -24,17 +23,14 @@
 
 .add-item-title {
   display: inline-flex;
-  /* background: green; */
   margin-bottom: 50px;
 }
 
 #addlogo {
   display: flex;
-  /* background: yellow; */
   width: 50px;
   height: 50px;
   margin-left: 28px;
-  /* margin-top: -50px; */
 }
 
 .add-item-line {
@@ -46,17 +42,10 @@
 }
 
 .create-item-form-parent {
-  /* background: blue; */
   display: flex;
   flex-flow: row;
   justify-content: center;
 }
-
-/* .create-item-form {
-  background: pink;
-  display: flex;
-  justify-content: space-between;
-} */
 
 .create-item-container {
   background: rgba(1, 36, 55, 0.29);

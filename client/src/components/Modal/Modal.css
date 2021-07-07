@@ -15,7 +15,7 @@
   background-color: #012437;
 }
 .watchlist-modalClass::-webkit-scrollbar-thumb {
-  background-color: rgb(245, 229, 200); /*rgb(204, 204, 204);*/
+  background-color: rgb(245, 229, 200);
   outline: 4px dashed white;
 }
 #watchlist-modal {
@@ -65,4 +65,15 @@
 #watchlist-btn {
   height: 29px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 970px) {
+  #watchlist-modal {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: #012437;
+    color: wheat;
+    margin: auto;
+  }
 }
