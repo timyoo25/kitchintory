@@ -9,10 +9,7 @@ export default function Footer() {
         </div>
         <div>
           <a href="https://www.linkedin.com/in/gilda-charles-8a761b18b/">
-            <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png"
-              height='30'
-              width='30'
-            />
+            <img className='linked-in'/>
           </a>
         </div>
       </div>
@@ -22,10 +19,7 @@ export default function Footer() {
         </div>
         <div>
           <a href='https://www.linkedin.com/in/talon-00-goulart/'>
-            <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png"
-              height='30'
-              width='30'
-            />
+            <img className='linked-in'/>
           </a>
         </div>
       </div>
@@ -38,10 +32,7 @@ export default function Footer() {
         </div>
         <div>
           <a href='https://www.linkedin.com/in/willnolinmetivier/'>
-            <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png"
-              height='30'
-              width='30'
-            />
+            <img className='linked-in'/>
           </a>
         </div>
       </div>
@@ -51,10 +42,7 @@ export default function Footer() {
         </div>
         <div>
           <a href='https://www.linkedin.com/in/timothy-yoo/'>
-            <img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png"
-              height='30'
-              width='30'
-            />
+            <img className='linked-in'/>
           </a>
         </div>
       </div>
