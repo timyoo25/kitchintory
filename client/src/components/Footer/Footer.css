@@ -32,6 +32,7 @@
 .linked-in {
   background-image: url(https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png);
   background-size: cover;
+  border-radius: 8px;
   height: 30px;
   width: 30px;
 }
