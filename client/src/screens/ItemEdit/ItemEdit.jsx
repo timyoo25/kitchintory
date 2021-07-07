@@ -68,8 +68,6 @@ export default function ItemEdit() {
     <Layout>
       <div className="item-edit-parent">
         <div className="item-edit-left-side">
-          {/* <img className="edit-item-image" src={item.imgURL} alt={item.name} /> */}
-
           <div className="item-edit-form-title-div">
             <h2 className="item-edit-form-title">Edit Item</h2>
             <hr className="item-edit-hr item-edit-form-title-hr" />
@@ -178,9 +176,7 @@ export default function ItemEdit() {
             </div>
           </div>
         </div>
-        <div className="item-edit-right-side">
-          {/* <img src="https://i.imgur.com/2OuCFqZ.png" /> */}
-        </div>
+        <div className="item-edit-right-side"></div>
       </div>
     </Layout>
   );

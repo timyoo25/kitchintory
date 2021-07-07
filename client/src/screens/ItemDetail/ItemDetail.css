@@ -3,7 +3,8 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  height: auto; /*100vh; */
+  height: auto;
+  /* height: 100vh; */
   font-family: "Mohave", sans-serif;
   background: #ffffff url("https://i.imgur.com/71o2pdM.jpg");
   background-size: cover;
@@ -15,7 +16,7 @@
   flex-flow: row wrap;
   align-items: center;
   width: 60%;
-  height: 80%;
+  height: 70%;
   padding: 0 5%;
   border-radius: 3px;
   background-color: #b5d4e7e0;
@@ -142,7 +143,60 @@
   font-size: x-large;
 }
 
+@media screen and (max-width: 1920px) {
+  .item-detail-name {
+    font-size: 55px;
+  }
+
+  .item-detail-quantity,
+  .item-detail-price,
+  .item-detail-category,
+  .item-detail-shelfLife,
+  .item-detail-expiration {
+    font-size: 32px;
+  }
+  .item-detail-container {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1253px) {
+  .item-detail-quantity,
+  .item-detail-price,
+  .item-detail-category,
+  .item-detail-shelfLife,
+  .item-detail-expiration {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  .item-detail-quantity,
+  .item-detail-price,
+  .item-detail-category,
+  .item-detail-shelfLife,
+  .item-detail-expiration {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-height: 1150) {
+}
+
+@media screen and (min-width: 1051px) {
+  .item-detail-parent {
+    height: 741px;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
+  .item-detail-quantity,
+  .item-detail-price,
+  .item-detail-category,
+  .item-detail-shelfLife,
+  .item-detail-expiration {
+    font-size: 40px;
+  }
   .item-detail-container {
     display: flex;
     justify-content: space-around;
@@ -193,7 +247,11 @@
     border-top: 5px solid black;
     border-left: unset;
   }
+  .item-detail-img {
+    margin-left: 29.25%;
+  }
 }
+
 @media only screen and (min-height: 1000px) and (min-width: 1000px) {
   #details-divider {
     border-left: 6px solid #012437;
@@ -202,5 +260,92 @@
     position: absolute;
     top: 22%;
     right: 22%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .item-detail-img {
+    margin-left: 28%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .item-detail-img {
+    margin-left: 27%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .item-detail-img {
+    margin-left: 26.3%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .item-detail-img {
+    margin-left: 24.7%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .item-detail-img {
+    margin-left: 23%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item-detail-img {
+    margin-left: 21.5%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .item-detail-img {
+    margin-left: 22%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .item-detail-img {
+    margin-left: 19%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .item-detail-img {
+    margin-left: 16%;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .item-detail-img {
+    margin-left: 15.6%;
+  }
+  .item-detail-name {
+    font-size: 50px;
+  }
+
+  .item-detail-quantity,
+  .item-detail-price,
+  .item-detail-category,
+  .item-detail-shelfLife,
+  .item-detail-expiration {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item-detail-img {
+    margin-left: 13.8%;
+  }
+}
+@media screen and (max-width: 583px) {
+  .item-detail-img {
+    margin-left: 12%;
+  }
+}
+@media screen and (max-width: 565px) {
+  .item-detail-img {
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .item-detail-img {
+    margin-left: 8.5%;
+  }
+  .item-detail-name {
+    font-size: 43px;
   }
 }
