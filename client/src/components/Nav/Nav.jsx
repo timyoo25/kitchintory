@@ -1,24 +1,14 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import {
-  userContext,
-  itemContext,
-  resultContext,
-  inputContext,
-} from "../../Context";
+import { Context } from '../../Context'
 import Search from "../Search/Search";
 import { verifyUser } from "../../services/users";
 import { Link } from "react-router-dom";
 
 export default function Nav() {
-  const [user, setUser] = useContext(userContext);
-  const [items] = useContext(itemContext);
-  // eslint-disable-next-line
-  const [searchResult, setSearchResult] = useContext(resultContext);
-  // eslint-disable-next-line
-  const [searchInput, setSearchInput] = useContext(inputContext);
-
+  const { user, setUser, items,
+    setSearchResult, setSearchInput } = useContext(Context)
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
