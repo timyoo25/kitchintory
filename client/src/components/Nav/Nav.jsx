@@ -1,14 +1,14 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import { Context } from '../../Context'
+import { Context } from "../../Context";
 import Search from "../Search/Search";
 import { verifyUser } from "../../services/users";
 import { Link } from "react-router-dom";
 
 export default function Nav() {
-  const { user, setUser, items,
-    setSearchResult, setSearchInput } = useContext(Context)
+  const { user, setUser, items, setSearchResult, setSearchInput } =
+    useContext(Context);
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
@@ -63,7 +63,7 @@ export default function Nav() {
           <div className="nav-sign-up-container">
             <br />
           </div>
-          <div className="nav-sign-up-text">Sign Up</div>
+          <div className="nav-sign-up-text">Sign Up / Sign In</div>
         </NavLink>
       </div>
     </div>
