@@ -14,7 +14,9 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   const [user, setUser] = useContext(userContext);
   const [items] = useContext(itemContext);
+  // eslint-disable-next-line
   const [searchResult, setSearchResult] = useContext(resultContext);
+  // eslint-disable-next-line
   const [searchInput, setSearchInput] = useContext(inputContext);
 
   useEffect(() => {
