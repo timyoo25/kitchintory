@@ -17,15 +17,18 @@ Kitchintory is an application for restaurant management. It's a tool to keep tra
 
 ## Wireframes
 
+[Wireframes](https://www.figma.com/file/R5kAmuUW4CBAAPc2hMXrzt/Inventory?node-id=0%3A1&frame-preset-name=Desktop)
+
 <img src="https://res.cloudinary.com/willnolin/image/upload/v1625667447/NAV_u9zfsl.png" width="500" height=300/>
 <img src="https://res.cloudinary.com/willnolin/image/upload/v1625667424/Add_item_ksyz6o.png" width="500" height="300"/>
 <img src="https://res.cloudinary.com/willnolin/image/upload/v1625667329/items_khngll.png" width="500" height="400"/>
-[Wireframes](https://www.figma.com/file/R5kAmuUW4CBAAPc2hMXrzt/Inventory?node-id=0%3A1&frame-preset-name=Desktop)
+
 
 ## Component Hierarchy
 
-<img src="https://res.cloudinary.com/willnolin/image/upload/v1625667691/Components_casnhj.png" width="900" height="600" />
 [Component Hierarchy](https://whimsical.com/p3-kitchntory-VXuCpdbZA9bXaRWaTE2ubN)
+
+<img src="https://res.cloudinary.com/willnolin/image/upload/v1625667691/Components_casnhj.png" width="900" height="600" />
 
 ## Schema
 
