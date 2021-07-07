@@ -1,37 +1,37 @@
 import "./Search.css";
 import { useContext } from "react";
-import {itemContext, resultContext, inputContext } from '../../Context'
-import { useHistory } from 'react-router-dom'
+import { itemContext, resultContext, inputContext } from "../../Context";
+import { useHistory } from "react-router-dom";
 
 const Search = (props) => {
-  const [items] = useContext(itemContext)
-  const [searchResult, setSearchResult] = useContext(resultContext)
-  const [searchInput, setSearchInput] = useContext(inputContext)
+  const [items] = useContext(itemContext);
+  // eslint-disable-next-line
+  const [searchResult, setSearchResult] = useContext(resultContext);
+  const [searchInput, setSearchInput] = useContext(inputContext);
 
   const history = useHistory();
-  
+
   const handleChange = (event) => {
-    event.preventDefault()
-    // console.log(event)
+    event.preventDefault();
     setSearchInput(
       // ...searchInput,
       event.target.value
-    )
-  }
+    );
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     if (searchInput) {
       const results = items.filter((item) =>
         item.name.toLowerCase().includes(searchInput.toLowerCase())
-      )
-      setSearchResult(results)
+      );
+      setSearchResult(results);
     } else {
-      setSearchResult(items)
+      setSearchResult(items);
     }
     // setSearchInput("")
-    history.push('/items')
-  }
+    history.push("/items");
+  };
   return (
     <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
       <input
